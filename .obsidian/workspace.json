@@ -1,0 +1,260 @@
+{
+  "main": {
+    "id": "a111248bd56506d0",
+    "type": "split",
+    "children": [
+      {
+        "id": "2cdbbf20265336c2",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "be1107740ca95d6e",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "开发/Golang/go-zero/安装.md",
+                "mode": "source",
+                "source": false,
+                "backlinks": true,
+                "backlinkOpts": {
+                  "collapseAll": false,
+                  "extraContext": false,
+                  "sortOrder": "alphabetical",
+                  "showSearch": false,
+                  "searchQuery": "",
+                  "backlinkCollapsed": false,
+                  "unlinkedCollapsed": true
+                }
+              },
+              "icon": "lucide-file",
+              "title": "安装"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "4c14b550621a460d",
+    "type": "split",
+    "children": [
+      {
+        "id": "63cfe39be83ee579",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "94f5e923dae0048b",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical",
+                "autoReveal": false
+              },
+              "icon": "lucide-folder-closed",
+              "title": "文件列表"
+            }
+          },
+          {
+            "id": "6af39cb7a8b971bc",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              },
+              "icon": "lucide-search",
+              "title": "搜索"
+            }
+          },
+          {
+            "id": "8a9bf1876e00e586",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {},
+              "icon": "lucide-bookmark",
+              "title": "书签"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 260.5
+  },
+  "right": {
+    "id": "c6c2a6364a0bb5ec",
+    "type": "split",
+    "children": [
+      {
+        "id": "1385ce02005c6d82",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "ddb66a1ae919ef0d",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "Python/playwright防自动化检测.md",
+                "collapseAll": false,
+                "extraContext": true,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-coming-in",
+              "title": "playwright防自动化检测 的反向链接列表"
+            }
+          },
+          {
+            "id": "5733a97d476f8a73",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "Python/playwright防自动化检测.md",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-going-out",
+              "title": "playwright防自动化检测 的出链列表"
+            }
+          },
+          {
+            "id": "9e19267da0ab37c9",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": false,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-tags",
+              "title": "标签"
+            }
+          },
+          {
+            "id": "2865a43beb758c00",
+            "type": "leaf",
+            "state": {
+              "type": "all-properties",
+              "state": {
+                "sortOrder": "frequency",
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-archive",
+              "title": "添加笔记属性"
+            }
+          },
+          {
+            "id": "af979f69a76fe0d2",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "开发/Golang/go-zero/安装.md",
+                "followCursor": false,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-list",
+              "title": "安装 的大纲"
+            }
+          },
+          {
+            "id": "77f592ea0bee8666",
+            "type": "leaf",
+            "state": {
+              "type": "git-view",
+              "state": {},
+              "icon": "git-pull-request",
+              "title": "Source Control"
+            }
+          },
+          {
+            "id": "b109a81edbf10cf0",
+            "type": "leaf",
+            "state": {
+              "type": "calendar",
+              "state": {},
+              "icon": "calendar-with-checkmark",
+              "title": "Calendar"
+            }
+          }
+        ],
+        "currentTab": 5
+      }
+    ],
+    "direction": "horizontal",
+    "width": 354.5
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:打开快速切换": false,
+      "graph:查看关系图谱": false,
+      "canvas:新建白板": false,
+      "daily-notes:打开/创建今天的日记": false,
+      "templates:插入模板": false,
+      "command-palette:打开命令面板": false,
+      "bases:创建新数据库": false,
+      "obsidian-excalidraw-plugin:新建绘图文件": false,
+      "remotely-save:Remotely Save": false,
+      "obsidian-git:Open Git source control": false
+    }
+  },
+  "active": "be1107740ca95d6e",
+  "lastOpenFiles": [
+    "AI/CrewAI/简历筛选助手AI.md",
+    "AI/Coze/安装 Coze Studio.md",
+    "开发/Golang/go-zero/安装.md",
+    "开发/Golang/go-zero",
+    "开发/Python/设计模式/工厂模式.md",
+    "AI/提示词/gork-涩涩.md",
+    "Pasted image 20251128172421.png",
+    "AI/提示词/豆包-KFC图片.md",
+    "开发/Python/基础/pathlib用法.md",
+    "AI/提示词/豆包-丝控.md",
+    "AI/提示词",
+    "数据库/Redis/未命名.md",
+    "开发/Python/设计模式/单例模式.md",
+    "开发/Python/设计模式",
+    "AI/CrewAI/安装.md",
+    "AI/Claude Code+Claude Code Router.md",
+    "AI/CrewAI",
+    "AI/Coze",
+    "AI/Eino",
+    "Linux/Ubuntu 22.04 上安装 Python 3.12.md",
+    "Linux/基础/linux学习笔记-nano用法.md",
+    "Linux/基础/linux学习笔记-搭建FTP服务.md",
+    "AI",
+    "开发/前端/基础三剑客/javascript/元素选择器.md",
+    "开发/前端/基础三剑客/javascript/forEach数组循环.md",
+    "开发/Python/基础/pydantic用法.md",
+    "开发/Python/基础/uv安装Python.md",
+    "开发/Python/基础/python日志.md",
+    "Linux/基础/linux学习笔记-Systemd.md",
+    "开发/Python/自动化/playwright/playwright进阶.md",
+    "开发/Python/自动化/playwright/playwright基础.md",
+    "开发/Python/自动化/playwright/playwright安装.md",
+    "开发/Python/自动化/playwright/playwright防自动化检测.md",
+    "开发/Python/自动化/playwright/目录.md",
+    "开发/Python/自动化/playwright",
+    "开发",
+    "运维/监控/日志监控",
+    "未命名.canvas"
+  ]
+}
