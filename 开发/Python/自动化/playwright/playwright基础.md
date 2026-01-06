@@ -3,6 +3,10 @@ tags:
   - 浏览器自动化
   - Python
 ---
+## 录制并生成代码
+```
+playwright codegen --target python -o baidu_test.py -b chromium https://www.baidu.com/
+```
 ## 同步运行
 ```python
 from playwright.sync_api import sync_playwright

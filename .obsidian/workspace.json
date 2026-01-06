@@ -4,16 +4,16 @@
     "type": "split",
     "children": [
       {
-        "id": "90b30c4c77479efc",
+        "id": "35a0d81d657fb62a",
         "type": "tabs",
         "children": [
           {
-            "id": "6c34c429b3363ef8",
+            "id": "d97363cabac99a04",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Linux/Ubuntu 22.04 上安装 Python 3.12.md",
+                "file": "AI/提示词/gork-涩涩.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -28,7 +28,7 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "Ubuntu 22.04 上安装 Python 3.12"
+              "title": "gork-涩涩"
             }
           }
         ]
@@ -51,7 +51,7 @@
               "type": "file-explorer",
               "state": {
                 "sortOrder": "alphabetical",
-                "autoReveal": false
+                "autoReveal": true
               },
               "icon": "lucide-folder-closed",
               "title": "文件列表"
@@ -63,7 +63,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "",
+                "query": "tag:#Web",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -88,7 +88,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 260.5
+    "width": 439.5
   },
   "right": {
     "id": "c6c2a6364a0bb5ec",
@@ -123,12 +123,12 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Python/playwright防自动化检测.md",
+                "file": "开发/前端/基础三剑客/javascript/forEach数组循环.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               },
               "icon": "links-going-out",
-              "title": "playwright防自动化检测 的出链列表"
+              "title": "forEach数组循环 的出链列表"
             }
           },
           {
@@ -139,7 +139,7 @@
               "state": {
                 "sortOrder": "frequency",
                 "useHierarchy": false,
-                "showSearch": false,
+                "showSearch": true,
                 "searchQuery": ""
               },
               "icon": "lucide-tags",
@@ -166,23 +166,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Linux/Ubuntu 22.04 上安装 Python 3.12.md",
+                "file": "AI/提示词/gork-涩涩.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Ubuntu 22.04 上安装 Python 3.12 的大纲"
-            }
-          },
-          {
-            "id": "77f592ea0bee8666",
-            "type": "leaf",
-            "state": {
-              "type": "git-view",
-              "state": {},
-              "icon": "lucide-ghost",
-              "title": "git-view"
+              "title": "gork-涩涩 的大纲"
             }
           },
           {
@@ -191,8 +181,8 @@
             "state": {
               "type": "calendar",
               "state": {},
-              "icon": "lucide-ghost",
-              "title": "calendar"
+              "icon": "calendar-with-checkmark",
+              "title": "Calendar"
             }
           }
         ],
@@ -204,6 +194,7 @@
   },
   "left-ribbon": {
     "hiddenItems": {
+      "obsidian-excalidraw-plugin:新建绘图文件": false,
       "switcher:打开快速切换": false,
       "graph:查看关系图谱": false,
       "canvas:新建白板": false,
@@ -213,45 +204,46 @@
       "bases:创建新数据库": false
     }
   },
-  "active": "6c34c429b3363ef8",
+  "active": "d97363cabac99a04",
   "lastOpenFiles": [
+    "AI/提示词/豆包-丝控.md",
+    "AI/提示词/豆包-KFC图片.md",
+    "AI/提示词/gork-涩涩.md",
+    "AI/Gemini-cli.md",
     "AI/Claude Code+Claude Code Router.md",
-    "Linux/wsl2自定义DNS永久.md",
-    "运维/监控/日志监控/基于Grafana+Loki+Promatil搭建日志分析平台.md",
-    "运维/监控/Prometheus/Prometheus笔记-设置Basic_auth登录校验.md",
-    "运维/监控/Prometheus/Prometheus笔记-监控docker容器.md",
-    "运维/监控/Prometheus/Prometheus笔记-file_sd_config.md",
-    "运维/监控/Prometheus/Prometheus笔记-配置文件字段解析.md",
-    "运维/监控/Prometheus/Prometheus笔记-安装Node_exporter.md",
-    "运维/监控/Prometheus/Prometheus笔记-Label标签.md",
-    "运维/监控/Prometheus/Prometheus笔记-安装blackbox_exporter.md",
-    "运维/监控/Prometheus/Prometheus笔记-安装.md",
-    "运维/监控/Prometheus/Prometheus笔记-告警规则配置.md",
-    "运维/监控/Prometheus/Prometheus笔记-Grafana可视化.md",
-    "运维/监控/日志监控",
-    "运维/监控/Uptime-kuma 监控.md",
-    "运维/监控/Prometheus",
-    "运维/监控",
-    "数据库/Redis/未命名.md",
-    "数据库/Redis",
-    "开发/前端/基础三剑客/javascript/元素选择器.md",
-    "开发/前端/基础三剑客/javascript/forEach数组循环.md",
-    "开发/前端/基础三剑客/javascript",
-    "开发/前端/基础三剑客",
-    "开发/Python/设计模式/工厂模式.md",
+    "运维/Traefik/Traefik学习笔记-安装.md",
+    "运维/Traefik/Traefik学习笔记-名词解释.md",
+    "运维/Traefik/Traefik学习笔记-重定向配置.md",
+    "运维/Traefik/Traefix学习笔记-自定义中间件.md",
+    "运维/Traefik",
+    "运维/容器化/Kubernetes/kubernetes学习笔记-安装.md",
+    "运维/容器化/Docker/环境搭建与安装.md",
+    "运维/容器化/Kubernetes/kubernetes学习笔记-namespace.md",
+    "运维/容器化/Kubernetes/kubernetes学习笔记-Pod.md",
+    "运维/容器化/Kubernetes/kubernetes学习笔记-Service.md",
+    "运维/容器化/Kubernetes/kubernetes学习笔记-Ingress.md",
+    "运维/容器化/Kubernetes/kubernetes学习笔记-helm.md",
+    "运维/容器化/Kubernetes/kubernetes学习笔记-Deployment.md",
+    "运维/容器化/Kubernetes/kubernetes学习笔记-ConfigMap.md",
+    "运维/容器化/Kubernetes/kubernetes学习笔记-搭建K3s集群.md",
+    "Linux/基础/linux学习笔记-更换镜像源.md",
+    "运维/容器化/Kubernetes/K3s环境和安装.md",
+    "运维/容器化/Kubernetes/kubernetes学习笔记-ReplicaSet.md",
+    "数据库/Redis/安装及基础.md",
     "开发/Python/设计模式/单例模式.md",
-    "开发/Python/设计模式",
-    "开发/Python/数据分析/Pandas用法.md",
-    "开发/Python/数据分析",
-    "开发/Python/Web/FastAPI/安装.md",
-    "开发/Python/Web/FastAPI",
-    "Linux/基础/linux学习笔记-搭建FTP服务.md",
-    "Linux/基础/linux学习笔记-服务器基础信息查询脚本.md",
-    "Linux/基础/linux学习笔记-免密登录.md",
-    "Linux/基础/linux学习笔记-ufw.md",
-    "Linux/基础/linux学习笔记-Ubuntu常用软件安装.md",
-    "Linux/基础",
-    "Pasted image 20251128172421.png",
-    "未命名.canvas"
+    "开发/Python/设计模式/工厂模式.md",
+    "开发/Python/基础/struct用法.md",
+    "a728b6d5675fa172032768de03d2f490.jpg",
+    "Excalidraw",
+    "未命名 8.base",
+    "未命名 1.base",
+    "未命名 7.base",
+    "未命名 6.base",
+    "未命名 5.base",
+    "未命名 4.base",
+    "未命名 3.base",
+    "未命名 2.base",
+    "未命名.canvas",
+    "Pasted image 20251128172421.png"
   ]
 }

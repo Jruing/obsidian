@@ -85,3 +85,54 @@ for txt_file in data_dir.glob('**/*.txt'):
     print(f"Found: {txt_file}")
     # 输出: Found: files/a.txt, Found: files/sub/c.txt
 ```
+## 删除文件
+```python
+from pathlib import Path
+
+# 1. 定义要删除的文件路径
+file_path = Path("/home/user/documents/temp_file.txt")
+# 相对路径示例
+# file_path = Path("test_delete.txt")
+
+# 2. 基础删除（如果文件不存在会报错）
+try:
+    file_path.unlink()
+    print(f"文件 {file_path} 已成功删除")
+except FileNotFoundError:
+    print(f"文件 {file_path} 不存在，无需删除")
+except PermissionError:
+    print(f"没有权限删除文件 {file_path}")
+
+# 3. 更安全的删除（先判断文件是否存在）
+if file_path.is_file():  # 确保是文件且存在
+    file_path.unlink()
+    print(f"文件 {file_path} 已删除")
+else:
+    print(f"文件 {file_path} 不存在或不是文件")
+
+# 4. 进阶：unlink() 的 missing_ok 参数（Python 3.8+ 支持）
+# missing_ok=True 表示文件不存在时不报错，无需手动捕获异常
+file_path.unlink(missing_ok=True)
+print(f"已尝试删除 {file_path}（文件不存在也不会报错）")
+
+# ❗ 注意：pathlib 不能直接用 unlink() 删除目录
+# 删除目录需要用 rmdir()，且目录必须为空
+folder_path = Path("/home/user/empty_folder")
+if folder_path.is_dir():
+    folder_path.rmdir()  # 仅删除空目录
+    print(f"空目录 {folder_path} 已删除")
+```
+## 移动文件
+```python
+source_file2 = Path("docs/data.csv")
+target_file2 = Path("archive/2025/data.csv")
+
+# 场景1：如果目标文件已存在，rename() 会报错，需先判断
+if not target_file2.exists():
+    source_file2.rename(target_file2)
+else:
+    print(f"目标文件 {target_file2} 已存在，跳过移动")
+# 场景2：强制覆盖已存在的目标文件（使用 replace()）,replace() 会直接覆盖同名文件，无需手动删除
+source_file2.replace(target_file2)
+print(f"文件已强制移动并覆盖：{target_file2}")
+```
