@@ -3,7 +3,7 @@ tags:
   - 浏览器自动化
   - Python
 ---
-> 使用playwright避开自动化特征检测
+> 使用playwright避开部分自动化特征检测
 
 ## playwright代码
 ```
