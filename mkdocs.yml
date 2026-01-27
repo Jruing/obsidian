@@ -1,6 +1,6 @@
 site_name: Wiki
 site_url: http://127.0.0.1:8000/
-repo_url: https://github.com/jruing/obsidian
+repo_url: https://github.com/jruing/obsidian/
 repo_name: jruing/obsidian
 
 use_directory_urls: false
