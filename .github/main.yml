@@ -1,0 +1,26 @@
+name: wiki
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  deploy-wiki:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: 拉取最新代码
+        uses: actions/checkout@v4
+
+      - name: 设置 Python 3.10 环境
+        uses: actions/setup-python@v4
+        with:
+          python-version: "3.10"
+
+      - name: 安装 mkdocs-material
+        run: pip install mkdocs-material
+
+      - name: 部署到 GitHub Pages
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: mkdocs gh-deploy --force
