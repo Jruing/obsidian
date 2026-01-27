@@ -4,17 +4,31 @@
     "type": "split",
     "children": [
       {
-        "id": "bcb6e31bbf211610",
+        "id": "7bd6dd75ddfd1ba4",
         "type": "tabs",
         "children": [
           {
-            "id": "a8c3bf94a4c64ed9",
+            "id": "6ef22d1ab7a2781a",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {},
+              "type": "markdown",
+              "state": {
+                "file": "日常工具/RustDesk 私有化部署.md",
+                "mode": "source",
+                "source": false,
+                "backlinks": true,
+                "backlinkOpts": {
+                  "collapseAll": false,
+                  "extraContext": false,
+                  "sortOrder": "alphabetical",
+                  "showSearch": false,
+                  "searchQuery": "",
+                  "backlinkCollapsed": false,
+                  "unlinkedCollapsed": true
+                }
+              },
               "icon": "lucide-file",
-              "title": "新标签页"
+              "title": "RustDesk 私有化部署"
             }
           }
         ]
@@ -152,12 +166,13 @@
             "state": {
               "type": "outline",
               "state": {
+                "file": "日常工具/RustDesk 私有化部署.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "大纲"
+              "title": "RustDesk 私有化部署 的大纲"
             }
           },
           {
@@ -189,44 +204,44 @@
       "command-palette:打开命令面板": false
     }
   },
-  "active": "a8c3bf94a4c64ed9",
+  "active": "6ef22d1ab7a2781a",
   "lastOpenFiles": [
+    "AI/提示词/豆包-生成架构图.md",
+    "运维/Traefik/Traefik学习笔记-安装.md",
+    "AI/Google ADK/Google ADK实现简历打分助手.md",
+    "AI/提示词/Banana提示词-文章变成卡通信息图.md",
+    "日常工具/RustDesk 私有化部署.md",
+    "AI/Coze/安装 Coze Studio.md",
+    "AI/Google ADK/Google ADK安装.md",
+    "运维/Jenkins/环境搭建与安装.md",
+    "运维/Jenkins/Freestyle Job.md",
+    "运维/Jenkins/Pipline.md",
+    "运维/Jenkins/Trigger.md",
+    "运维/Jenkins/Jenkinsfile.md",
+    "运维/Jenkins/部署Github项目.md",
+    "运维/Jenkins/目录.md",
+    "运维/Traefik/Traefik学习笔记-概念详解（基于 Docker Labels 配置）.md",
+    "运维/Traefik/Traefik学习笔记-自定义中间件.md",
     "新建 文本文档.txt",
     "github.pub",
     "github",
     "pc.pub",
     "pc",
-    "运维/Traefik/Traefik学习笔记-安装.md",
     "运维/Traefik/Traefik学习笔记-重定向配置.md",
-    "运维/Traefik/Traefik学习笔记-概念详解（基于 Docker Labels 配置）.md",
-    "运维/Traefik/Traefik学习笔记-自定义中间件.md",
     "运维/进程管理/Supervisor 学习笔记.md",
     "运维/容器化/Kubernetes/目录.md",
-    "运维/Jenkins/目录.md",
     "运维/容器化/Kubernetes/kubernetes学习笔记-安装.md",
     "运维/容器化/Kubernetes/kubernetes学习笔记-ConfigMap.md",
     "运维/容器化/Kubernetes/kubernetes学习笔记-Deployment.md",
     "运维/容器化/Kubernetes/kubernetes学习笔记-namespace.md",
     "运维/容器化/Kubernetes/kubernetes学习笔记-Service.md",
-    "运维/Jenkins/Jenkinsfile.md",
-    "运维/Jenkins/部署Github项目.md",
-    "运维/Jenkins/Pipline.md",
-    "运维/Jenkins/Trigger.md",
-    "运维/Jenkins/Freestyle Job.md",
-    "运维/Jenkins/环境搭建与安装.md",
     "运维/Minio/环境搭建与安装.md",
     "运维/Nginx/环境搭建与安装.md",
     "运维/Minio",
-    "Linux/基础/linux学习笔记-jq.md",
     "运维/Jenkins",
-    "Linux/基础/linux学习笔记-搭建FTP服务.md",
-    "开发/Python/自动化/playwright/目录.md",
-    "Linux/基础/linux学习笔记-cgroup(二).md",
-    "Linux/基础/linux学习笔记-cgroup(一).md",
     "运维/进程管理",
     "AI/Google ADK",
     "日常工具",
-    "运维/Traefik",
     "a728b6d5675fa172032768de03d2f490.jpg",
     "未命名.canvas",
     "Pasted image 20251128172421.png"
