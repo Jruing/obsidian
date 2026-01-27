@@ -87,8 +87,6 @@ nav:
         - Golang学习笔记-令牌桶限流: 开发/Golang/进阶/Golang学习笔记-令牌桶限流.md
         - Golang学习笔记-自定义日志轮转及输出: 开发/Golang/进阶/Golang学习笔记-自定义日志轮转及输出.md
         - Golang学习笔记-Casbin学习笔记: 开发/Golang/进阶/Golang学习笔记-Casbin学习笔记.md
-      - go-zero:
-    - Java:
     - Python:
       - 基础:
         - 安装环境: 开发/Python/基础/安装环境.md
@@ -144,10 +142,8 @@ nav:
         - selenium:
           - Selenium接管浏览器: 开发/Python/自动化/selenium/Selenium接管浏览器.md
       - Web:
-        - Django:
         - FastAPI:
           - 安装: 开发/Python/Web/FastAPI/安装.md
-        - Flask:
   - 日常工具:
     - 基于订阅号开发属于自己的微信消息通知: 日常工具/基于订阅号开发属于自己的微信消息通知.md
     - Frp 内网穿透搭建: 日常工具/Frp 内网穿透搭建.md
@@ -277,7 +273,6 @@ nav:
       - Llamaindex-Agent自然语言查询数据库: AI/AIAgent/Llamaindex-Agent自然语言查询数据库.md
     - Coze:
       - 安装 Coze Studio: AI/Coze/安装 Coze Studio.md
-    - Eino:
     - Google ADK:
       - Google ADK安装: AI/Google ADK/Google ADK安装.md
       - Google ADK实现简历打分助手: AI/Google ADK/Google ADK实现简历打分助手.md
