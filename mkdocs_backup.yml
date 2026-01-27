@@ -51,7 +51,8 @@ nav:
   - 开发:
     - 前端:
       - 基础三剑客:
-        - javascript: 开发/前端/基础三剑客/javascript/元素选择器.md
+        - javascript: 开发/前端/基础三剑客/javascript/index.md
+        - 元素选择器: 开发/前端/基础三剑客/javascript/元素选择器.md
         - fetch 学习笔记: 开发/前端/基础三剑客/javascript/fetch 学习笔记.md
         - forEach数组循环: 开发/前端/基础三剑客/javascript/forEach数组循环.md
         - Javascript学习笔记-js实现拷贝复制功能: 开发/前端/基础三剑客/javascript/Javascript学习笔记-js实现拷贝复制功能.md
@@ -162,7 +163,7 @@ nav:
       - 安装及基础: 数据库/Redis/安装及基础.md
       - Redis7.XCentos集群搭建: 数据库/Redis/Redis7.XCentos集群搭建.md
   - 运维:
-    - Neo4j 实现一个简单的CMDB管理平台: 运务/Neo4j 实现一个简单的CMDB管理平台.md
+    - Neo4j 实现一个简单的CMDB管理平台: 运维/Neo4j 实现一个简单的CMDB管理平台.md
     - SSH隧道代理: 运维/SSH隧道代理.md
     - Minio:
       - 环境搭建与安装: 运维/Minio/环境搭建与安装.md
