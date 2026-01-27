@@ -1,3 +1,7 @@
+---
+tags:
+  - Kubernetes
+---
 ## 简介
 
 > **ReplicaSet** 是 Kubernetes 中的一种控制器，它确保在任何时刻都能维持指定数量的 Pod 副本运行。即使某些 Pod 发生故障或被删除，ReplicaSet 也会自动创建新的 Pod 来替代它们，确保系统中始终有一定数量的 Pod 副本在运行。

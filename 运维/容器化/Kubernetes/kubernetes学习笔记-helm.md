@@ -1,3 +1,8 @@
+---
+tags:
+  - Kubernetes
+  - Helm
+---
 ## 简介
 
 > **Helm** 是 Kubernetes 的包管理器，类似于 Linux 下的 `apt` 或 `yum`，可以方便地管理 Kubernetes 中的应用程序。Helm 通过 **charts**（预打包的 Kubernetes 资源集合）来实现应用的安装、升级、版本控制等。
