@@ -86,6 +86,13 @@ nav:
         - Golang学习笔记-令牌桶限流: 开发/Golang/进阶/Golang学习笔记-令牌桶限流.md
         - Golang学习笔记-自定义日志轮转及输出: 开发/Golang/进阶/Golang学习笔记-自定义日志轮转及输出.md
         - Golang学习笔记-Casbin学习笔记: 开发/Golang/进阶/Golang学习笔记-Casbin学习笔记.md
+        - Golang学习笔记-jwt: 开发/Golang/进阶/Golang学习笔记-jwt.md
+        - Golang学习笔记-go-resty请求: 开发/Golang/进阶/Golang学习笔记-go-resty请求.md
+        - Golang学习笔记-CorbaCLI学习笔记: 开发/Golang/进阶/Golang学习笔记-CorbaCLI学习笔记.md
+      - gozero:
+        - 安装: 开发/Golang/gozero/安装.md
+        - api语法: 开发/Golang/gozero/api语法.md
+  
     - Python:
       - 基础:
         - 安装环境: 开发/Python/基础/安装环境.md
@@ -162,7 +169,7 @@ nav:
       - 安装及基础: 数据库/Redis/安装及基础.md
       - Redis7.XCentos集群搭建: 数据库/Redis/Redis7.XCentos集群搭建.md
   - 运维:
-    - Neo4j 实现一个简单的CMDB管理平台: 运务/Neo4j 实现一个简单的CMDB管理平台.md
+    - Neo4j 实现一个简单的CMDB管理平台: 运维/Neo4j 实现一个简单的CMDB管理平台.md
     - SSH隧道代理: 运维/SSH隧道代理.md
     - Minio:
       - 环境搭建与安装: 运维/Minio/环境搭建与安装.md
