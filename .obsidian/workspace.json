@@ -51,7 +51,7 @@
               "type": "file-explorer",
               "state": {
                 "sortOrder": "byCreatedTimeReverse",
-                "autoReveal": true
+                "autoReveal": false
               },
               "icon": "lucide-folder-closed",
               "title": "文件列表"
@@ -204,8 +204,20 @@
       "command-palette:打开命令面板": false
     }
   },
-  "active": "6ef22d1ab7a2781a",
+  "active": "94f5e923dae0048b",
   "lastOpenFiles": [
+    "运维/监控/Prometheus/Prometheus学习笔记-配置文件字段解析.md",
+    "运维/监控/Prometheus/Prometheus学习笔记-设置Basic_auth登录校验.md",
+    "运维/监控/Prometheus/Prometheus学习笔记-监控docker容器.md",
+    "运维/监控/Prometheus/Prometheus学习笔记-安装Node_exporter.md",
+    "运维/监控/Prometheus/Prometheus学习笔记-安装blackbox_exporter.md",
+    "运维/监控/Prometheus/Prometheus学习笔记-安装.md",
+    "运维/监控/Prometheus/Prometheus学习笔记-告警规则配置.md",
+    "运维/监控/Prometheus/Prometheus学习笔记-Label标签.md",
+    "运维/监控/Prometheus/Prometheus学习笔记-Grafana可视化.md",
+    "运维/监控/Prometheus/Prometheus学习笔记-file_sd_config.md",
+    "rename_to_learning_notes.py",
+    "rename_to_learning_notes.ps1",
     "日常工具/RustDesk 私有化部署.md",
     "database.sqlite",
     "readme.md",
@@ -223,24 +235,13 @@
     "运维/Jenkins/部署Github项目.md",
     "运维/Jenkins/目录.md",
     "运维/Traefik/Traefik学习笔记-概念详解（基于 Docker Labels 配置）.md",
-    "运维/Traefik/Traefik学习笔记-自定义中间件.md",
     "新建 文本文档.txt",
     "github.pub",
     "github",
     "pc.pub",
     "pc",
-    "运维/Traefik/Traefik学习笔记-重定向配置.md",
-    "运维/进程管理/Supervisor 学习笔记.md",
-    "运维/容器化/Kubernetes/目录.md",
-    "运维/容器化/Kubernetes/kubernetes学习笔记-安装.md",
-    "运维/容器化/Kubernetes/kubernetes学习笔记-ConfigMap.md",
-    "运维/容器化/Kubernetes/kubernetes学习笔记-Deployment.md",
-    "运维/容器化/Kubernetes/kubernetes学习笔记-namespace.md",
-    "运维/容器化/Kubernetes/kubernetes学习笔记-Service.md",
     "运维/Minio",
     "运维/Jenkins",
-    "运维/进程管理",
-    "AI/Google ADK",
     "a728b6d5675fa172032768de03d2f490.jpg",
     "未命名.canvas",
     "Pasted image 20251128172421.png"
