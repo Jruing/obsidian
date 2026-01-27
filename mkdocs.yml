@@ -242,7 +242,7 @@ nav:
       - Nginx学习笔记-Centos 7 安装Nginx: 运维/Nginx/Nginx学习笔记-Centos 7 安装Nginx.md
       - Nginx学习笔记-Nginx简介: 运维/Nginx/Nginx学习笔记-Nginx简介.md
     - Serverless:
-      - ServerLess学习笔记-完整指南: 运维/Serverless/ServerLess学习笔记-完整指南.md
+      - ServerLess学习笔记-完整指南: 运维/Serverless/ServerLess学习笔记-FnProject完整指南.md
     - Traefik:
       - Traefik学习笔记-安装: 运维/Traefik/Traefik学习笔记-安装.md
       - Traefik学习笔记-概念详解（基于 Docker Labels 配置）: 运维/Traefik/Traefik学习笔记-概念详解（基于 Docker Labels 配置）.md
