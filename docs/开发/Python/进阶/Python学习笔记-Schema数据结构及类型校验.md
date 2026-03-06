@@ -1,4 +1,8 @@
-# Python学习笔记-Schema数据结构及类型校验
+---
+tags:
+  - Python
+---
+
 
 > 使用 `schema` 库来执行数据结构的校验。`schema` 是一个简单而强大的库，用于定义和验证 Python 数据结构的约束
 

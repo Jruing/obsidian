@@ -1,3 +1,8 @@
+---
+tags:
+  - 前端
+  - React
+---
 # 方案一
 ```
 npm install -g create-react-app

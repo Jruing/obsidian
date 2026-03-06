@@ -1,7 +1,7 @@
-# AnythingLLM+Ollama搭建本地知识库
-
-
-
+---
+tags:
+  - AI
+---
 ## Ollama
 
 ### 下载

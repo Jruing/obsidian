@@ -1,3 +1,7 @@
+---
+tags:
+  - AI
+---
 ## 部署并启动
 ```
 git clone https://github.com/coze-dev/coze-studio.git

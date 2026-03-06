@@ -1,3 +1,7 @@
+---
+tags:
+  - Python
+---
 > 在Python 3.5版本之前是没有参数类型提示的,在3.5版本加入了这一项,这一项新的内容的优点在于帮助我们明确函数中每个参数的类型是什么,方便排查问题及项目交接后,下一任能够看懂代码,但是这一样不像其他语言一样强制检查参数类型,这里只是为了提示,不影响代码执行
 > 具体文档参考官网文档: [https://docs.python.org/3/library/typing.html](https://docs.python.org/3/library/typing.html)
 

@@ -1,5 +1,7 @@
-# Python 创建虚拟环境及配置
-
+---
+tags:
+  - Python
+---
 ## 介绍
 
 https://docs.python.org/zh-cn/3/library/venv.html 官方文档

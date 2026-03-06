@@ -1,3 +1,8 @@
+---
+tags:
+  - 提示词
+  - Vibe-coding
+---
 ```
 {
   "customModes": [

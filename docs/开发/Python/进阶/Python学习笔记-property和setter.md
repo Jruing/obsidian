@@ -1,4 +1,7 @@
-# Python学习笔记-property和setter
+---
+tags:
+  - Python
+---
 
 ## property装饰器
 

@@ -1,5 +1,8 @@
-# MCP学习笔记-查询主机资源使用情况
-
+---
+tags:
+  - MCP
+  - AI
+---
 ## 环境准备
 
 - CherryStudio

@@ -1,4 +1,8 @@
-# Python 调用dll
+---
+tags:
+  - Python
+---
+
 > 为了方便python调用main.go种的Sum函数,需要先将main.go打包为dll文件,利用python调用dll文件
 ## GO代码
 main.go

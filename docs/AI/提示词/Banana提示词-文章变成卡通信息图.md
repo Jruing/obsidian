@@ -1,3 +1,7 @@
+---
+tags:
+  - 提示词
+---
 ```
 [System / Prompt]
 

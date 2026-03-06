@@ -1,3 +1,7 @@
+---
+tags:
+  - 前端
+---
 ```javascript
 const numbers = [10, 20, 30]; 
 numbers.forEach(function(value, index) { 

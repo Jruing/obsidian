@@ -1,3 +1,8 @@
+---
+tags:
+  - AI
+  - Llamaindex
+---
 ## 安装
 ```
 pip install llama-index

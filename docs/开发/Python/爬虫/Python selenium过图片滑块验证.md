@@ -1,3 +1,8 @@
+---
+tags:
+  - Python
+  - 爬虫
+---
 ## 计算滑块移动距离
 ```
 def get_distance(image1,image2):

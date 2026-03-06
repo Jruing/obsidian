@@ -2,7 +2,6 @@
 tags:
   - Linux
 ---
-
 ## 1. sudo是什么
 
 `sudo`（superuser do）是 Linux/Unix 系统中用来**以超级用户（root）或其他指定用户身份执行命令**的工具。

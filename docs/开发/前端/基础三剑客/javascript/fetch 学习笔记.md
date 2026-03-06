@@ -1,3 +1,7 @@
+---
+tags:
+  - 前端
+---
 ### **Fetch API 完全手册**
 
 `fetch` 是现代 JavaScript 中用于发起网络请求的标准 API

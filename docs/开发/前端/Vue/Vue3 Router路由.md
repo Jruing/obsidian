@@ -1,3 +1,8 @@
+---
+tags:
+  - Vue
+  - 前端
+---
 ## 安装依赖
 ```
 npm install vue-router
