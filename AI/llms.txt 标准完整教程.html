@@ -1,0 +1,4567 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://jruing.github.io/obsidian/AI/llms.txt%20%E6%A0%87%E5%87%86%E5%AE%8C%E6%95%B4%E6%95%99%E7%A8%8B.html">
+      
+      
+        <link rel="prev" href="Gemini-cli.html">
+      
+      
+        <link rel="next" href="OpenCode.html">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.4">
+    
+    
+      
+        <title>llms.txt 标准完整教程 - Wiki</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.484c7ddc.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    <body dir="ltr">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#_1" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow md-header--lifted" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="Wiki" class="md-header__button md-logo" aria-label="Wiki" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Wiki
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              llms.txt 标准完整教程
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+          <a href="javascript:void(0)" class="md-search__icon md-icon" title="Share" aria-label="Share" data-clipboard data-clipboard-text="" data-md-component="search-share" tabindex="-1">
+            
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7s-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9a3 3 0 0 0-3 3 3 3 0 0 0 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.15c-.05.21-.08.43-.08.66 0 1.61 1.31 2.91 2.92 2.91s2.92-1.3 2.92-2.91A2.92 2.92 0 0 0 18 16.08"/></svg>
+          </a>
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/jruing/obsidian" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    jruing/obsidian
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+    
+      
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../readme.html" class="md-tabs__link">
+        
+  
+  
+    
+  
+  简介
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="Claude%20Code%2BClaude%20Code%20Router.html" class="md-tabs__link">
+          
+  
+  
+    
+  
+  AI
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../Linux/%E5%9F%BA%E7%A1%80/linux%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0-awk.html" class="md-tabs__link">
+          
+  
+  
+    
+  
+  Linux
+
+        </a>
+      </li>
+    
+  
+
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../%E5%BC%80%E5%8F%91/Jetbrains%E5%85%A8%E5%AE%B6%E6%A1%B6%E6%BF%80%E6%B4%BB.html" class="md-tabs__link">
+          
+  
+  
+    
+  
+  开发
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../%E6%95%B0%E6%8D%AE%E5%BA%93/MySQL/Mysql57%E7%BB%BF%E8%89%B2%E7%89%88%E5%AE%89%E8%A3%85.html" class="md-tabs__link">
+          
+  
+  
+    
+  
+  数据库
+
+        </a>
+      </li>
+    
+  
+
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../%E6%97%A5%E5%B8%B8%E5%B7%A5%E5%85%B7/Frp%20%E5%86%85%E7%BD%91%E7%A9%BF%E9%80%8F%E6%90%AD%E5%BB%BA.html" class="md-tabs__link">
+          
+  
+  
+    
+  
+  日常工具
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../%E8%BF%90%E7%BB%B4/IP%E5%88%92%E5%88%86.html" class="md-tabs__link">
+          
+  
+  
+    
+  
+  运维
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+    
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="Wiki" class="md-nav__button md-logo" aria-label="Wiki" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    Wiki
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/jruing/obsidian" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    jruing/obsidian
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../readme.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    简介
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+      
+    
+    
+      
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    AI
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    AI
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="Claude%20Code%2BClaude%20Code%20Router.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Claude Code+Claude Code Router
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="Docker%E5%AE%89%E8%A3%85OneAPI.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Docker安装OneAPI
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="Gemini-cli.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Gemini-cli
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    llms.txt 标准完整教程
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="llms.txt%20%E6%A0%87%E5%87%86%E5%AE%8C%E6%95%B4%E6%95%99%E7%A8%8B.html" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    llms.txt 标准完整教程
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        目录
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#llmstxt" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        什么是 llms.txt
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="什么是 llms.txt">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        定义
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        核心目标
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#llmstxt_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        为什么需要 llms.txt
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="为什么需要 llms.txt">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        当前的问题
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="当前的问题">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. 上下文窗口限制
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-html" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. HTML 转换困难
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. 信息分散
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#llmstxt_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        llms.txt 的解决方案
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        核心概念
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="核心概念">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        双文件策略
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="双文件策略">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-llmstxt" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. /llms.txt 文件
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-md" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. .md 版本的页面
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        使用场景
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_8" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        文件格式规范
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="文件格式规范">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_9" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        基本结构
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_10" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        详细规范
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="详细规范">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-h1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. H1 标题（必需）
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. 引用块摘要（推荐）
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. 详细信息部分（可选）
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. 文件列表分类（可选但推荐）
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#5" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5. 链接格式
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#6-optional" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6. Optional 分类（特殊含义）
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_11" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        完整示例
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="完整示例">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1fasthtml" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        示例 1：软件项目（FastHTML）
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        示例 2：电商网站
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        示例 3：个人简历网站
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4api" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        示例 4：API 文档网站
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_12" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        实施指南
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="实施指南">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-llmstxt_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        步骤 1：创建 llms.txt 文件
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="步骤 1：创建 llms.txt 文件">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#a" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        方法 A：手动创建
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#b" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        方法 B：使用构建工具
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-md_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        步骤 2：创建 .md 版本的页面
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="步骤 2：创建 .md 版本的页面">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#a_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        选项 A：手动维护
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#b_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        选项 B：自动生成
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-llmstxt" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        步骤 3：测试 llms.txt
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="步骤 3：测试 llms.txt">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_13" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        验证清单
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_14" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        实际测试方法
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        步骤 4：优化和维护
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="步骤 4：优化和维护">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_15" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        定期更新
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_16" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        内容策略
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_17" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        最佳实践
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="最佳实践">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. 保持简洁
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. 使用清晰的链接描述
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. 避免行话和模糊术语
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. 合理组织分类
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#5-markdown" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5. 链接到 Markdown 版本
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#6" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6. 提供上下文
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#7-optional" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7. 使用 Optional 分类
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#8-ai" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        8. 测试 AI 理解
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_18" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        工具和集成
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="工具和集成">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_19" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        官方和社区工具
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="官方和社区工具">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-llms_txt2ctxpython-cli" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. llms_txt2ctx（Python CLI）
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-llmstxt-jsjavascript" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. llmstxt-js（JavaScript）
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-vitepress-plugin" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. VitePress Plugin
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-docusaurus-plugin" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. Docusaurus Plugin
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#5-drupal-llm-support" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5. Drupal LLM Support
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_20" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        与其他标准的关系
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="与其他标准的关系">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#llmstxt-vs-robotstxt" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        llms.txt vs robots.txt
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#llmstxt-vs-sitemapxml" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        llms.txt vs sitemap.xml
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_21" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        常见问题
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="常见问题">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#q1-llmstxt-ai" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Q1: llms.txt 是否会被用于训练 AI？
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#q2-llmstxt" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Q2: 我的网站很小，还需要 llms.txt 吗？
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#q3-llmstxt-seo" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Q3: llms.txt 会影响 SEO 吗？
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#q4-md" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Q4: 必须为每个页面创建 .md 版本吗？
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#q5-llmstxt" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Q5: llms.txt 应该多长？
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#q6" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Q6: 可以链接到外部网站吗？
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#q7" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Q7: 如何处理多语言网站？
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#q8-llmstxt" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Q8: llms.txt 需要频繁更新吗？
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_22" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        快速检查清单
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="快速检查清单">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_23" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        实施检查清单
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_24" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        延伸阅读
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="延伸阅读">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_25" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        官方资源
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_26" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        相关标准
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_27" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        示例实现
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_28" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        总结
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="总结">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_29" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        核心要点
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_30" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        记住
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="OpenCode.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    OpenCode
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="Agent/Agent%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0-Skills.html" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Agent
+  
+
+    
+  </span>
+  
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="Coze/%E5%AE%89%E8%A3%85%20Coze%20Studio.html" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Coze
+  
+
+    
+  </span>
+  
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="Google%20ADK/Google%20ADK%E5%AE%89%E8%A3%85.html" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Google ADK
+  
+
+    
+  </span>
+  
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="MCP/MCP%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0-%E4%BB%8E0%E5%88%B01.html" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    MCP
+  
+
+    
+  </span>
+  
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="%E6%8F%90%E7%A4%BA%E8%AF%8D/Banana%E6%8F%90%E7%A4%BA%E8%AF%8D-%E6%96%87%E7%AB%A0%E5%8F%98%E6%88%90%E5%8D%A1%E9%80%9A%E4%BF%A1%E6%81%AF%E5%9B%BE.html" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    提示词
+  
+
+    
+  </span>
+  
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    
+  
+  
+  
+    <a href="../Linux/%E5%9F%BA%E7%A1%80/linux%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0-awk.html" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Linux
+  
+
+    
+  </span>
+  
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../%E5%BC%80%E5%8F%91/Jetbrains%E5%85%A8%E5%AE%B6%E6%A1%B6%E6%BF%80%E6%B4%BB.html" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    开发
+  
+
+    
+  </span>
+  
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    
+  
+  
+  
+    <a href="../%E6%95%B0%E6%8D%AE%E5%BA%93/MySQL/Mysql57%E7%BB%BF%E8%89%B2%E7%89%88%E5%AE%89%E8%A3%85.html" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    数据库
+  
+
+    
+  </span>
+  
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../%E6%97%A5%E5%B8%B8%E5%B7%A5%E5%85%B7/Frp%20%E5%86%85%E7%BD%91%E7%A9%BF%E9%80%8F%E6%90%AD%E5%BB%BA.html" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    日常工具
+  
+
+    
+  </span>
+  
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../%E8%BF%90%E7%BB%B4/IP%E5%88%92%E5%88%86.html" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    运维
+  
+
+    
+  </span>
+  
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        目录
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#llmstxt" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        什么是 llms.txt
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="什么是 llms.txt">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        定义
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        核心目标
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#llmstxt_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        为什么需要 llms.txt
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="为什么需要 llms.txt">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        当前的问题
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="当前的问题">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. 上下文窗口限制
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-html" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. HTML 转换困难
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. 信息分散
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#llmstxt_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        llms.txt 的解决方案
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        核心概念
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="核心概念">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        双文件策略
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="双文件策略">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-llmstxt" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. /llms.txt 文件
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-md" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. .md 版本的页面
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        使用场景
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_8" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        文件格式规范
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="文件格式规范">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_9" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        基本结构
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_10" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        详细规范
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="详细规范">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-h1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. H1 标题（必需）
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. 引用块摘要（推荐）
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. 详细信息部分（可选）
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. 文件列表分类（可选但推荐）
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#5" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5. 链接格式
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#6-optional" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6. Optional 分类（特殊含义）
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_11" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        完整示例
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="完整示例">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1fasthtml" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        示例 1：软件项目（FastHTML）
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        示例 2：电商网站
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        示例 3：个人简历网站
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4api" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        示例 4：API 文档网站
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_12" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        实施指南
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="实施指南">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-llmstxt_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        步骤 1：创建 llms.txt 文件
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="步骤 1：创建 llms.txt 文件">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#a" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        方法 A：手动创建
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#b" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        方法 B：使用构建工具
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-md_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        步骤 2：创建 .md 版本的页面
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="步骤 2：创建 .md 版本的页面">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#a_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        选项 A：手动维护
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#b_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        选项 B：自动生成
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-llmstxt" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        步骤 3：测试 llms.txt
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="步骤 3：测试 llms.txt">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_13" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        验证清单
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_14" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        实际测试方法
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        步骤 4：优化和维护
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="步骤 4：优化和维护">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_15" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        定期更新
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_16" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        内容策略
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_17" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        最佳实践
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="最佳实践">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. 保持简洁
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. 使用清晰的链接描述
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. 避免行话和模糊术语
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. 合理组织分类
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#5-markdown" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5. 链接到 Markdown 版本
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#6" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6. 提供上下文
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#7-optional" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7. 使用 Optional 分类
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#8-ai" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        8. 测试 AI 理解
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_18" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        工具和集成
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="工具和集成">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_19" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        官方和社区工具
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="官方和社区工具">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-llms_txt2ctxpython-cli" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. llms_txt2ctx（Python CLI）
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-llmstxt-jsjavascript" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. llmstxt-js（JavaScript）
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-vitepress-plugin" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. VitePress Plugin
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-docusaurus-plugin" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. Docusaurus Plugin
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#5-drupal-llm-support" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5. Drupal LLM Support
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_20" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        与其他标准的关系
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="与其他标准的关系">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#llmstxt-vs-robotstxt" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        llms.txt vs robots.txt
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#llmstxt-vs-sitemapxml" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        llms.txt vs sitemap.xml
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_21" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        常见问题
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="常见问题">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#q1-llmstxt-ai" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Q1: llms.txt 是否会被用于训练 AI？
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#q2-llmstxt" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Q2: 我的网站很小，还需要 llms.txt 吗？
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#q3-llmstxt-seo" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Q3: llms.txt 会影响 SEO 吗？
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#q4-md" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Q4: 必须为每个页面创建 .md 版本吗？
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#q5-llmstxt" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Q5: llms.txt 应该多长？
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#q6" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Q6: 可以链接到外部网站吗？
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#q7" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Q7: 如何处理多语言网站？
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#q8-llmstxt" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Q8: llms.txt 需要频繁更新吗？
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_22" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        快速检查清单
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="快速检查清单">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_23" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        实施检查清单
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_24" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        延伸阅读
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="延伸阅读">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_25" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        官方资源
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_26" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        相关标准
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_27" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        示例实现
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_28" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        总结
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="总结">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_29" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        核心要点
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_30" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        记住
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+                
+
+
+
+
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  
+    <a href="https://github.com/jruing/obsidian/edit/master/docs/AI/llms.txt 标准完整教程.md" title="Edit this page" class="md-content__button md-icon" rel="edit">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10 20H6V4h7v5h5v3.1l2-2V8l-6-6H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h4zm10.2-7c.1 0 .3.1.4.2l1.3 1.3c.2.2.2.6 0 .8l-1 1-2.1-2.1 1-1c.1-.1.2-.2.4-.2m0 3.9L14.1 23H12v-2.1l6.1-6.1z"/></svg>
+    </a>
+  
+  
+
+
+  <h1>llms.txt 标准完整教程</h1>
+
+<p>为大语言模型提供网站信息的标准化文件格式</p>
+<hr />
+<p><strong>官方网站：</strong> https://llmstxt.org/</p>
+<p><strong>GitHub：</strong> https://github.com/AnswerDotAI/llms-txt</p>
+<hr />
+<h2 id="_1">目录</h2>
+<ul>
+<li><a href="#什么是-llmstxt">什么是 llms.txt</a></li>
+<li><a href="#为什么需要-llmstxt">为什么需要 llms.txt</a></li>
+<li><a href="#核心概念">核心概念</a></li>
+<li><a href="#文件格式规范">文件格式规范</a></li>
+<li><a href="#完整示例">完整示例</a></li>
+<li><a href="#实施指南">实施指南</a></li>
+<li><a href="#最佳实践">最佳实践</a></li>
+<li><a href="#工具和集成">工具和集成</a></li>
+<li><a href="#与其他标准的关系">与其他标准的关系</a></li>
+<li><a href="#常见问题">常见问题</a></li>
+<li><a href="#快速检查清单">快速检查清单</a></li>
+</ul>
+<hr />
+<h2 id="llmstxt">什么是 llms.txt</h2>
+<h3 id="_2">定义</h3>
+<p><strong>llms.txt</strong> 是一个放置在网站根目录的标准化 Markdown 文件（<code>/llms.txt</code>），用于帮助大语言模型（LLM）在推理时更好地使用网站信息。</p>
+<h3 id="_3">核心目标</h3>
+<pre><code>让 AI 更容易理解和使用你的网站内容
+</code></pre>
+<p><strong>主要用途：</strong></p>
+<ul>
+<li>📚 提供网站/项目的简洁概述</li>
+<li>🔗 指向详细文档的链接</li>
+<li>📝 为 LLM 提供结构化、易读的信息</li>
+<li>🎯 帮助 AI 快速定位关键内容</li>
+</ul>
+<hr />
+<h2 id="llmstxt_1">为什么需要 llms.txt</h2>
+<h3 id="_4">当前的问题</h3>
+<h4 id="1">1. 上下文窗口限制</h4>
+<pre><code>❌ 问题：
+大多数网站太大 → LLM 上下文窗口装不下 → AI 无法处理完整网站
+</code></pre>
+<p><strong>示例：</strong></p>
+<ul>
+<li>一个中型文档网站：500+ 页面</li>
+<li>Claude 3.5 上下文窗口：200K tokens</li>
+<li>完整网站内容：可能超过 1M tokens</li>
+</ul>
+<h4 id="2-html">2. HTML 转换困难</h4>
+<pre><code>复杂的 HTML
+├─ 导航菜单
+├─ 广告
+├─ JavaScript
+├─ CSS 样式
+└─ 嵌套结构
+    ↓
+转换为纯文本
+    ↓
+❌ 困难且不精确
+</code></pre>
+<h4 id="3">3. 信息分散</h4>
+<p>对于 AI 来说：</p>
+<ul>
+<li>❌ 需要爬取多个页面</li>
+<li>❌ 需要理解网站结构</li>
+<li>❌ 需要过滤无关内容</li>
+<li>❌ 浪费时间和资源</li>
+</ul>
+<h3 id="llmstxt_2">llms.txt 的解决方案</h3>
+<pre><code>✅ 单一文件集中信息
+✅ Markdown 格式（AI 和人类都易读）
+✅ 结构化、可解析
+✅ 指向详细内容的链接
+✅ 可选的精简版本
+</code></pre>
+<hr />
+<h2 id="_5">核心概念</h2>
+<h3 id="_6">双文件策略</h3>
+<p>llms.txt 提案包含两个核心概念：</p>
+<h4 id="1-llmstxt">1. <code>/llms.txt</code> 文件</h4>
+<p><strong>位置：</strong> 网站根目录</p>
+<p><strong>格式：</strong> Markdown</p>
+<p><strong>内容：</strong> 概述 + 链接列表</p>
+<pre><code>https://example.com/llms.txt
+</code></pre>
+<h4 id="2-md">2. <code>.md</code> 版本的页面</h4>
+<p><strong>格式：</strong> 在原始 URL 后添加 <code>.md</code></p>
+<p><strong>目的：</strong> 提供纯 Markdown 版本的页面内容</p>
+<pre><code>原始页面：https://example.com/docs/guide.html
+Markdown：https://example.com/docs/guide.html.md
+
+无文件名：https://example.com/docs/
+Markdown：https://example.com/docs/index.html.md
+</code></pre>
+<h3 id="_7">使用场景</h3>
+<p>llms.txt 特别适用于：</p>
+<table>
+<thead>
+<tr>
+<th>场景</th>
+<th>说明</th>
+<th>示例</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>🔧 开发工具文档</td>
+<td>API 文档、编程库指南</td>
+<td>FastHTML, React</td>
+</tr>
+<tr>
+<td>💼 企业网站</td>
+<td>公司结构、产品说明</td>
+<td>公司官网</td>
+</tr>
+<tr>
+<td>📚 教育机构</td>
+<td>课程信息、资源导航</td>
+<td>大学网站</td>
+</tr>
+<tr>
+<td>🛒 电商网站</td>
+<td>产品信息、政策说明</td>
+<td>在线商店</td>
+</tr>
+<tr>
+<td>👤 个人网站</td>
+<td>简历、作品集</td>
+<td>个人博客</td>
+</tr>
+<tr>
+<td>⚖️ 法律文档</td>
+<td>法规解读、政策说明</td>
+<td>政府网站</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="_8">文件格式规范</h2>
+<h3 id="_9">基本结构</h3>
+<p>llms.txt 文件必须按以下<strong>特定顺序</strong>包含以下部分：</p>
+<pre><code class="language-markdown"># [必需] H1 标题：项目/网站名称
+
+&gt; [可选] 引用块：项目简短摘要
+
+[可选] 详细说明段落
+可以包含多个段落、列表等
+但不能包含标题（H2 除外）
+
+## [可选] 分类名称
+
+- [链接标题](URL): 可选的链接说明
+- [另一个链接](URL): 说明文字
+
+## Optional（特殊分类）
+
+- [次要信息链接](URL): 可在需要简短上下文时跳过
+</code></pre>
+<h3 id="_10">详细规范</h3>
+<h4 id="1-h1">1. H1 标题（必需）</h4>
+<pre><code class="language-markdown"># 项目名称
+</code></pre>
+<p><strong>要求：</strong></p>
+<ul>
+<li>✅ 必须是第一行</li>
+<li>✅ 只能有一个 H1</li>
+<li>✅ 使用项目或网站的正式名称</li>
+</ul>
+<h4 id="2">2. 引用块摘要（推荐）</h4>
+<pre><code class="language-markdown">&gt; 简短的项目描述，包含理解后续内容所需的关键信息
+</code></pre>
+<p><strong>要求：</strong></p>
+<ul>
+<li>✅ 使用 <code>&gt;</code> 引用块语法</li>
+<li>✅ 保持简洁（1-3 句话）</li>
+<li>✅ 包含最关键的背景信息</li>
+</ul>
+<p><strong>示例：</strong></p>
+<pre><code class="language-markdown"># FastHTML
+
+&gt; FastHTML 是一个 Python 库，它将 Starlette、Uvicorn、HTMX
+&gt; 和 fastcore 的 FT &quot;FastTags&quot; 结合在一起，用于创建服务器渲染的
+&gt; 超媒体应用程序。
+</code></pre>
+<h4 id="3_1">3. 详细信息部分（可选）</h4>
+<pre><code class="language-markdown">重要说明：
+- 项目的特殊特性
+- 注意事项
+- 兼容性信息
+
+可以包含：
+- 段落
+- 列表
+- 代码块
+- 但不能有 H2-H6 标题
+</code></pre>
+<h4 id="4">4. 文件列表分类（可选但推荐）</h4>
+<p>使用 <strong>H2 标题</strong> 创建不同的文件分类：</p>
+<pre><code class="language-markdown">## 文档 (Docs)
+
+- [快速入门指南](https://example.com/quickstart.html.md): 5 分钟上手
+- [API 参考](https://example.com/api.html.md): 完整 API 文档
+
+## 教程 (Tutorials)
+
+- [初学者教程](https://example.com/beginner.html.md): 从零开始
+- [高级技巧](https://example.com/advanced.html.md): 深入了解
+
+## 示例 (Examples)
+
+- [Todo 应用](https://example.com/todo.py): 完整的 CRUD 示例
+
+## Optional（可选内容）
+
+- [完整规范](https://example.com/full-spec.html.md): 详细技术规范
+</code></pre>
+<h4 id="5">5. 链接格式</h4>
+<p>每个链接必须遵循以下格式：</p>
+<pre><code class="language-markdown">- [链接标题](URL): 可选的描述文字
+</code></pre>
+<p><strong>组成部分：</strong></p>
+<ul>
+<li><code>[链接标题]</code> - 必需，简洁的标题</li>
+<li><code>(URL)</code> - 必需，可以是内部或外部链接</li>
+<li><code>: 描述文字</code> - 可选，简短说明链接内容</li>
+</ul>
+<p><strong>示例：</strong></p>
+<pre><code class="language-markdown">✅ 正确：
+- [快速入门](https://example.com/start.md): 10 分钟入门教程
+- [API 文档](https://example.com/api.md)
+
+❌ 错误：
+- 快速入门：https://example.com/start.md （缺少 Markdown 链接格式）
+- [快速入门] （缺少 URL）
+</code></pre>
+<h4 id="6-optional">6. Optional 分类（特殊含义）</h4>
+<pre><code class="language-markdown">## Optional
+
+- [次要文档](https://example.com/secondary.md): 补充信息
+- [详细规范](https://example.com/spec.md): 完整技术细节
+</code></pre>
+<p><strong>特殊用途：</strong></p>
+<ul>
+<li>✅ 包含可跳过的次要信息</li>
+<li>✅ 当需要更短的上下文时可以忽略</li>
+<li>✅ 适合放置详细但非必需的内容</li>
+</ul>
+<hr />
+<h2 id="_11">完整示例</h2>
+<h3 id="1fasthtml">示例 1：软件项目（FastHTML）</h3>
+<p>这是 FastHTML 项目的真实 llms.txt 文件（简化版）：</p>
+<pre><code class="language-markdown"># FastHTML
+
+&gt; FastHTML 是一个 Python 库，它将 Starlette、Uvicorn、HTMX
+&gt; 和 fastcore 的 FT &quot;FastTags&quot; 结合在一起，用于创建服务器渲染的
+&gt; 超媒体应用程序。
+
+重要说明：
+- 虽然它的 API 部分受到 FastAPI 的启发，但它**不兼容** FastAPI 语法，
+  也不针对创建 API 服务
+- FastHTML 兼容 JS 原生 Web 组件和任何原生 JS 库，但不兼容 React、
+  Vue 或 Svelte
+
+## Docs
+
+- [FastHTML 快速入门](https://fastht.ml/docs/tutorials/quickstart_for_web_devs.html.md): FastHTML 功能的简要概述
+- [HTMX 参考](https://github.com/bigskysoftware/htmx/blob/master/www/content/reference.md): HTMX 所有属性、CSS 类、标头、事件、扩展、JS 库方法和配置选项的简要描述
+
+## Examples
+
+- [Todo 列表应用](https://github.com/AnswerDotAI/fasthtml/blob/main/examples/adv_app.py): 完整的 CRUD 应用详细演练，展示 FastHTML 和 HTMX 模式的惯用用法
+
+## Optional
+
+- [Starlette 完整文档](https://gist.githubusercontent.com/jph00/809e4a4808d4510be0e3dc9565e9cbd3/raw/9b717589ca44cedc8aaf00b2b8cacef922964c0f/starlette-sml.md): 对 FastHTML 开发有用的 Starlette 文档子集
+</code></pre>
+<p><strong>查看真实文件：</strong> https://www.fastht.ml/docs/llms.txt</p>
+<h3 id="2_1">示例 2：电商网站</h3>
+<pre><code class="language-markdown"># TechStore - 专业电子产品商城
+
+&gt; TechStore 是一家专注于高端电子产品的在线零售商，
+&gt; 提供笔记本电脑、手机、配件等产品，覆盖全国配送。
+
+重要信息：
+- 所有产品提供 30 天无理由退货
+- 支持多种支付方式：支付宝、微信、信用卡
+- 会员享受额外 5% 折扣
+
+## 产品分类 (Products)
+
+- [笔记本电脑](https://techstore.com/products/laptops.html.md): 包含规格、价格和评价
+- [智能手机](https://techstore.com/products/phones.html.md): 最新款式和促销信息
+- [配件](https://techstore.com/products/accessories.html.md): 充电器、保护壳等
+
+## 购物指南 (Guides)
+
+- [如何选购笔记本](https://techstore.com/guides/laptop-buying.html.md): 根据需求选择合适的笔记本
+- [支付和配送](https://techstore.com/guides/payment-shipping.html.md): 支付方式和配送时间说明
+
+## 客户服务 (Support)
+
+- [退换货政策](https://techstore.com/support/returns.html.md): 详细的退换货流程
+- [常见问题](https://techstore.com/support/faq.html.md): 最常见的 50 个问题解答
+
+## Optional
+
+- [公司历史](https://techstore.com/about/history.html.md): TechStore 的发展历程
+- [技术博客](https://techstore.com/blog/index.html.md): 科技资讯和产品评测
+</code></pre>
+<h3 id="3_2">示例 3：个人简历网站</h3>
+<pre><code class="language-markdown"># 张伟 - 全栈开发工程师
+
+&gt; 拥有 8 年全栈开发经验的软件工程师，专注于 Web 应用开发、
+&gt; 云架构和团队领导。擅长 Python、JavaScript 和 AWS。
+
+## 工作经历 (Experience)
+
+- [完整简历](https://zhangwei.com/resume.html.md): 详细的工作经历和技能
+- [项目作品集](https://zhangwei.com/portfolio.html.md): 代表性项目展示
+
+## 技术博客 (Blog)
+
+- [React 性能优化](https://zhangwei.com/blog/react-optimization.html.md): 实战经验分享
+- [微服务架构实践](https://zhangwei.com/blog/microservices.html.md): 在生产环境中的应用
+
+## 开源贡献 (Open Source)
+
+- [GitHub 项目](https://github.com/zhangwei): 我的开源项目列表
+- [技术演讲](https://zhangwei.com/talks.html.md): 在各种技术会议上的演讲
+
+## Optional
+
+- [个人爱好](https://zhangwei.com/hobbies.html.md): 摄影和登山
+- [联系方式](https://zhangwei.com/contact.html.md): 如何联系我
+</code></pre>
+<h3 id="4api">示例 4：API 文档网站</h3>
+<pre><code class="language-markdown"># PaymentAPI - 支付集成 API
+
+&gt; PaymentAPI 提供简单、安全的支付集成解决方案，支持信用卡、
+&gt; 借记卡和数字钱包。符合 PCI-DSS 标准。
+
+关键特性：
+- 多币种支持（150+ 种货币）
+- 实时交易处理
+- 强大的欺诈检测
+- RESTful API 设计
+
+## 快速开始 (Getting Started)
+
+- [5 分钟集成指南](https://paymentapi.com/docs/quickstart.html.md): 最快的上手方式
+- [认证和 API 密钥](https://paymentapi.com/docs/auth.html.md): 如何获取和使用 API 密钥
+
+## API 参考 (API Reference)
+
+- [支付端点](https://paymentapi.com/api/payments.html.md): 创建、查询和退款支付
+- [客户管理](https://paymentapi.com/api/customers.html.md): 客户信息 CRUD 操作
+- [Webhooks](https://paymentapi.com/api/webhooks.html.md): 接收实时事件通知
+
+## SDK 和库 (SDKs)
+
+- [Python SDK](https://paymentapi.com/sdks/python.html.md): Python 集成库
+- [Node.js SDK](https://paymentapi.com/sdks/nodejs.html.md): Node.js 集成库
+- [PHP SDK](https://paymentapi.com/sdks/php.html.md): PHP 集成库
+
+## 示例代码 (Examples)
+
+- [完整电商集成](https://github.com/paymentapi/examples/ecommerce): 端到端示例
+- [订阅计费](https://github.com/paymentapi/examples/subscriptions): 定期付款示例
+
+## Optional
+
+- [错误代码完整列表](https://paymentapi.com/docs/errors.html.md): 所有可能的错误代码
+- [API 变更日志](https://paymentapi.com/docs/changelog.html.md): 版本更新历史
+- [测试卡号](https://paymentapi.com/docs/testing.html.md): 用于测试环境的卡号
+</code></pre>
+<hr />
+<h2 id="_12">实施指南</h2>
+<h3 id="1-llmstxt_1">步骤 1：创建 llms.txt 文件</h3>
+<h4 id="a">方法 A：手动创建</h4>
+<ul>
+<li>在网站根目录创建 <code>llms.txt</code> 文件</li>
+<li>按照规范编写内容</li>
+<li>确保文件可通过 <code>https://yourdomain.com/llms.txt</code> 访问</li>
+</ul>
+<h4 id="b">方法 B：使用构建工具</h4>
+<p>如果你使用静态网站生成器：</p>
+<p><strong>Jekyll 示例：</strong></p>
+<pre><code class="language-yaml"># _config.yml
+include:
+  - llms.txt
+</code></pre>
+<p><strong>Hugo 示例：</strong></p>
+<pre><code class="language-toml"># config.toml
+[outputs]
+home = [&quot;HTML&quot;, &quot;RSS&quot;, &quot;LLMSTXT&quot;]
+</code></pre>
+<p><strong>Next.js 示例：</strong></p>
+<pre><code class="language-javascript">// next.config.js
+module.exports = {
+  async rewrites() {
+    return [
+      {
+        source: '/llms.txt',
+        destination: '/api/llms-txt',
+      },
+    ];
+  },
+};
+</code></pre>
+<h3 id="2-md_1">步骤 2：创建 .md 版本的页面</h3>
+<h4 id="a_1">选项 A：手动维护</h4>
+<p>为重要页面创建 <code>.md</code> 版本：</p>
+<pre><code>docs/
+├─ guide.html          # 原始 HTML 页面
+├─ guide.html.md       # Markdown 版本
+├─ api.html
+└─ api.html.md
+</code></pre>
+<h4 id="b_1">选项 B：自动生成</h4>
+<p><strong>使用 nbdev（Python）：</strong></p>
+<p>所有 nbdev 项目自动生成 <code>.md</code> 版本。</p>
+<p><strong>自定义脚本示例：</strong></p>
+<pre><code class="language-python"># generate_md.py
+from bs4 import BeautifulSoup
+import html2text
+
+def html_to_markdown(html_file):
+    with open(html_file, 'r') as f:
+        html = f.read()
+
+    # 移除导航、广告等
+    soup = BeautifulSoup(html, 'html.parser')
+    main_content = soup.find('main') or soup.find('article')
+
+    # 转换为 Markdown
+    h = html2text.HTML2Text()
+    h.ignore_links = False
+    markdown = h.handle(str(main_content))
+
+    # 保存为 .md 文件
+    md_file = html_file + '.md'
+    with open(md_file, 'w') as f:
+        f.write(markdown)
+
+# 使用
+html_to_markdown('docs/guide.html')
+</code></pre>
+<h3 id="3-llmstxt">步骤 3：测试 llms.txt</h3>
+<h4 id="_13">验证清单</h4>
+<pre><code>□ llms.txt 文件可访问
+  → 访问 https://yourdomain.com/llms.txt
+
+□ 格式正确
+  → H1 标题存在
+  → 链接格式正确
+  → 没有语法错误
+
+□ 链接有效
+  → 所有链接可以访问
+  → .md 文件存在且内容正确
+
+□ 内容清晰
+  → 摘要简洁明了
+  → 链接描述准确
+  → 组织结构合理
+
+□ AI 测试
+  → 在 ChatGPT/Claude 中测试
+  → 询问关于你网站的问题
+  → 验证 AI 能否找到信息
+</code></pre>
+<h4 id="_14">实际测试方法</h4>
+<p><strong>方法 1：ChatGPT/Claude 测试</strong></p>
+<pre><code>提示词：
+请阅读 https://yourdomain.com/llms.txt 文件，
+然后回答：[你的网站]的主要功能是什么？
+
+检查：
+- AI 是否能正确读取文件
+- 回答是否准确
+- 是否遵循了链接
+</code></pre>
+<p><strong>方法 2：使用工具验证</strong></p>
+<pre><code class="language-bash"># 使用 llms_txt2ctx 工具
+pip install llms-txt
+
+# 生成上下文文件
+llms_txt2ctx https://yourdomain.com/llms.txt
+
+# 检查生成的文件
+cat llms-ctx.txt
+</code></pre>
+<h3 id="4_1">步骤 4：优化和维护</h3>
+<h4 id="_15">定期更新</h4>
+<pre><code>每月检查：
+□ 链接是否仍然有效
+□ 内容是否需要更新
+□ 是否有新的重要页面需要添加
+
+每季度审查：
+□ 结构是否仍然合理
+□ 是否需要重新组织分类
+□ 用户反馈是否有改进建议
+</code></pre>
+<h4 id="_16">内容策略</h4>
+<p><strong>包含什么：</strong></p>
+<ul>
+<li>✅ 最重要的文档和指南</li>
+<li>✅ 核心 API 参考</li>
+<li>✅ 常见用例示例</li>
+<li>✅ 快速入门资源</li>
+</ul>
+<p><strong>不包含什么：</strong></p>
+<ul>
+<li>❌ 过于详细的内部文档</li>
+<li>❌ 频繁变化的内容（除非能自动更新）</li>
+<li>❌ 营销材料（除非与理解产品直接相关）</li>
+<li>❌ 个人博客文章（除非是重要教程）</li>
+</ul>
+<hr />
+<h2 id="_17">最佳实践</h2>
+<h3 id="1_1">1. 保持简洁</h3>
+<pre><code class="language-markdown">❌ 不好：
+&gt; 我们的项目是一个革命性的、创新的、下一代的云原生
+&gt; 微服务架构框架，它利用最先进的人工智能和机器学习
+&gt; 技术，为企业提供前所未有的可扩展性和灵活性...
+
+✅ 好：
+&gt; 云原生微服务框架，简化分布式应用开发。
+&gt; 支持多语言、自动扩展和内置监控。
+</code></pre>
+<h3 id="2_2">2. 使用清晰的链接描述</h3>
+<pre><code class="language-markdown">❌ 不好：
+- [文档](https://example.com/docs.md)
+- [这里](https://example.com/guide.md): 点击查看
+
+✅ 好：
+- [快速入门指南](https://example.com/quickstart.md): 10 分钟上手教程
+- [API 参考手册](https://example.com/api.md): 完整的 API 端点文档
+</code></pre>
+<h3 id="3_3">3. 避免行话和模糊术语</h3>
+<pre><code class="language-markdown">❌ 不好：
+&gt; 本框架利用先进的范式和抽象层
+
+✅ 好：
+&gt; 本框架使用组件化架构，简化代码组织
+</code></pre>
+<h3 id="4_2">4. 合理组织分类</h3>
+<pre><code class="language-markdown">✅ 推荐的分类名称：
+- Docs / Documentation（文档）
+- Tutorials（教程）
+- Examples（示例）
+- API Reference（API 参考）
+- Guides（指南）
+- Getting Started（入门）
+- FAQ（常见问题）
+- Optional（可选内容）
+
+❌ 避免的分类：
+- 模糊的名称（&quot;其他&quot;、&quot;更多&quot;）
+- 过于具体的技术术语
+- 内部代号或缩写
+</code></pre>
+<h3 id="5-markdown">5. 链接到 Markdown 版本</h3>
+<pre><code class="language-markdown">✅ 好：
+- [用户指南](https://example.com/guide.html.md)
+
+⚠️ 可接受（如果没有 .md 版本）：
+- [用户指南](https://example.com/guide.html)
+
+❌ 不推荐：
+- [用户指南](https://example.com/guide.pdf)（PDF 难以解析）
+</code></pre>
+<h3 id="6">6. 提供上下文</h3>
+<pre><code class="language-markdown">❌ 不够：
+- [教程](https://example.com/tutorial.md)
+
+✅ 好：
+- [React 初学者教程](https://example.com/tutorial.md): 使用 Hooks 构建 Todo 应用，适合有基本 JavaScript 知识的开发者
+</code></pre>
+<h3 id="7-optional">7. 使用 Optional 分类</h3>
+<pre><code class="language-markdown">## Optional
+
+- [完整 API 规范](https://example.com/full-spec.md): 2000+ 页详细文档，仅在需要时参考
+- [历史版本](https://example.com/legacy.md): v1.x 的文档，用于维护旧项目
+- [设计决策](https://example.com/decisions.md): 架构设计背后的思考过程
+</code></pre>
+<h3 id="8-ai">8. 测试 AI 理解</h3>
+<p>定期测试：</p>
+<pre><code>测试场景：
+
+1. 让 AI 总结你的项目
+   提示：阅读 llms.txt 并用一段话总结这个项目
+
+2. 让 AI 回答具体问题
+   提示：如何使用 X 功能？需要哪些步骤？
+
+3. 让 AI 找到特定信息
+   提示：在哪里可以找到关于 Y 的文档？
+
+评估标准：
+✅ AI 能找到正确信息
+✅ 回答准确且完整
+✅ 能够遵循链接获取详细信息
+
+❌ 回答模糊或错误
+❌ 无法找到关键信息
+</code></pre>
+<hr />
+<h2 id="_18">工具和集成</h2>
+<h3 id="_19">官方和社区工具</h3>
+<h4 id="1-llms_txt2ctxpython-cli">1. llms_txt2ctx（Python CLI）</h4>
+<p><strong>功能：</strong> 将 llms.txt 展开为 LLM 上下文文件</p>
+<p><strong>安装：</strong></p>
+<pre><code class="language-bash">pip install llms-txt
+</code></pre>
+<p><strong>使用：</strong></p>
+<pre><code class="language-bash"># 基本用法
+llms_txt2ctx https://example.com/llms.txt
+
+# 生成两个文件：
+# - llms-ctx.txt（不包含 Optional 链接）
+# - llms-ctx-full.txt（包含 Optional 链接）
+
+# 自定义输出
+llms_txt2ctx https://example.com/llms.txt --output my-context.txt
+
+# 仅生成简洁版
+llms_txt2ctx https://example.com/llms.txt --skip-optional
+</code></pre>
+<p><strong>输出示例：</strong></p>
+<p>生成的文件使用 XML 风格的结构，适合 Claude 等 LLM：</p>
+<pre><code class="language-xml">&lt;doc title=&quot;项目名称&quot;&gt;
+  &lt;summary&gt;项目简短摘要&lt;/summary&gt;
+  &lt;section title=&quot;快速入门&quot;&gt;
+    [快速入门指南的完整 Markdown 内容]
+  &lt;/section&gt;
+  &lt;section title=&quot;API 参考&quot;&gt;
+    [API 参考的完整 Markdown 内容]
+  &lt;/section&gt;
+&lt;/doc&gt;
+</code></pre>
+<h4 id="2-llmstxt-jsjavascript">2. llmstxt-js（JavaScript）</h4>
+<p><strong>功能：</strong> JavaScript 实现的 llms.txt 解析器</p>
+<p><strong>安装：</strong></p>
+<pre><code class="language-bash">npm install llmstxt
+</code></pre>
+<p><strong>使用：</strong></p>
+<pre><code class="language-javascript">import { parseLLMsTxt } from 'llmstxt';
+
+// 解析 llms.txt
+const llmsTxt = await fetch('https://example.com/llms.txt').then((r) =&gt; r.text());
+const parsed = parseLLMsTxt(llmsTxt);
+
+console.log(parsed.title);       // &quot;项目名称&quot;
+console.log(parsed.description); // &quot;简短摘要&quot;
+console.log(parsed.sections);    // 分类数组
+
+// 获取所有链接
+parsed.sections.forEach((section) =&gt; {
+  console.log(section.name);  // 分类名称
+  section.links.forEach((link) =&gt; {
+    console.log(link.title, link.url, link.description);
+  });
+});
+</code></pre>
+<p><strong>官方文档：</strong> https://llmstxt.org/llmstxt-js.html</p>
+<h4 id="3-vitepress-plugin">3. VitePress Plugin</h4>
+<p><strong>功能：</strong> 自动为 VitePress 网站生成 llms.txt</p>
+<p><strong>安装：</strong></p>
+<pre><code class="language-bash">npm install vitepress-plugin-llms
+</code></pre>
+<p><strong>配置：</strong></p>
+<pre><code class="language-javascript">// .vitepress/config.js
+import { defineConfig } from 'vitepress';
+import { llmsPlugin } from 'vitepress-plugin-llms';
+
+export default defineConfig({
+  // ... 其他配置
+  vite: {
+    plugins: [
+      llmsPlugin({
+        title: '项目名称',
+        description: '项目简短描述',
+        sections: [
+          {
+            name: 'Docs',
+            pattern: '/docs/**/*.md',
+          },
+          {
+            name: 'API',
+            pattern: '/api/**/*.md',
+          },
+        ],
+      }),
+    ],
+  },
+});
+</code></pre>
+<h4 id="4-docusaurus-plugin">4. Docusaurus Plugin</h4>
+<p><strong>功能：</strong> 为 Docusaurus 网站生成 llms.txt</p>
+<p><strong>安装：</strong></p>
+<pre><code class="language-bash">npm install docusaurus-plugin-llms
+</code></pre>
+<p><strong>配置：</strong></p>
+<pre><code class="language-javascript">// docusaurus.config.js
+module.exports = {
+  plugins: [
+    [
+      'docusaurus-plugin-llms',
+      {
+        title: '项目名称',
+        description: '项目描述',
+        sections: {
+          'Getting Started': ['/docs/intro', '/docs/installation'],
+          'API Reference': ['/api/overview', '/api/endpoints'],
+          Optional: ['/docs/advanced'],
+        },
+      },
+    ],
+  ],
+};
+</code></pre>
+<h4 id="5-drupal-llm-support">5. Drupal LLM Support</h4>
+<p><strong>功能：</strong> Drupal 10.3+ 的完整 llms.txt 支持</p>
+<p><strong>安装：</strong></p>
+<pre><code class="language-bash">composer require drupal/llm_support
+drush en llm_support
+</code></pre>
+<p><strong>特性：</strong></p>
+<ul>
+<li>自动生成 llms.txt</li>
+<li>为内容类型生成 .md 版本</li>
+<li>可配置的内容选择</li>
+<li>集成到 Drupal 管理界面</li>
+</ul>
+<p><strong>官方页面：</strong> https://www.drupal.org/project/llm_support</p>
+<hr />
+<h2 id="_20">与其他标准的关系</h2>
+<h3 id="llmstxt-vs-robotstxt">llms.txt vs robots.txt</h3>
+<table>
+<thead>
+<tr>
+<th>特性</th>
+<th>robots.txt</th>
+<th>llms.txt</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>目的</td>
+<td>控制爬虫访问权限</td>
+<td>提供 LLM 友好的内容概览</td>
+</tr>
+<tr>
+<td>使用时机</td>
+<td>索引时（训练前）</td>
+<td>推理时（用户查询时）</td>
+</tr>
+<tr>
+<td>内容</td>
+<td>允许/禁止规则</td>
+<td>内容摘要和链接</td>
+</tr>
+<tr>
+<td>目标用户</td>
+<td>搜索引擎爬虫</td>
+<td>LLM 和 AI 助手</td>
+</tr>
+<tr>
+<td>关系</td>
+<td>互补，可共存</td>
+<td>提供爬取内容的上下文</td>
+</tr>
+</tbody>
+</table>
+<p><strong>示例：共同使用</strong></p>
+<pre><code>网站根目录/
+├─ robots.txt      # 控制哪些内容可以被爬取
+├─ llms.txt        # 说明如何理解已爬取的内容
+├─ sitemap.xml     # 列出所有可索引页面
+└─ ...
+</code></pre>
+<h3 id="llmstxt-vs-sitemapxml">llms.txt vs sitemap.xml</h3>
+<table>
+<thead>
+<tr>
+<th>特性</th>
+<th>sitemap.xml</th>
+<th>llms.txt</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>格式</td>
+<td>XML</td>
+<td>Markdown</td>
+</tr>
+<tr>
+<td>内容</td>
+<td>所有可索引页面的完整列表</td>
+<td>精选的重要页面</td>
+</tr>
+<tr>
+<td>目的</td>
+<td>帮助搜索引擎发现页面</td>
+<td>帮助 LLM 理解网站</td>
+</tr>
+<tr>
+<td>范围</td>
+<td>可能数千个 URL</td>
+<td>精选的 10-50 个关键 URL</td>
+</tr>
+<tr>
+<td>外部链接</td>
+<td>❌ 不包含</td>
+<td>✅ 可以包含</td>
+</tr>
+<tr>
+<td>上下文信息</td>
+<td>❌ 无</td>
+<td>✅ 提供描述和组织</td>
+</tr>
+</tbody>
+</table>
+<p><strong>关键区别：</strong></p>
+<pre><code class="language-xml">&lt;!-- sitemap.xml：列出所有页面 --&gt;
+&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
+&lt;urlset xmlns=&quot;http://www.sitemaps.org/schemas/sitemap/0.9&quot;&gt;
+  &lt;url&gt;&lt;loc&gt;https://example.com/page1.html&lt;/loc&gt;&lt;/url&gt;
+  &lt;url&gt;&lt;loc&gt;https://example.com/page2.html&lt;/loc&gt;&lt;/url&gt;
+  &lt;url&gt;&lt;loc&gt;https://example.com/page3.html&lt;/loc&gt;&lt;/url&gt;
+  &lt;!-- ... 可能有数千个 URL --&gt;
+&lt;/urlset&gt;
+</code></pre>
+<pre><code class="language-markdown"># llms.txt：精选关键页面，带描述
+
+## Getting Started
+
+- [快速入门](https://example.com/quickstart.md): 10 分钟上手
+- [核心概念](https://example.com/concepts.md): 理解关键概念
+
+## API Reference
+
+- [REST API](https://example.com/api.md): 完整 API 端点文档
+</code></pre>
+<hr />
+<h2 id="_21">常见问题</h2>
+<h3 id="q1-llmstxt-ai">Q1: llms.txt 是否会被用于训练 AI？</h3>
+<p><strong>A:</strong> 主要用于推理（inference），而非训练。</p>
+<ul>
+<li>🎯 <strong>主要用途：</strong> 用户查询时帮助 AI 理解网站</li>
+<li>🔮 <strong>未来可能：</strong> 如果广泛采用，可能用于训练</li>
+<li>⚠️ <strong>当前：</strong> 主要在推理时使用</li>
+</ul>
+<h3 id="q2-llmstxt">Q2: 我的网站很小，还需要 llms.txt 吗？</h3>
+<p><strong>A:</strong> 视情况而定。</p>
+<p><strong>适合小网站的情况：</strong></p>
+<ul>
+<li>✅ 个人简历/作品集</li>
+<li>✅ API 文档（即使只有几个端点）</li>
+<li>✅ 教程网站</li>
+<li>✅ 产品文档</li>
+</ul>
+<p><strong>可能不需要的情况：</strong></p>
+<ul>
+<li>❌ 纯静态单页网站（所有内容都在首页）</li>
+<li>❌ 图片/视频为主的网站（少量文字）</li>
+<li>❌ 没有结构化信息的个人博客</li>
+</ul>
+<h3 id="q3-llmstxt-seo">Q3: llms.txt 会影响 SEO 吗？</h3>
+<p><strong>A:</strong> 不会负面影响，可能有轻微正面影响。</p>
+<p><strong>SEO 影响：</strong></p>
+<ul>
+<li>✅ 提供额外的结构化信息</li>
+<li>✅ 清晰的网站地图对爬虫友好</li>
+<li>⚠️ 不会直接提升排名</li>
+<li>✅ 改善 AI 搜索结果（如 Perplexity）</li>
+</ul>
+<h3 id="q4-md">Q4: 必须为每个页面创建 .md 版本吗？</h3>
+<p><strong>A:</strong> 不必须，但推荐为重要页面创建。</p>
+<p><strong>优先级：</strong></p>
+<ul>
+<li>🔴 <strong>必需：</strong> 核心文档、API 参考</li>
+<li>🟡 <strong>推荐：</strong> 教程、指南、FAQ</li>
+<li>🟢 <strong>可选：</strong> 博客文章、次要页面</li>
+<li>⚪ <strong>不需要：</strong> 营销页面、关于页面</li>
+</ul>
+<h3 id="q5-llmstxt">Q5: llms.txt 应该多长？</h3>
+<p><strong>A:</strong> 建议 50-200 行。</p>
+<p><strong>参考标准：</strong></p>
+<ul>
+<li>📏 <strong>最小：</strong> 只有标题和几个链接（~10 行）</li>
+<li>📏 <strong>理想：</strong> 包含摘要、详细说明和分类链接（~50-100 行）</li>
+<li>📏 <strong>最大：</strong> 避免超过 200-300 行（太长难以维护）</li>
+</ul>
+<p><strong>示例：</strong></p>
+<pre><code>小型项目：  ~30 行
+中型项目：  ~80 行
+大型项目：  ~150 行
+超大项目：  ~200 行（考虑拆分）
+</code></pre>
+<h3 id="q6">Q6: 可以链接到外部网站吗？</h3>
+<p><strong>A:</strong> 可以！这是 llms.txt 的一个优势。</p>
+<pre><code class="language-markdown">## 相关资源
+
+- [Python 官方文档](https://docs.python.org/3/): 我们使用的编程语言
+- [PostgreSQL 指南](https://postgresql.org/docs/): 数据库文档
+- [HTMX 参考](https://htmx.org/reference/): 前端库文档
+</code></pre>
+<h3 id="q7">Q7: 如何处理多语言网站？</h3>
+<p><strong>A:</strong> 为每种语言创建单独的 llms.txt。</p>
+<p><strong>方法 A：子域名</strong></p>
+<pre><code>https://en.example.com/llms.txt  # 英文
+https://zh.example.com/llms.txt  # 中文
+https://ja.example.com/llms.txt  # 日文
+</code></pre>
+<p><strong>方法 B：路径</strong></p>
+<pre><code>https://example.com/en/llms.txt
+https://example.com/zh/llms.txt
+https://example.com/ja/llms.txt
+</code></pre>
+<p><strong>方法 C：主文件 + 语言分类</strong></p>
+<pre><code class="language-markdown"># My Project
+
+&gt; Available in multiple languages
+
+## English Documentation
+
+- [Quick Start (EN)](https://example.com/en/start.md)
+- [API Reference (EN)](https://example.com/en/api.md)
+
+## 中文文档
+
+- [快速入门](https://example.com/zh/start.md)
+- [API 参考](https://example.com/zh/api.md)
+</code></pre>
+<h3 id="q8-llmstxt">Q8: llms.txt 需要频繁更新吗？</h3>
+<p><strong>A:</strong> 取决于网站更新频率。</p>
+<p><strong>更新建议：</strong></p>
+<pre><code>每周更新：     频繁变化的 API 文档
+每月更新：     活跃的开源项目
+每季度更新：   稳定的产品文档
+每年更新：     企业网站、个人网站
+发布时更新：   大版本发布时
+</code></pre>
+<hr />
+<h2 id="_22">快速检查清单</h2>
+<h3 id="_23">实施检查清单</h3>
+<pre><code>□ 创建 llms.txt 文件
+  □ 包含 H1 标题
+  □ 添加引用块摘要
+  □ 组织合理的分类
+  □ 添加链接和描述
+
+□ 创建 .md 版本
+  □ 为核心页面创建 .md 版本
+  □ 确保格式正确
+  □ 内容清晰易读
+
+□ 测试
+  □ 文件可访问（/llms.txt）
+  □ 所有链接有效
+  □ 在 AI 中测试
+  □ 格式验证通过
+
+□ 优化
+  □ 简洁明了的描述
+  □ 合理的信息组织
+  □ 避免行话和模糊术语
+
+□ 维护
+  □ 设置更新计划
+  □ 定期检查链接
+  □ 根据反馈改进
+</code></pre>
+<hr />
+<h2 id="_24">延伸阅读</h2>
+<h3 id="_25">官方资源</h3>
+<ul>
+<li><strong>官方网站：</strong> https://llmstxt.org/</li>
+<li><strong>GitHub 仓库：</strong> https://github.com/AnswerDotAI/llms-txt</li>
+<li><strong>Discord 社区：</strong> https://discord.gg/aJPygMvPEN</li>
+</ul>
+<h3 id="_26">相关标准</h3>
+<ul>
+<li><strong>robots.txt：</strong> https://www.robotstxt.org/</li>
+<li><strong>sitemap.xml：</strong> https://www.sitemaps.org/</li>
+<li><strong>Schema.org：</strong> https://schema.org/</li>
+</ul>
+<h3 id="_27">示例实现</h3>
+<ul>
+<li><strong>FastHTML：</strong> https://www.fastht.ml/docs/llms.txt</li>
+<li><strong>fastcore：</strong> https://fastcore.fast.ai/docments.html.md</li>
+<li><strong>nbdev：</strong> https://nbdev.fast.ai/</li>
+</ul>
+<hr />
+<h2 id="_28">总结</h2>
+<h3 id="_29">核心要点</h3>
+<ul>
+<li><strong>llms.txt 的目的</strong></li>
+<li>帮助 LLM 在推理时理解网站</li>
+<li>提供结构化、易读的内容导航</li>
+<li>
+<p>补充而非替代现有标准</p>
+</li>
+<li>
+<p><strong>实施要素</strong></p>
+</li>
+<li><code>/llms.txt</code> 文件（概述 + 链接）</li>
+<li><code>.md</code> 版本的页面（详细内容）</li>
+<li>
+<p>清晰的组织和描述</p>
+</li>
+<li>
+<p><strong>最佳实践</strong></p>
+</li>
+<li>保持简洁明了</li>
+<li>使用清晰的链接描述</li>
+<li>合理组织分类</li>
+<li>
+<p>定期测试和更新</p>
+</li>
+<li>
+<p><strong>价值</strong></p>
+</li>
+<li>改善 AI 对网站的理解</li>
+<li>提升 AI 搜索结果质量</li>
+<li>帮助开发者快速集成</li>
+<li>未来可能的更广泛应用</li>
+</ul>
+<h3 id="_30">记住</h3>
+<p>llms.txt 不是一个复杂的标准，而是一个简单、实用的约定。从最基础的版本开始，逐步完善，重点是帮助 AI 更好地理解和使用你的内容。</p>
+<p><strong>开始你的 llms.txt 之旅吧！</strong> 🚀</p>
+<hr />
+<p><strong>文档信息</strong></p>
+<ul>
+<li><strong>版本：</strong> 1.0</li>
+<li><strong>更新日期：</strong> 2025-11-02</li>
+<li><strong>基于：</strong> https://llmstxt.org/ 官方提案</li>
+</ul>
+<p><strong>免责声明</strong></p>
+<p>本教程基于 llms.txt 官方提案，仅供教育和参考。规范可能随时间演进，请参考官方网站获取最新信息。实施前请根据自己的具体需求进行调整。</p>
+
+
+
+
+
+
+
+  
+  
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="Footer" >
+        
+          
+          <a href="Gemini-cli.html" class="md-footer__link md-footer__link--prev" aria-label="Previous: Gemini-cli">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              <div class="md-ellipsis">
+                Gemini-cli
+              </div>
+            </div>
+          </a>
+        
+        
+          
+          <a href="OpenCode.html" class="md-footer__link md-footer__link--next" aria-label="Next: OpenCode">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              <div class="md-ellipsis">
+                OpenCode
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+      <div class="md-progress" data-md-component="progress" role="progressbar"></div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "..", "features": ["navigation.instant", "navigation.instant.prefetch", "navigation.instant.progress", "navigation.instant.preview", "navigation.tracking", "navigation.tabs", "navigation.tabs.sticky", "navigation.tabs.sections", "navigation.expand", "navigation.path", "navigation.indexes", "toc.follow", "navigation.top", "navigation.footer", "search.suggest", "search.highlight", "search.share", "content.code.copy", "content.action.edit", "navigation.prune"], "search": "../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+    
+  </body>
+</html>
