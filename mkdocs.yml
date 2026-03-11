@@ -207,6 +207,8 @@ nav:
         - Python学习笔记-装饰器: 开发/Python/进阶/Python学习笔记-装饰器.md
         - Python学习笔记-读取指定文件指定行: 开发/Python/进阶/Python学习笔记-读取指定文件指定行.md
         - Python学习笔记-调用dll: 开发/Python/进阶/Python学习笔记-调用dll.md
+        - Python学习笔记-Dataclass: Python/advanced/Python学习笔记-Dataclass.md
+
     - 前端:
       - React:
         - React-JSX: 开发/前端/React/React-JSX.md
