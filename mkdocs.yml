@@ -48,13 +48,16 @@ theme:
 nav:
   - 简介: readme.md
   - AI:
-    - Claude Code+Claude Code Router: AI/Claude Code+Claude Code Router.md
+    - ClaudeCode+ClaudeCodeRouter: AI/ClaudeCode+ClaudeCodeRouter.md
     - CliProxyAPI: AI/CliProxyAPI.md
     - Docker安装OneAPI: AI/Docker安装OneAPI.md
     - Gemini-cli: AI/Gemini-cli.md
-    - llms.txt 标准完整教程: AI/llms.txt 标准完整教程.md
+    - llms.txt标准完整教程: AI/llms.txt标准完整教程.md
+    - LLM中FunctionCall与MCP的区别: AI/LLM中FunctionCall与MCP的区别.md
     - OpenClaw: AI/OpenClaw.md
     - OpenCode: AI/OpenCode.md
+    - OpenSpec中文文档: AI/OpenSpec中文文档.md
+    - Trellis学习笔记: AI/Trellis学习笔记.md
     - Agent:
       - Agent学习笔记-Skills: AI/Agent/Agent学习笔记-Skills.md
       - Agent学习笔记-自定义数据库查询Skills: AI/Agent/Agent学习笔记-自定义数据库查询Skills.md
@@ -62,12 +65,12 @@ nav:
       - LlamaIndex-Agent关联数据库: AI/Agent/LlamaIndex-Agent关联数据库.md
       - Llamaindex-Agent自然语言查询数据库: AI/Agent/Llamaindex-Agent自然语言查询数据库.md
     - Coze:
-      - 安装 Coze Studio: AI/Coze/安装 Coze Studio.md
-    - Google ADK:
-      - Google ADK-多工具智能体: AI/Google ADK/Google ADK-多工具智能体.md
-      - Google ADK-顺序智能体: AI/Google ADK/Google ADK-顺序智能体.md
-      - Google ADK安装: AI/Google ADK/Google ADK安装.md
-      - Google ADK实现简历打分助手: AI/Google ADK/Google ADK实现简历打分助手.md
+      - 安装CozeStudio: AI/Coze/安装CozeStudio.md
+    - GoogleADK:
+      - GoogleADK-多工具智能体: AI/GoogleADK/GoogleADK-多工具智能体.md
+      - GoogleADK-顺序智能体: AI/GoogleADK/GoogleADK-顺序智能体.md
+      - GoogleADK安装: AI/GoogleADK/GoogleADK安装.md
+      - GoogleADK实现简历打分助手: AI/GoogleADK/GoogleADK实现简历打分助手.md
     - MCP:
       - MCP学习笔记-从0到1: AI/MCP/MCP学习笔记-从0到1.md
       - MCP学习笔记-天气预报: AI/MCP/MCP学习笔记-天气预报.md
@@ -90,6 +93,8 @@ nav:
       - 归纳总结: AI/提示词/归纳总结.md
       - 源文档到SVG幻灯片生成器: AI/提示词/源文档到SVG幻灯片生成器.md
       - 猫娘: AI/提示词/猫娘.md
+      - 论文修改助手: AI/提示词/论文修改助手.md
+      - 论文降AI率大师: AI/提示词/论文降AI率大师.md
       - 豆包-KFC图片: AI/提示词/豆包-KFC图片.md
       - 豆包-丝控: AI/提示词/豆包-丝控.md
       - 豆包-生成架构图: AI/提示词/豆包-生成架构图.md
@@ -121,6 +126,7 @@ nav:
       - linux学习笔记-终端美化-zsh: Linux/基础/linux学习笔记-终端美化-zsh.md
   - 开发:
     - Jetbrains全家桶激活: 开发/Jetbrains全家桶激活.md
+    - TLS1.3握手过程详解: 开发/TLS1.3握手过程详解.md
     - Golang:
       - gozero:
         - api语法: 开发/Golang/gozero/api语法.md
@@ -133,16 +139,16 @@ nav:
         - Golang学习笔记-循环: 开发/Golang/基础/Golang学习笔记-循环.md
         - Golang学习笔记-数据类型: 开发/Golang/基础/Golang学习笔记-数据类型.md
       - 进阶:
-        - Golang 学习笔记-sqlc 代码生成: 开发/Golang/进阶/Golang 学习笔记-sqlc 代码生成.md
-        - Golang 学习笔记-Viper: 开发/Golang/进阶/Golang 学习笔记-Viper.md
-        - Golang 学习笔记-结构体与匿名结构体: 开发/Golang/进阶/Golang 学习笔记-结构体与匿名结构体.md
         - Golang学习笔记-Casbin学习笔记: 开发/Golang/进阶/Golang学习笔记-Casbin学习笔记.md
         - Golang学习笔记-CorbaCLI学习笔记: 开发/Golang/进阶/Golang学习笔记-CorbaCLI学习笔记.md
         - Golang学习笔记-go-resty请求: 开发/Golang/进阶/Golang学习笔记-go-resty请求.md
         - Golang学习笔记-jwt: 开发/Golang/进阶/Golang学习笔记-jwt.md
+        - Golang学习笔记-sqlc代码生成: 开发/Golang/进阶/Golang学习笔记-sqlc代码生成.md
+        - Golang学习笔记-Viper: 开发/Golang/进阶/Golang学习笔记-Viper.md
         - Golang学习笔记-令牌桶限流: 开发/Golang/进阶/Golang学习笔记-令牌桶限流.md
         - Golang学习笔记-处理HTTP请求参数: 开发/Golang/进阶/Golang学习笔记-处理HTTP请求参数.md
         - Golang学习笔记-定时任务: 开发/Golang/进阶/Golang学习笔记-定时任务.md
+        - Golang学习笔记-结构体与匿名结构体: 开发/Golang/进阶/Golang学习笔记-结构体与匿名结构体.md
         - Golang学习笔记-自定义日志轮转及输出: 开发/Golang/进阶/Golang学习笔记-自定义日志轮转及输出.md
         - Golang学习笔记-跨平台编译: 开发/Golang/进阶/Golang学习笔记-跨平台编译.md
     - Java:
@@ -169,7 +175,6 @@ nav:
         - zipapp用法: 开发/Python/基础/zipapp用法.md
         - 函数: 开发/Python/基础/函数.md
         - 判断: 开发/Python/基础/判断.md
-        - 安装环境: 开发/Python/基础/安装环境.md
         - 异常处理: 开发/Python/基础/异常处理.md
         - 循环: 开发/Python/基础/循环.md
         - 数据类型: 开发/Python/基础/数据类型.md
@@ -180,8 +185,8 @@ nav:
         - Pandas用法: 开发/Python/数据分析/Pandas用法.md
       - 爬虫:
         - JsRpc练习: 开发/Python/爬虫/JsRpc练习.md
-        - Python selenium过图片滑块验证: 开发/Python/爬虫/Python selenium过图片滑块验证.md
-        - Python爬虫-无限VM debugger解决方案: 开发/Python/爬虫/Python爬虫-无限VM debugger解决方案.md
+        - Pythonselenium过图片滑块验证: 开发/Python/爬虫/Pythonselenium过图片滑块验证.md
+        - Python爬虫-无限VMdebugger解决方案: 开发/Python/爬虫/Python爬虫-无限VMdebugger解决方案.md
         - 有道翻译爬虫: 开发/Python/爬虫/有道翻译爬虫.md
         - 某验五子棋验证码: 开发/Python/爬虫/某验五子棋验证码.md
       - 自动化:
@@ -198,8 +203,10 @@ nav:
         - 工厂模式: 开发/Python/设计模式/工厂模式.md
       - 进阶:
         - Python学习笔记-__missing__用法: 开发/Python/进阶/Python学习笔记-__missing__用法.md
-        - Python学习笔记-Alembic Python数据库迁移教程: 开发/Python/进阶/Python学习笔记-Alembic Python数据库迁移教程.md
+        - Python学习笔记-AlembicPython数据库迁移教程: 开发/Python/进阶/Python学习笔记-AlembicPython数据库迁移教程.md
+        - Python学习笔记-APScheduler定时任务: 开发/Python/进阶/Python学习笔记-APScheduler定时任务.md
         - Python学习笔记-Dataclass: 开发/Python/进阶/Python学习笔记-Dataclass.md
+        - Python学习笔记-FastScheduler任务调度: 开发/Python/进阶/Python学习笔记-FastScheduler任务调度.md
         - Python学习笔记-gc垃圾回收: 开发/Python/进阶/Python学习笔记-gc垃圾回收.md
         - Python学习笔记-grpc: 开发/Python/进阶/Python学习笔记-grpc.md
         - Python学习笔记-property和setter: 开发/Python/进阶/Python学习笔记-property和setter.md
@@ -215,7 +222,6 @@ nav:
         - Python学习笔记-装饰器: 开发/Python/进阶/Python学习笔记-装饰器.md
         - Python学习笔记-读取指定文件指定行: 开发/Python/进阶/Python学习笔记-读取指定文件指定行.md
         - Python学习笔记-调用dll: 开发/Python/进阶/Python学习笔记-调用dll.md
-        - Python学习笔记-APScheduler定时任务: 开发/Python/进阶/Python学习笔记-APScheduler定时任务.md
     - 前端:
       - React:
         - React-JSX: 开发/前端/React/React-JSX.md
@@ -227,16 +233,15 @@ nav:
         - React-更新页面数据: 开发/前端/React/React-更新页面数据.md
         - React-条件判断: 开发/前端/React/React-条件判断.md
       - Vue:
-        - Vue3 Router路由: 开发/前端/Vue/Vue3 Router路由.md
         - Vue3+Vite项目基础环境搭建: 开发/前端/Vue/Vue3+Vite项目基础环境搭建.md
+        - Vue3Router路由: 开发/前端/Vue/Vue3Router路由.md
       - 基础三剑客:
         - javascript:
-          - fetch 学习笔记: 开发/前端/基础三剑客/javascript/fetch 学习笔记.md
+          - fetch学习笔记: 开发/前端/基础三剑客/javascript/fetch学习笔记.md
           - forEach数组循环: 开发/前端/基础三剑客/javascript/forEach数组循环.md
           - Javascript学习笔记-js实现拷贝复制功能: 开发/前端/基础三剑客/javascript/Javascript学习笔记-js实现拷贝复制功能.md
           - js控制台Hook: 开发/前端/基础三剑客/javascript/js控制台Hook.md
           - 元素选择器: 开发/前端/基础三剑客/javascript/元素选择器.md
-    - TLS 1.3 握手过程详解: 开发/TLS 1.3 握手过程详解.md
     - 数据结构:
       - BBR拥塞算法: 开发/数据结构/BBR拥塞算法.md
       - 哈夫曼.excalidraw: 开发/数据结构/哈夫曼.excalidraw.md
@@ -251,17 +256,17 @@ nav:
       - Redis7.XCentos集群搭建: 数据库/Redis/Redis7.XCentos集群搭建.md
       - 安装及基础: 数据库/Redis/安装及基础.md
   - 日常工具:
-    - Frp 内网穿透搭建: 日常工具/Frp 内网穿透搭建.md
+    - Frp内网穿透搭建: 日常工具/Frp内网穿透搭建.md
     - jookdb重置试用期: 日常工具/jookdb重置试用期.md
-    - RustDesk 私有化部署: 日常工具/RustDesk 私有化部署.md
+    - RustDesk私有化部署: 日常工具/RustDesk私有化部署.md
     - task任务构建工具: 日常工具/task任务构建工具.md
     - UPX使用方法: 日常工具/UPX使用方法.md
-    - Wiki.js 安装: 日常工具/Wiki.js 安装.md
+    - Wiki.js安装: 日常工具/Wiki.js安装.md
     - win10右键添加复制文件绝对路径: 日常工具/win10右键添加复制文件绝对路径.md
     - 基于订阅号开发属于自己的微信消息通知: 日常工具/基于订阅号开发属于自己的微信消息通知.md
   - 运维:
     - IP划分: 运维/IP划分.md
-    - Neo4j 实现一个简单的CMDB管理平台: 运维/Neo4j 实现一个简单的CMDB管理平台.md
+    - Neo4j实现一个简单的CMDB管理平台: 运维/Neo4j实现一个简单的CMDB管理平台.md
     - Caddy:
       - caddy安装: 运维/Caddy/caddy安装.md
       - caddy实战-basicauth授权: 运维/Caddy/caddy实战-basicauth授权.md
@@ -272,7 +277,7 @@ nav:
       - caddy简介: 运维/Caddy/caddy简介.md
       - caddy静态文件: 运维/Caddy/caddy静态文件.md
     - Jenkins:
-      - Freestyle Job: 运维/Jenkins/Freestyle Job.md
+      - FreestyleJob: 运维/Jenkins/FreestyleJob.md
       - Jenkinsfile: 运维/Jenkins/Jenkinsfile.md
       - Pipline: 运维/Jenkins/Pipline.md
       - Trigger: 运维/Jenkins/Trigger.md
@@ -283,7 +288,7 @@ nav:
       - 环境搭建与安装: 运维/Minio/环境搭建与安装.md
     - Nginx:
       - Nginx学习笔记-auth_basic认证: 运维/Nginx/Nginx学习笔记-auth_basic认证.md
-      - Nginx学习笔记-Centos 7 安装Nginx: 运维/Nginx/Nginx学习笔记-Centos 7 安装Nginx.md
+      - Nginx学习笔记-Centos7安装Nginx: 运维/Nginx/Nginx学习笔记-Centos7安装Nginx.md
       - Nginx学习笔记-Nginx简介: 运维/Nginx/Nginx学习笔记-Nginx简介.md
       - Nginx学习笔记-图片防盗链: 运维/Nginx/Nginx学习笔记-图片防盗链.md
       - Nginx学习笔记-解决前端后端跨域: 运维/Nginx/Nginx学习笔记-解决前端后端跨域.md
@@ -296,13 +301,13 @@ nav:
       - ServerLess学习笔记-FnProject完整指南: 运维/Serverless/ServerLess学习笔记-FnProject完整指南.md
     - Traefik:
       - Traefik学习笔记-安装: 运维/Traefik/Traefik学习笔记-安装.md
-      - Traefik学习笔记-概念详解（基于 Docker Labels 配置）: 运维/Traefik/Traefik学习笔记-概念详解（基于 Docker Labels 配置）.md
+      - Traefik学习笔记-概念详解（基于DockerLabels配置）: 运维/Traefik/Traefik学习笔记-概念详解（基于DockerLabels配置）.md
       - Traefik学习笔记-自定义中间件: 运维/Traefik/Traefik学习笔记-自定义中间件.md
       - Traefik学习笔记-重定向配置: 运维/Traefik/Traefik学习笔记-重定向配置.md
     - 容器化:
       - Docker:
-        - Docker Swarm 学习笔记: 运维/容器化/Docker/Docker Swarm 学习笔记.md
         - Docker-Compose安装: 运维/容器化/Docker/Docker-Compose安装.md
+        - DockerSwarm学习笔记: 运维/容器化/Docker/DockerSwarm学习笔记.md
         - Docker学习笔记-redis部署: 运维/容器化/Docker/Docker学习笔记-redis部署.md
         - Docker学习笔记-在线安装教程: 运维/容器化/Docker/Docker学习笔记-在线安装教程.md
         - Docker学习笔记-多阶段构建学习笔记: 运维/容器化/Docker/Docker学习笔记-多阶段构建学习笔记.md
@@ -323,7 +328,7 @@ nav:
         - kubernetes学习笔记-安装: 运维/容器化/Kubernetes/kubernetes学习笔记-安装.md
         - 目录: 运维/容器化/Kubernetes/目录.md
     - 监控:
-      - Uptime-kuma 监控: 运维/监控/Uptime-kuma 监控.md
+      - Uptime-kuma监控: 运维/监控/Uptime-kuma监控.md
       - Prometheus:
         - Prometheus学习笔记-file_sd_config: 运维/监控/Prometheus/Prometheus学习笔记-file_sd_config.md
         - Prometheus学习笔记-Grafana可视化: 运维/监控/Prometheus/Prometheus学习笔记-Grafana可视化.md
@@ -338,4 +343,4 @@ nav:
       - 日志监控:
         - 基于Grafana+Loki+Promatil搭建日志分析平台: 运维/监控/日志监控/基于Grafana+Loki+Promatil搭建日志分析平台.md
     - 进程管理:
-      - Supervisor 学习笔记: 运维/进程管理/Supervisor 学习笔记.md
+      - Supervisor学习笔记: 运维/进程管理/Supervisor学习笔记.md
