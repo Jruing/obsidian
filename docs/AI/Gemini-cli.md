@@ -1,6 +1,10 @@
 ---
+title: Gemini CLI 快速入门
+date: 2026-01-27
 tags:
-  - Vibe-coding
+  - AI
+  - Gemini
+  - CLI
 ---
 ## 快速入门
 Gemini CLI 是一款开源 AI 终端代理，基于 ReAct 推理-行动循环，为开发者提供在本地或远程 MCP 服务器上调用 Gemini 系列模型的能力。您可以借助它完成从代码生成、调试到自动化运维的全流程任务。

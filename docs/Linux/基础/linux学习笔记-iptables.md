@@ -1,6 +1,17 @@
 ---
+title: "iptables 使用手册"
+date: 2026-06-09
 tags:
   - Linux
+  - 基础
+  - iptables
+  - 防火墙
+  - Netfilter
+  - 网络安全
+  - NAT
+  - 端口管理
+  - 访问控制
+  - 连接追踪
 ---
 
 ## 1. 什么是 iptables？

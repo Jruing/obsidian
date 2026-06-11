@@ -1,7 +1,18 @@
 ---
+title: "ufw 防火墙"
+date: 2026-06-09
 tags:
   - Linux
+  - 基础
+  - UFW
+  - 防火墙
+  - 网络安全
+  - iptables
+  - nftables
+  - 端口管理
+  - Ubuntu
 ---
+
 ## 1. ufw是什么
 
 `ufw`（Uncomplicated Firewall）是 Ubuntu 及部分 Linux 发行版中提供的一款简化防火墙管理工具。

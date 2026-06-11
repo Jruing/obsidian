@@ -1,7 +1,13 @@
 ---
+title: "Dataclass"
+date: 2026-06-09
 tags:
+  - 开发
   - Python
+  - 进阶
+  - dataclass
 ---
+
 #### 1. 概述
 
 Python的`dataclass`是Python 3.7引入的标准库特性，旨在简化主要用来存储数据的类的定义。它通过装饰器自动生成`__init__`、`__repr__`、`__eq__`等常用但繁琐的特殊方法，减少样板代码，使代码更简洁、可读性更强。

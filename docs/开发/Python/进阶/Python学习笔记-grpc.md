@@ -1,7 +1,13 @@
 ---
+title: "gRPC"
+date: 2026-06-09
 tags:
+  - 开发
   - Python
+  - 进阶
+  - gRPC
 ---
+
 ## grpc简介
 
 > gRPC 可以使用 Protocol Buffers 作为其接口定义语言 (**IDL**) 和其底层消息交换格式

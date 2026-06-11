@@ -1,7 +1,13 @@
 ---
+title: "struct处理二进制数据"
+date: 2026-06-09
 tags:
+  - 开发
   - Python
+  - 进阶
+  - struct
 ---
+
 ## Struct打包字节
 
 ### 简介

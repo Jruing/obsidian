@@ -1,8 +1,13 @@
 ---
+title: "Docker学习笔记-安装Nginx及实践应用"
+date: 2026-06-09
 tags:
+  - 运维
+  - 容器化
   - Docker
   - Nginx
 ---
+
 > 本文以下面链接文件为测试过程，为了方便，可以在本地把文件解压后重新压缩为 zip类型的压缩包
 > [http://www.mobanwang.com/mb/UploadFiles_2010/lo202105/202105033.rar](http://www.mobanwang.com/mb/UploadFiles_2010/lo202105/202105033.rar)
 

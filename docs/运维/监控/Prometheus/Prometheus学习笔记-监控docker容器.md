@@ -1,9 +1,13 @@
 ---
+title: "Prometheus学习笔记-监控docker容器"
+date: 2026-06-09
 tags:
+  - 运维
   - 监控
-  - prometheus
+  - Prometheus
   - Docker
 ---
+
 # docker安装google/cadvisor
 ```
 [root@VM-24-9-centos ~]# docker pull google/cadvisor

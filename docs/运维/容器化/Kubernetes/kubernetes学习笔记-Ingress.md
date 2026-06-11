@@ -1,7 +1,13 @@
 ---
+title: "kubernetes学习笔记-Ingress"
+date: 2026-06-09
 tags:
+  - 运维
+  - 容器化
   - Kubernetes
+  - Ingress
 ---
+
 # 简介
 > Kubernetes Ingress 是一种 API 对象，用于管理对集群内服务的外部访问。它通常用于 HTTP/HTTPS 流量的路由，并提供负载均衡、SSL/TLS 终止和基于名称的虚拟主机等功能。Ingress 本身并不直接处理流量，而是通过 Ingress Controller 来实现这些功能。常见的 Ingress Controller 有 Nginx、Traefik、HAProxy 等。
 

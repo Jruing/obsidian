@@ -1,8 +1,11 @@
 ---
+title: "caddy实战-黑白名单"
+date: 2026-06-09
 tags:
+  - 运维
   - Caddy
-  - 反向代理
 ---
+
 ## Caddyfile文件
 ```
 localhost:8002 {

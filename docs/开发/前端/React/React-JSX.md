@@ -1,8 +1,13 @@
 ---
+title: "React JSX"
+date: 2026-06-09
 tags:
-  - React
+  - 开发
   - 前端
+  - React
+  - JSX
 ---
+
 # 简介
 > 若需要返回多个JSX标签必须有且只有一个父标签，
 

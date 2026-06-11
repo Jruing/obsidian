@@ -1,8 +1,13 @@
 ---
+title: "基于Grafana+Loki+Promatil搭建日志分析平台"
+date: 2026-06-09
 tags:
+  - 运维
   - 监控
+  - 日志监控
   - Grafana
-  - 日志
+  - Loki
+  - Promtail
 ---
 
 ## 简介

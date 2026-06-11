@@ -1,8 +1,11 @@
 ---
+title: Agent 学习笔记 - Skills 技能系统
+date: 2026-03-06
 tags:
-  - Vibe-coding
   - AI
   - Agent
+  - Vibe-coding
+  - 教程
 ---
 # Skill 技能系统完整教程
 

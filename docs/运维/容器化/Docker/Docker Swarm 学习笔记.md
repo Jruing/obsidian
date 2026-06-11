@@ -1,7 +1,13 @@
 ---
+title: "Docker Swarm 学习笔记"
+date: 2026-06-09
 tags:
+  - 运维
+  - 容器化
   - Docker
+  - Docker-Swarm
 ---
+
 ## 初始化集群
 
 ```

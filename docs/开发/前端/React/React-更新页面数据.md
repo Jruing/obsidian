@@ -1,8 +1,12 @@
 ---
+title: "React 更新页面数据"
+date: 2026-06-09
 tags:
-  - React
+  - 开发
   - 前端
+  - React
 ---
+
 > useState 用于临时存储
 ```
 import "./App.css";

@@ -1,6 +1,11 @@
 ---
+title: "调用dll"
+date: 2026-06-09
 tags:
+  - 开发
   - Python
+  - 进阶
+  - DLL
 ---
 
 > 为了方便python调用main.go种的Sum函数,需要先将main.go打包为dll文件,利用python调用dll文件

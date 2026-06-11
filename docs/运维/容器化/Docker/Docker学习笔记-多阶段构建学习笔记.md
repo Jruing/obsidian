@@ -1,7 +1,12 @@
 ---
+title: "Docker学习笔记-多阶段构建学习笔记"
+date: 2026-06-09
 tags:
+  - 运维
+  - 容器化
   - Docker
 ---
+
 ## 准备工作
 
 * centos 7

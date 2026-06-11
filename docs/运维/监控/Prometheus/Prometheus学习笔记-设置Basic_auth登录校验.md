@@ -1,7 +1,11 @@
 ---
+title: "Prometheus学习笔记-设置Basic_auth登录校验"
+date: 2026-06-09
 tags:
+  - 运维
   - 监控
-  - prometheus
+  - Prometheus
+  - BasicAuth
 ---
 
 > 密码是采用bcrypt加密

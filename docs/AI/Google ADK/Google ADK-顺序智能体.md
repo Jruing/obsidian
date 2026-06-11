@@ -1,3 +1,12 @@
+﻿---
+title: Google ADK - 顺序智能体
+date: 2026-03-18
+tags:
+  - AI
+  - 智能体
+  - Google ADK
+  - 教程
+---
 ## 创建项目
 ```
 adk create seq_agent
@@ -242,4 +251,5 @@ root_agent = SequentialAgent(
 adk web
 ```
 ![](https://jruing-blogs.oss-cn-beijing.aliyuncs.com/blogs/202603161825.png)
+
 

@@ -1,8 +1,13 @@
 ---
+title: "Prometheus学习笔记-安装blackbox_exporter"
+date: 2026-06-09
 tags:
+  - 运维
   - 监控
-  - prometheus
+  - Prometheus
+  - BlackboxExporter
 ---
+
 > Blackbox Exporter是Prometheus社区提供的官方黑盒监控解决方案，其允许用户通过：HTTP、HTTPS、DNS、TCP以及ICMP	的方式对网络进行探测。我们可以利用这个exporter定时访问业务系统某个接口来确定服务是否存活
 
 

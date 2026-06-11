@@ -1,7 +1,10 @@
 ---
+title: MCP 学习笔记 - 从0到1
+date: 2026-01-27
 tags:
-  - MCP
   - AI
+  - MCP
+  - 教程
 ---
 # MCP从零到一
 
@@ -20,21 +23,17 @@ tags:
 - **MCP Servers**: 轻量级程序，通过标准的 Model Context Protocol 提供特定能力
 - **本地数据源**: MCP 服务器可安全访问的计算机文件、数据库和服务
 - **远程服务**: MCP 服务器可连接的互联网上的外部系统（如通过 APIs）
-
 ## 名词概念
 
 - 工具(tool)：使服务器能够向客户端暴露可执行的功能。通过工具，LLMs可以与外部系统交互、执行计算并在现实世界中采取行动。
 - 资源(resource)：是MCP中用来对外暴露数据的核心机制，你可以把它想象成一个只读的数据库接口或者文件系统，比如日志文件
 - 提示(prompt)：提供预定义的交互模式或者推理指引。
-
 ## 准备工作
 
 - CherryStudio
-
 - Python
-
 - VScode
-
+- FastMCP官网 https://fastmcp.wiki/zh/getting-started/welcome
 ## CherryStudio配置
 
 ### 基础配置
@@ -52,7 +51,6 @@ tags:
 ### MCP服务器配置(公网MCP服务)
 
 ![image-20250508141159426](https://jruing-blogs.oss-cn-beijing.aliyuncs.com/blogs/image-20250508141159426.png)
-
 ## 环境准备
 
 ### 创建项目文件夹
@@ -61,9 +59,7 @@ tags:
 mkdir mcp_server_demo
 cd mcp_server_demo
 ```
-
 ### 创建虚拟环境
-
 ```
 python -m venv .venv
 cd .venv
@@ -71,18 +67,13 @@ cd Scripts
 # 激活虚拟环境
 activate
 ```
-
 ### 安装依赖
-
 ```
 pip install mcp
 pip install mcp[cli]
 ```
-
 ## 栗子
-
 ### data.json
-
 ```
 {
     "Inbound": 0,
@@ -90,7 +81,6 @@ pip install mcp[cli]
     "Inventory": 0
 }
 ```
-
 ### main.py
 
 ```
@@ -142,16 +132,12 @@ async def resource() -> dict:
 if __name__ == "__main__":
     mcp.run("sse")
 ```
-
-
-
 ## 本地测试
 
 ```
 mcp dev main.py
 # 访问http://127.0.0.1:6274/#resources
 ```
-
 ### tool
 
 > 工具：提供了出库与入库两个工具，根据用户输入的内容结合大模型理解，调用相对应的工具进行入库与出库，结果持久化存储在json文件中

@@ -1,7 +1,11 @@
 ---
+title: "Vue3 + Vite项目基础环境搭建"
+date: 2026-06-09
 tags:
-  - Vue
+  - 开发
   - 前端
+  - Vue
+  - Vite
 ---
 
 ## 创建工程

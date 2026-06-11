@@ -1,8 +1,13 @@
 ---
+title: "playwright防自动化检测"
+date: 2026-06-09
 tags:
-  - 浏览器自动化
+  - 开发
   - Python
+  - 自动化
+  - Playwright
 ---
+
 > 使用playwright避开部分自动化特征检测
 
 ## playwright代码

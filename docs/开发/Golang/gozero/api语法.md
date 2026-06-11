@@ -1,8 +1,12 @@
 ---
+title: "go-zero API 语法"
+date: 2026-06-09
 tags:
+  - 开发
   - Golang
   - go-zero
 ---
+
 ## 编写api文件
 ```
 syntax = "v1"

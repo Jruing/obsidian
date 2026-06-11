@@ -1,8 +1,12 @@
 ---
+title: Agent 学习笔记 - 自定义数据库查询 Skills
+date: 2026-03-06
 tags:
-  - Vibe-coding
   - AI
   - Agent
+  - Vibe-coding
+  - 数据库
+  - 教程
 ---
 	## 准备工作
 - IFlow CLI

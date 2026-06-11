@@ -1,8 +1,12 @@
 ---
+title: "Prometheus学习笔记-安装"
+date: 2026-06-09
 tags:
+  - 运维
   - 监控
-  - prometheus
+  - Prometheus
 ---
+
 # 官网
 
 > https://prometheus.io/docs/introduction/overview/

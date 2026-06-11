@@ -1,7 +1,11 @@
 ---
+title: "Traefik学习笔记-概念详解（基于 Docker Labels 配置）"
+date: 2026-06-09
 tags:
+  - 运维
   - Traefik
-  - 反向代理
+  - Docker
+  - Label
 ---
 
 > 本文档假设你已启用 Traefik 的 Docker Provider，并设置 `exposedByDefault: false`（即容器默认不暴露，需显式打标签）。

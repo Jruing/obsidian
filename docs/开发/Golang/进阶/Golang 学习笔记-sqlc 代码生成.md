@@ -1,8 +1,12 @@
 ---
+title: "sqlc 代码生成"
+date: 2026-06-09
 tags:
+  - 开发
   - Golang
+  - 进阶
+  - sqlc
 ---
-
 
 ## 简介
 

@@ -1,7 +1,13 @@
 ---
+title: "pydantic用法"
+date: 2026-06-09
 tags:
+  - 开发
   - Python
+  - 基础
+  - Pydantic
 ---
+
 > Pydantic 是一个基于 Python 类型注解（Type Hints）的 **数据验证（Data Validation）** 和 **数据设置（Data Settings）** 库。它的核心价值在于，它允许您使用标准的 Python 类和类型注解来定义数据结构和约束，然后自动进行数据解析和验证。
 
 ## 基本模型定义

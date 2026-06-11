@@ -1,3 +1,17 @@
+---
+title: "jookdb 重置试用期"
+date: 2026-06-09
+tags:
+  - 日常工具
+  - jookdb
+  - Windows
+  - 批处理
+  - 注册表
+  - 定时任务
+  - schtasks
+  - 软件配置
+---
+
 将下面的内容保存在 jookdb重置试用期.bat 文件中,把bat文件放到与jookdb.exe同级目录下
 ```
 @echo off

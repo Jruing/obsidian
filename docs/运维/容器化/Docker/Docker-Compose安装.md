@@ -1,7 +1,13 @@
 ---
+title: "Docker-Compose安装"
+date: 2026-06-09
 tags:
+  - 运维
+  - 容器化
   - Docker
+  - Docker-Compose
 ---
+
 ## 下载
 
 > https://github.com/docker/compose/releases

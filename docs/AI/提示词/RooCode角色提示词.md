@@ -1,7 +1,11 @@
 ---
+title: RooCode 角色提示词 - SPARC 开发方法论
+date: 2026-01-27
 tags:
+  - AI
   - 提示词
   - Vibe-coding
+  - 开发
 ---
 ```
 {

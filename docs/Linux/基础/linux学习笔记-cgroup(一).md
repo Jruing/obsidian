@@ -1,7 +1,20 @@
 ---
+title: "cgroup 概念与原理"
+date: 2026-06-09
 tags:
   - Linux
+  - 基础
+  - cgroup
+  - cgroup-v1
+  - 资源隔离
+  - 资源限制
+  - 进程管理
+  - CPU限制
+  - 内存限制
+  - IO限制
+  - 容器底层
 ---
+
 #  Linux学习笔记-cgroup(一)
 
 ## 概念

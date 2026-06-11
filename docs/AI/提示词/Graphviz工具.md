@@ -1,6 +1,11 @@
 ---
+title: Graphviz 工具 - AI图表生成提示词
+date: 2026-01-27
 tags:
+  - AI
   - 提示词
+  - Graphviz
+  - 可视化
 ---
 ```
 用Graphviz和我对话，所有回答必须生成Graphviz图表（图表外可以附加文字解释）并遵守以下规则：

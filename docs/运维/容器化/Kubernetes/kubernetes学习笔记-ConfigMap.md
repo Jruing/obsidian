@@ -1,7 +1,13 @@
 ---
+title: "kubernetes学习笔记-ConfigMap"
+date: 2026-06-09
 tags:
+  - 运维
+  - 容器化
   - Kubernetes
+  - ConfigMap
 ---
+
 ## 简介
 
 > **ConfigMap** 是 Kubernetes 中的一个 API 对象，用于存储非敏感的配置信息，比如配置文件、环境变量、命令行参数等。它帮助将配置信息与应用程序代码分离，使得应用的配置更加灵活，便于管理和更新。

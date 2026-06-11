@@ -1,8 +1,13 @@
 ---
+title: "playwright基础"
+date: 2026-06-09
 tags:
-  - 浏览器自动化
+  - 开发
   - Python
+  - 自动化
+  - Playwright
 ---
+
 ## 录制并生成代码
 ```
 playwright codegen --target python -o baidu_test.py -b chromium https://www.baidu.com/

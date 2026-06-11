@@ -1,8 +1,13 @@
 ---
+title: "playwright进阶"
+date: 2026-06-09
 tags:
-  - 浏览器自动化
+  - 开发
   - Python
+  - 自动化
+  - Playwright
 ---
+
 ## 常用的断言列表
 [断言列表](https://playwright.dev/python/docs/test-assertions)
 ## 会话状态存储

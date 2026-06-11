@@ -1,8 +1,11 @@
 ---
+title: "caddy安装"
+date: 2026-06-09
 tags:
+  - 运维
   - Caddy
-  - 反向代理
 ---
+
 # 安装
 > 下载地址：https://github.com/caddyserver/caddy/releases
 ```

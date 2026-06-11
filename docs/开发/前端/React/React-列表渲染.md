@@ -1,8 +1,12 @@
 ---
+title: "React 列表渲染"
+date: 2026-06-09
 tags:
+  - 开发
   - 前端
   - React
 ---
+
 ```
 import "./App.css";
 const colorList = ["red", "blue", "yellow"];

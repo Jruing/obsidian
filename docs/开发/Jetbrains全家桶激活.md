@@ -1,3 +1,11 @@
+---
+title: "Jetbrains全家桶激活"
+date: 2026-06-09
+tags:
+  - 开发
+  - JetBrains
+---
+
 ## 方式一：客户端
 ```
 蓝奏云：https://violetfreesia.lanzouq.com/b02qs6n25e

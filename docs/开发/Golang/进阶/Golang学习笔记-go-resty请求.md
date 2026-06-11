@@ -1,7 +1,13 @@
 ---
+title: "go-resty请求"
+date: 2026-06-09
 tags:
+  - 开发
   - Golang
+  - 进阶
+  - Resty
 ---
+
 go-resty一个优秀的 HTTP 客户端库 go-resty超时控制示例 go-resty自动重示例 go-resty TLS示例 go-resty 与连接池 go-resty 与代理 go-resty 与认证 总结go-resty中提供的API
 
 # 一. go-resty一个优秀的 HTTP 客户端库

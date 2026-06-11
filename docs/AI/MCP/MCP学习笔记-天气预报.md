@@ -1,7 +1,11 @@
 ---
+title: MCP 学习笔记 - 天气预报服务实现
+date: 2026-01-27
 tags:
-  - MCP
   - AI
+  - MCP
+  - 教程
+  - Python
 ---
 # MCP学习笔记
 

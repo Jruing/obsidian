@@ -1,7 +1,14 @@
 ---
+title: "js控制台Hook"
+date: 2026-06-09
 tags:
+  - 开发
   - 前端
+  - 前端基础
+  - JavaScript
+  - Hook
 ---
+
 ## Hook fetch
 ```
 (function() {

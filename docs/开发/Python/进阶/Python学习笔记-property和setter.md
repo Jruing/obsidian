@@ -1,6 +1,11 @@
 ---
+title: "property和setter"
+date: 2026-06-09
 tags:
+  - 开发
   - Python
+  - 进阶
+  - 属性
 ---
 
 ## property装饰器

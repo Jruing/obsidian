@@ -1,8 +1,14 @@
 ---
+title: "Python selenium过图片滑块验证"
+date: 2026-06-09
 tags:
+  - 开发
   - Python
   - 爬虫
+  - Selenium
+  - 验证码
 ---
+
 ## 计算滑块移动距离
 ```
 def get_distance(image1,image2):

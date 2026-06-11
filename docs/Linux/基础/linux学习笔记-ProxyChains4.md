@@ -1,7 +1,18 @@
 ---
+title: "ProxyChains4 代理配置"
+date: 2026-06-09
 tags:
   - Linux
+  - 基础
+  - ProxyChains4
+  - 代理
+  - SOCKS5
+  - HTTP代理
+  - 网络代理
+  - 终端代理
+  - GitHub加速
 ---
+
 > ProxyChains4 是一款用于 Linux 系统的代理工具，能够通过 SOCKS 或 HTTP 代理加速网络访问，特别适用于国内服务器访问 GitHub 等国外网站时遇到的下载超时或速度慢的问题。
 ## 安装
 ```

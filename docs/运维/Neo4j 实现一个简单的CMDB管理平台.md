@@ -1,3 +1,12 @@
+---
+title: "Neo4j 实现一个简单的CMDB管理平台"
+date: 2026-06-09
+tags:
+  - 运维
+  - Neo4j
+  - CMDB
+---
+
 # Neo4j 实现一个简单的CMDB管理平台
 
 ## 简介

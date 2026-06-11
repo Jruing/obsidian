@@ -1,9 +1,10 @@
 ---
+title: "Nginx学习笔记-Centos 7 安装Nginx"
+date: 2026-06-09
 tags:
-  - 反向代理
+  - 运维
   - Nginx
 ---
-
 
 ## 前置条件
 

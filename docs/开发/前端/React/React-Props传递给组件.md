@@ -1,8 +1,13 @@
 ---
+title: "React Props传递给组件"
+date: 2026-06-09
 tags:
-  - React
+  - 开发
   - 前端
+  - React
+  - Props
 ---
+
 ```
 import "./App.css";
 import React from "react";

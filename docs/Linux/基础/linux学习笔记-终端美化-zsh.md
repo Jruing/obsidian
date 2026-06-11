@@ -1,7 +1,17 @@
 ---
+title: "终端美化 zsh"
+date: 2026-06-09
 tags:
   - Linux
+  - 基础
+  - 终端
+  - Shell
+  - Zsh
+  - OhMyZsh
+  - 命令行
+  - 插件
 ---
+
 ## 准备工作
 ```bash
 apt install zsh git curl -y

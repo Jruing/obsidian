@@ -1,6 +1,8 @@
 ---
+title: "Nginx学习笔记-Nginx简介"
+date: 2026-06-09
 tags:
-  - 反向代理
+  - 运维
   - Nginx
 ---
 

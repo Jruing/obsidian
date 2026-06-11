@@ -1,8 +1,11 @@
 ---
+title: "caddy简介"
+date: 2026-06-09
 tags:
+  - 运维
   - Caddy
-  - 反向代理
 ---
+
 > 官网地址: https://caddyserver.com/
 ## Caddy简介
 Caddy 是一个现代化、高性能的 Web 服务器，由 Matthew Holt 开发，并于 2015 年首次发布。Caddy 的设计理念是简单易用、安全可靠，并且支持自动 HTTPS 配置。它迅速成为开发者和系统管理员的热门选择，尤其适合需要快速部署和维护的场景。

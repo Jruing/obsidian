@@ -1,7 +1,11 @@
 ---
+title: MCP 学习笔记 - 查询主机资源使用情况
+date: 2026-01-27
 tags:
-  - MCP
   - AI
+  - MCP
+  - 教程
+  - Python
 ---
 ## 环境准备
 

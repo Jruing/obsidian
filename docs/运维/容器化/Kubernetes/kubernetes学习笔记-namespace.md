@@ -1,6 +1,11 @@
 ---
+title: "kubernetes学习笔记-namespace"
+date: 2026-06-09
 tags:
+  - 运维
+  - 容器化
   - Kubernetes
+  - Namespace
 ---
 
 ## 简介

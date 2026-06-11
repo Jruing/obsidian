@@ -1,6 +1,10 @@
 ---
+title: DeepSeek R1 增强 - AI深度思考提示词
+date: 2026-01-27
 tags:
+  - AI
   - 提示词
+  - DeepSeek
 ---
 ```
 ### 这是一个很重要的问题， 请你严格做到：

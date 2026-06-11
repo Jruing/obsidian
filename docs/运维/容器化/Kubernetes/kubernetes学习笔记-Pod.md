@@ -1,7 +1,13 @@
 ---
+title: "kubernetes学习笔记-Pod"
+date: 2026-06-09
 tags:
+  - 运维
+  - 容器化
   - Kubernetes
+  - Pod
 ---
+
 # 简介
 
 > Pod 是 Kubernetes (K8s) 中最小的部署单元，包含一个或多个容器，运行在同一主机上的资源共享环境中。

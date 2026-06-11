@@ -1,8 +1,11 @@
 ---
+title: "Traefik学习笔记-自定义中间件"
+date: 2026-06-09
 tags:
-  - 反向代理
+  - 运维
   - Traefik
 ---
+
 # 🛡️ 基于 Flask + Redis + Traefik 的动态 IP 黑名单中间件实现
 
 **项目目标**：利用 Flask 构建一个轻量级、高性能的动态 IP 黑名单中间件，结合 Traefik 的 `forwardAuth` 中间件能力，实现对后端服务的访问控制。支持通过 API 动态增删黑名单 IP/CIDR，具备缓存优化与高并发适应性。

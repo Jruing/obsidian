@@ -1,3 +1,13 @@
+---
+title: "Selenium接管浏览器"
+date: 2026-06-09
+tags:
+  - 开发
+  - Python
+  - 自动化
+  - Selenium
+---
+
 ## 启动谷歌浏览器远程调试
 `chrome.exe --remote-debugging-port=9222 --user-data-dir="某个存在的文件夹地址"`
 

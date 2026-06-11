@@ -1,3 +1,18 @@
+---
+title: "Task 任务构建工具"
+date: 2026-06-09
+tags:
+  - 日常工具
+  - Task
+  - 构建工具
+  - 任务运行器
+  - Taskfile
+  - 自动化
+  - 命令行工具
+  - YAML
+  - 环境变量
+---
+
 # 简介
 > Task 是一个任务运行器/构建工具，旨在更简单、更易于使用 比 GNU Make 更重要。
 > 官网地址：https://taskfile.dev/

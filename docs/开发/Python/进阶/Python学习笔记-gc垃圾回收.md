@@ -1,7 +1,13 @@
 ---
+title: "gc垃圾回收"
+date: 2026-06-09
 tags:
+  - 开发
   - Python
+  - 进阶
+  - 垃圾回收
 ---
+
 Python 的垃圾回收（Garbage Collection，GC）机制主要包括引用计数、标记 - 清除、分代回收这三部分，以下是详细介绍：
 
 ### 引用计数

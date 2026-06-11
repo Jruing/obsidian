@@ -1,7 +1,9 @@
 ---
+title: "Nginx学习笔记-黑名单-白名单"
+date: 2026-06-09
 tags:
+  - 运维
   - Nginx
-  - 反向代理
 ---
 
 > 通过在nginx配置文件中加入指令或者配置文件来实现黑名单/白名单策略，它的作用域有`http`,`server`和`location`

@@ -1,8 +1,13 @@
 ---
+title: "playwright安装"
+date: 2026-06-09
 tags:
-  - 浏览器自动化
+  - 开发
   - Python
+  - 自动化
+  - Playwright
 ---
+
 ## 官方文档
 >https://playwright.dev/python/docs/intro
 ```bash

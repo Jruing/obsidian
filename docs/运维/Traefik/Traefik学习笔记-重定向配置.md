@@ -1,8 +1,11 @@
 ---
+title: "Traefik学习笔记-重定向配置"
+date: 2026-06-09
 tags:
-  - 反向代理
+  - 运维
   - Traefik
 ---
+
 # 🌐 基于 Traefik 中间件实现 HTTP 到 HTTPS 重定向
 
 **核心机制**：利用 Traefik 的 `redirectScheme` 中间件，实现从 HTTP 到 HTTPS 的自动跳转，确保服务访问的安全性与一致性。

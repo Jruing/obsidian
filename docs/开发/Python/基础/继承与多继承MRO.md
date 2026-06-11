@@ -1,7 +1,13 @@
 ---
+title: "继承与多继承MRO"
+date: 2026-06-09
 tags:
+  - 开发
   - Python
+  - 基础
+  - 继承
 ---
+
 ## 继承
 ```markdown
 class Parent:

@@ -1,10 +1,14 @@
 ---
+title: Google ADK 实现简历打分助手
+date: 2026-01-27
 tags:
-  - 智能体
   - AI
+  - 智能体
+  - Google ADK
+  - 简历
 ---
 ## 代码
-```
+```python
 import os
 
 from google.adk.agents import SequentialAgent

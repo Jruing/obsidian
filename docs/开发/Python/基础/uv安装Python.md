@@ -1,7 +1,13 @@
 ---
+title: "uv安装Python"
+date: 2026-06-09
 tags:
+  - 开发
   - Python
+  - 基础
+  - 开发环境
 ---
+
 ## 官网
 ```
 https://docs.astral.sh/uv/

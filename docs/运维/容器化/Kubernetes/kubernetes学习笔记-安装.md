@@ -1,7 +1,12 @@
 ---
+title: "kubernetes学习笔记-安装"
+date: 2026-06-09
 tags:
+  - 运维
+  - 容器化
   - Kubernetes
 ---
+
 # 安装 K3s
 
 ### 国内用户安装

@@ -1,7 +1,13 @@
 ---
+title: "Pandas用法"
+date: 2026-06-09
 tags:
+  - 开发
   - Python
+  - 数据分析
+  - Pandas
 ---
+
 ## 示例数据
 ```python
 import pandas as pd

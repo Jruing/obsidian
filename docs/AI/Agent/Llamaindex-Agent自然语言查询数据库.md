@@ -1,7 +1,12 @@
 ---
+title: LlamaIndex Agent 自然语言查询数据库
+date: 2026-03-06
 tags:
   - AI
+  - Agent
   - Llamaindex
+  - 数据库
+  - 教程
 ---
 ## 安装
 ```

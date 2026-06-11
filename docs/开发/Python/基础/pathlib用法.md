@@ -1,7 +1,13 @@
 ---
+title: "pathlib用法"
+date: 2026-06-09
 tags:
+  - 开发
   - Python
+  - 基础
+  - pathlib
 ---
+
 ## 创建Path对象
 ```python
 from pathlib import Path

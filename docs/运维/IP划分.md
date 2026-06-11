@@ -1,7 +1,11 @@
 ---
+title: "IP划分"
+date: 2026-06-09
 tags:
-  - network
+  - 运维
+  - 网络
 ---
+
 IP地址（Internet Protocol Address）是互联网上每一台设备的唯一标识。为了更有效地管理和使用这些地址，它们被划分为不同的类别和类型。
 
 ### 一、 IPv4 地址结构与分类

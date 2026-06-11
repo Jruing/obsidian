@@ -1,7 +1,18 @@
 ---
+title: "sudo 权限管理"
+date: 2026-06-09
 tags:
   - Linux
+  - 基础
+  - sudo
+  - 权限管理
+  - sudoers
+  - visudo
+  - 用户管理
+  - 系统安全
+  - 权限提升
 ---
+
 ## 1. sudo是什么
 
 `sudo`（superuser do）是 Linux/Unix 系统中用来**以超级用户（root）或其他指定用户身份执行命令**的工具。

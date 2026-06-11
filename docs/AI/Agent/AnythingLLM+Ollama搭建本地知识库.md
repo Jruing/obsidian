@@ -1,6 +1,12 @@
 ---
+title: AnythingLLM + Ollama 搭建本地知识库
+date: 2026-03-06
 tags:
   - AI
+  - Agent
+  - Ollama
+  - 知识库
+  - 教程
 ---
 ## Ollama
 

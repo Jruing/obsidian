@@ -1,7 +1,14 @@
 ---
+title: "fetch 学习笔记"
+date: 2026-06-09
 tags:
+  - 开发
   - 前端
+  - 前端基础
+  - JavaScript
+  - Fetch API
 ---
+
 ### **Fetch API 完全手册**
 
 `fetch` 是现代 JavaScript 中用于发起网络请求的标准 API

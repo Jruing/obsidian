@@ -1,9 +1,13 @@
 ---
+title: "Prometheus学习笔记-Grafana可视化"
+date: 2026-06-09
 tags:
+  - 运维
   - 监控
-  - prometheus
+  - Prometheus
   - Grafana
 ---
+
 # Grafana官网
 # 下载Grafana
 ```yaml

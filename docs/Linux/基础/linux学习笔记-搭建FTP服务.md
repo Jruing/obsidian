@@ -1,8 +1,17 @@
 ---
+title: "搭建 FTP 服务"
+date: 2026-06-09
 tags:
-  - FTP
   - Linux
+  - 基础
+  - FTP
+  - vsftpd
+  - 文件服务
+  - 服务部署
+  - 网络服务
+  - 用户管理
 ---
+
 ## 安装vsftpd
 ```
 yum install -y vsftpd

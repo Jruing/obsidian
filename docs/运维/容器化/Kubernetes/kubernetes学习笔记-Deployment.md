@@ -1,7 +1,13 @@
 ---
+title: "kubernetes学习笔记-Deployment"
+date: 2026-06-09
 tags:
+  - 运维
+  - 容器化
   - Kubernetes
+  - Deployment
 ---
+
 ## 简介
 
 > Deployment 是 Kubernetes 中用于声明和管理一组副本（Pod）的控制器。它可以确保在集群中运行的 Pod 数量始终保持一致。使用 Deployment，可以轻松进行应用程序的滚动更新和回滚。

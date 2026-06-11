@@ -1,6 +1,10 @@
 ---
+title: 安装 Coze Studio
+date: 2026-01-27
 tags:
   - AI
+  - Coze
+  - 教程
 ---
 ## 部署并启动
 ```

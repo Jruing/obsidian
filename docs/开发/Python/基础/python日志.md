@@ -1,8 +1,13 @@
 ---
+title: "python日志"
+date: 2026-06-09
 tags:
+  - 开发
   - Python
+  - 基础
   - 日志
 ---
+
 ## 默认模板
 ```python
 import logging

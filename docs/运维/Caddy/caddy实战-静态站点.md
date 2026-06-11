@@ -1,8 +1,11 @@
 ---
+title: "caddy实战-静态站点"
+date: 2026-06-09
 tags:
+  - 运维
   - Caddy
-  - 反向代理
 ---
+
 ## 准备工作
 - 安装caddy
 - 一个html文件

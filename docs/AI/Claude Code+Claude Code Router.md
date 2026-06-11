@@ -1,6 +1,10 @@
 ---
+title: Claude Code + Claude Code Router 安装配置
+date: 2026-01-27
 tags:
+  - AI
   - Vibe-coding
+  - Claude
 ---
 ## 文档
 [github](https://github.com/musistudio/claude-code-router)

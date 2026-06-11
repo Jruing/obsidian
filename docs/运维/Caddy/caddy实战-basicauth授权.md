@@ -1,8 +1,12 @@
 ---
+title: "caddy实战-basicauth授权"
+date: 2026-06-09
 tags:
+  - 运维
   - Caddy
-  - 反向代理
+  - BasicAuth
 ---
+
 # BasicAuth 认证
 
 ## hash-password生成密码

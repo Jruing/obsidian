@@ -1,7 +1,17 @@
 ---
+title: "Systemd 服务管理"
+date: 2026-06-09
 tags:
   - Linux
+  - 基础
+  - Systemd
+  - systemctl
+  - 服务管理
+  - Unit
+  - journalctl
+  - 开机自启
 ---
+
 > Unit 的配置文件
 >
 > * `[Unit]`区块通常是配置文件的第一个区块，用来定义 Unit 的元数据，以及配置与其他 Unit 的关系

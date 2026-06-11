@@ -1,6 +1,11 @@
 ---
+title: "JWT"
+date: 2026-06-09
 tags:
+  - 开发
   - Golang
+  - 进阶
+  - JWT
 ---
 
 ## 简介

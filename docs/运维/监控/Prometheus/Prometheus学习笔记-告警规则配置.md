@@ -1,8 +1,12 @@
 ---
+title: "Prometheus学习笔记-告警规则配置"
+date: 2026-06-09
 tags:
-  - prometheus
+  - 运维
   - 监控
+  - Prometheus
 ---
+
 ## 告警规则Demo
 
 ```yaml

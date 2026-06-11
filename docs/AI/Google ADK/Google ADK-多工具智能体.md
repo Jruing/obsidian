@@ -1,7 +1,11 @@
 ---
+title: Google ADK - 多工具智能体
+date: 2026-03-18
 tags:
-  - 智能体
   - AI
+  - 智能体
+  - Google ADK
+  - 教程
 ---
 ## 创建项目
 ```

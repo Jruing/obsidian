@@ -1,6 +1,11 @@
 ---
+title: Banana提示词 - 文章变成卡通信息图
+date: 2026-01-27
 tags:
+  - AI
   - 提示词
+  - 图片生成
+  - 信息图
 ---
 ```
 [System / Prompt]

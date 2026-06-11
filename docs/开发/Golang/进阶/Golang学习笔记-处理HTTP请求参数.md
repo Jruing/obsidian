@@ -1,7 +1,13 @@
 ---
+title: "处理HTTP请求参数"
+date: 2026-06-09
 tags:
+  - 开发
   - Golang
+  - 进阶
+  - HTTP请求
 ---
+
 ```
 func body(w http.ResponseWriter, r *http.Request) {
 	fmt.Println(r.Header)

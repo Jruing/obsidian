@@ -1,8 +1,13 @@
 ---
+title: "Prometheus学习笔记-安装Node_exporter"
+date: 2026-06-09
 tags:
+  - 运维
   - 监控
-  - prometheus
+  - Prometheus
+  - NodeExporter
 ---
+
 > Node_exporter是可以在* Nix和Linux系统上运行的计算机度量标准的导出器。
 > Node_exporter 主要用于暴露 metrics 给 Prometheus，其中 metrics 包括：cpu 的负载，内存的使用情况，网络等。
 

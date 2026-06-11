@@ -1,7 +1,18 @@
 ---
+title: "RustDesk 私有化部署"
+date: 2026-06-09
 tags:
+  - 日常工具
+  - RustDesk
+  - 远程桌面
   - 私有化部署
+  - Docker
+  - Docker-Compose
+  - 远程控制
+  - 端口配置
+  - 自托管
 ---
+
 ## 介绍
 
 > RustDesk 是一款轻量、开源且完全免费的远程桌面控制软件，功能强大且易于使用。

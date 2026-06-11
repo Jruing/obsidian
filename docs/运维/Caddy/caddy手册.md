@@ -1,7 +1,9 @@
 ---
+title: "caddy手册"
+date: 2026-06-09
 tags:
+  - 运维
   - Caddy
-  - 反向代理
 ---
 
 ## 1. 什么是 Caddy？

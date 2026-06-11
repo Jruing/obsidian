@@ -1,8 +1,13 @@
 ---
+title: "Prometheus学习笔记-Label标签"
+date: 2026-06-09
 tags:
+  - 运维
   - 监控
-  - prometheus
+  - Prometheus
+  - Label
 ---
+
 # Label
 
 Lable是为了方便管理及查询监控目标，在后续写promtheus查询语法的时候需要使用标签作为查询条件

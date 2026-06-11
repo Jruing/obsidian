@@ -1,3 +1,11 @@
+---
+title: OpenCode - 开源AI编码代理
+date: 2026-03-06
+tags:
+  - AI
+  - Vibe-coding
+  - OpenCode
+---
 # 什么是 OpenCode？
 *OpenCode 是一个开源代理，帮助您在终端、IDE 或桌面端编写代码。*
 * 支持 LSP 为 LLM 自动加载合适的 LSP

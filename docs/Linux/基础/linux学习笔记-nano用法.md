@@ -1,7 +1,16 @@
 ---
+title: "nano 用法"
+date: 2026-06-09
 tags:
   - Linux
+  - 基础
+  - nano
+  - 文本编辑器
+  - 文件编辑
+  - 快捷键
+  - 命令行
 ---
+
 ## 创建/编辑文件
 ```bash
 nano a.txt

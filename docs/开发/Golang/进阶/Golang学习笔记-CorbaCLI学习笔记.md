@@ -1,6 +1,11 @@
 ---
+title: "CorbaCLI学习笔记"
+date: 2026-06-09
 tags:
+  - 开发
   - Golang
+  - 进阶
+  - CLI
 ---
 
 ## 简介

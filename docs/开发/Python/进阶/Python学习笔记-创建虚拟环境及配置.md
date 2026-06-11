@@ -1,7 +1,13 @@
 ---
+title: "创建虚拟环境及配置"
+date: 2026-06-09
 tags:
+  - 开发
   - Python
+  - 进阶
+  - 开发环境
 ---
+
 ## 介绍
 
 https://docs.python.org/zh-cn/3/library/venv.html 官方文档

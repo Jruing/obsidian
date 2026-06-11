@@ -1,8 +1,13 @@
 ---
+title: "Vue3 Router路由"
+date: 2026-06-09
 tags:
-  - Vue
+  - 开发
   - 前端
+  - Vue
+  - 路由
 ---
+
 Vue Router 是 Vue.js 官方的路由管理器，用于构建单页面应用（SPA）。本文介绍 Vue Router 4.x 版本在 Vue3 中的使用方法。
 
 ## 目录

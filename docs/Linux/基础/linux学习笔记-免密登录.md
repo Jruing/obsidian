@@ -1,8 +1,17 @@
 ---
+title: "SSH 免密登录"
+date: 2026-06-09
 tags:
-  - SSH
   - Linux
+  - 基础
+  - SSH
+  - 免密登录
+  - 密钥认证
+  - 远程登录
+  - ssh-keygen
+  - ssh-copy-id
 ---
+
 # 第一步：本地生成公钥及私钥
 > id_rsa.pub(公钥文件) 和 id_rsa(私钥文件)
 ```

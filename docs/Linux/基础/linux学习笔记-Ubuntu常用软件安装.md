@@ -1,8 +1,19 @@
 ---
+title: "Ubuntu 常用软件安装"
+date: 2026-06-09
 tags:
-  - Ubuntu
   - Linux
+  - 基础
+  - Ubuntu
+  - 软件安装
+  - 包管理
+  - apt
+  - 开发环境
+  - Zsh
+  - Python
+  - Golang
 ---
+
 ## Ubuntu系统配置
 ### 一键换源
 ```

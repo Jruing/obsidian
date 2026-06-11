@@ -1,8 +1,12 @@
 ---
+title: "Prometheus学习笔记-配置文件字段解析"
+date: 2026-06-09
 tags:
+  - 运维
   - 监控
-  - prometheus
+  - Prometheus
 ---
+
 # 全局配置注解
 
 ```shell

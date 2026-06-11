@@ -1,6 +1,10 @@
 ---
+title: "Supervisor 学习笔记"
+date: 2026-06-09
 tags:
+  - 运维
   - 进程管理
+  - Supervisor
 ---
 
 ## 一、Supervisor 背景介绍

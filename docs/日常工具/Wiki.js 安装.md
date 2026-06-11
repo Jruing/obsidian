@@ -1,6 +1,16 @@
 ---
+title: "Wiki.js 安装"
+date: 2026-06-09
 tags:
+  - 日常工具
+  - Wiki.js
+  - 知识库
+  - 文档系统
   - 私有化部署
+  - NodeJS
+  - SQLite
+  - Linux
+  - 安装部署
 ---
 
 ## 安装NodeJS

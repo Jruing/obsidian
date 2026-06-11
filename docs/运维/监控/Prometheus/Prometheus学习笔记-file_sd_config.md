@@ -1,8 +1,13 @@
 ---
+title: "Prometheus学习笔记-file_sd_config"
+date: 2026-06-09
 tags:
+  - 运维
   - 监控
-  - prometheus
+  - Prometheus
+  - FileSD
 ---
+
 > 一般一个job作为一个业务服务，它下面的监控的机器/节点都是这个服务的节点，为了方便管理，我们可以按照job划分，为每个job创建一个子配置文件，这样方便管理
 
 # 配置文件

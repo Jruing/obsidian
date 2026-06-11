@@ -1,7 +1,13 @@
 ---
+title: "Zipapp打包可执行文件"
+date: 2026-06-09
 tags:
+  - 开发
   - Python
+  - 进阶
+  - zipapp
 ---
+
 > 使用场景：只需要项目所需指定版本的Python解释器就可以运行由zipapp打包后的项目
 >
 > 环境要求

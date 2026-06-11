@@ -1,7 +1,13 @@
 ---
+title: "__missing__用法"
+date: 2026-06-09
 tags:
+  - 开发
   - Python
+  - 进阶
+  - 字典
 ---
+
 ## `__missing__` 方法的作用
 
 - `__missing__` 方法在字典的子类中定义，当通过 `dict[key]` 访问一个不存在的键时，如果定义了 `__missing__` 方法，Python 会自动调用它。

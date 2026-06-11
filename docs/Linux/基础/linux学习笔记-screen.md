@@ -1,6 +1,15 @@
 ---
+title: "screen 使用手册"
+date: 2026-06-09
 tags:
   - Linux
+  - 基础
+  - screen
+  - 终端复用
+  - 会话管理
+  - 后台任务
+  - 快捷键
+  - 命令行
 ---
 
 # 🐧 Linux `screen` 快速参考手册（Cheatsheet）

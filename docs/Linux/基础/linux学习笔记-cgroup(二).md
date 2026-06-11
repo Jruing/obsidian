@@ -1,7 +1,20 @@
 ---
+title: "cgroup v2 操作与资源限制"
+date: 2026-06-09
 tags:
   - Linux
+  - 基础
+  - cgroup
+  - cgroup-v2
+  - 资源隔离
+  - 资源限制
+  - 进程管理
+  - CPU限制
+  - 内存限制
+  - IO限制
+  - 容器底层
 ---
+
 cgroups (Control Groups) 是 Linux 内核功能，用于限制、记录和隔离进程组的资源使用（CPU、内存、磁盘I/O、网络等）。cgroup v2 是 cgroups 的第二代实现，提供了更统一和一致的接口。
 
 ## 一、cgroup v2 核心概念
