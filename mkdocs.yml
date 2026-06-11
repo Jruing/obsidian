@@ -10,10 +10,18 @@ theme:
   name: material
   highlightjs: true
   plugins:
-  - social
+    - social
+  markdown_extensions:
+    - pymdownx.superfences
+    - pymdownx.snippets
+    - pymdownx.tabbed
+  extra_javascript:
+    - https://bramp.github.io/js-sequence-diagrams/js/raphael-min.js
+    - https://bramp.github.io/js-sequence-diagrams/js/underscore-min.js
+    - https://bramp.github.io/js-sequence-diagrams/js/sequence-diagram-min.js
+    - http://flowchart.js.org/flowchart-latest.js
   hljs_languages:
     - yaml
-    - rust
     - toml
     - css
     - javascript
@@ -21,6 +29,8 @@ theme:
     - python
     - go
     - html
+    - java
+    - json
   features:
     - navigation.instant            # 即时加载
     - navigation.instant.prefetch   # 即时预取

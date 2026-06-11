@@ -18,7 +18,7 @@ jobs:
           python-version: "3.10"
 
       - name: 安装 mkdocs-material
-        run: pip install mkdocs-material
+        run: pip install mkdocs-material pymdown-extensions
 
       - name: 部署到 GitHub Pages
         env:
