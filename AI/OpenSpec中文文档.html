@@ -1,0 +1,8358 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://jruing.github.io/obsidian/AI/OpenSpec%E4%B8%AD%E6%96%87%E6%96%87%E6%A1%A3.html">
+      
+      
+        <link rel="prev" href="OpenCode.html">
+      
+      
+        <link rel="next" href="Trellis%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0.html">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
+    
+    
+      
+        <title>OpenSpec 中文文档 - AI原生规范驱动开发 - Wiki</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.484c7ddc.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    <body dir="ltr">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#ai" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow md-header--lifted" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="Wiki" class="md-header__button md-logo" aria-label="Wiki" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Wiki
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              OpenSpec 中文文档 - AI原生规范驱动开发
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+          <a href="javascript:void(0)" class="md-search__icon md-icon" title="Share" aria-label="Share" data-clipboard data-clipboard-text="" data-md-component="search-share" tabindex="-1">
+            
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7s-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9a3 3 0 0 0-3 3 3 3 0 0 0 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.15c-.05.21-.08.43-.08.66 0 1.61 1.31 2.91 2.92 2.91s2.92-1.3 2.92-2.91A2.92 2.92 0 0 0 18 16.08"/></svg>
+          </a>
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/jruing/obsidian" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    jruing/obsidian
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+    
+      
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../readme.html" class="md-tabs__link">
+        
+  
+  
+    
+  
+  简介
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="ClaudeCode%2BClaudeCodeRouter.html" class="md-tabs__link">
+          
+  
+  
+    
+  
+  AI
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../Linux/%E5%9F%BA%E7%A1%80/linux%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0-awk.html" class="md-tabs__link">
+          
+  
+  
+    
+  
+  Linux
+
+        </a>
+      </li>
+    
+  
+
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../%E5%BC%80%E5%8F%91/Jetbrains%E5%85%A8%E5%AE%B6%E6%A1%B6%E6%BF%80%E6%B4%BB.html" class="md-tabs__link">
+          
+  
+  
+    
+  
+  开发
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../%E6%95%B0%E6%8D%AE%E5%BA%93/MySQL/Mysql57%E7%BB%BF%E8%89%B2%E7%89%88%E5%AE%89%E8%A3%85.html" class="md-tabs__link">
+          
+  
+  
+    
+  
+  数据库
+
+        </a>
+      </li>
+    
+  
+
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../%E6%97%A5%E5%B8%B8%E5%B7%A5%E5%85%B7/Frp%E5%86%85%E7%BD%91%E7%A9%BF%E9%80%8F%E6%90%AD%E5%BB%BA.html" class="md-tabs__link">
+          
+  
+  
+    
+  
+  日常工具
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../%E8%BF%90%E7%BB%B4/IP%E5%88%92%E5%88%86.html" class="md-tabs__link">
+          
+  
+  
+    
+  
+  运维
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+    
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="Wiki" class="md-nav__button md-logo" aria-label="Wiki" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    Wiki
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/jruing/obsidian" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    jruing/obsidian
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../readme.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    简介
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+      
+    
+    
+      
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    AI
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    AI
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="ClaudeCode%2BClaudeCodeRouter.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ClaudeCode+ClaudeCodeRouter
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="CliProxyAPI.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    CliProxyAPI
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="Docker%E5%AE%89%E8%A3%85OneAPI.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Docker安装OneAPI
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="Gemini-cli.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Gemini-cli
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="llms.txt%E6%A0%87%E5%87%86%E5%AE%8C%E6%95%B4%E6%95%99%E7%A8%8B.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    llms.txt标准完整教程
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="LLM%E4%B8%ADFunctionCall%E4%B8%8EMCP%E7%9A%84%E5%8C%BA%E5%88%AB.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    LLM中FunctionCall与MCP的区别
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="OpenClaw.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    OpenClaw
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="OpenCode.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    OpenCode
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    OpenSpec中文文档
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="OpenSpec%E4%B8%AD%E6%96%87%E6%96%87%E6%A1%A3.html" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    OpenSpec中文文档
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#ai" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        让 AI 编码助手 真正理解你的意图
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        演示
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="演示">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        三步完成一个完整变更
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="三步完成一个完整变更">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#ai_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        AI 对话 — 添加暗色模式
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        价值
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="价值">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#openspec" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        为什么选择 OpenSpec？
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="为什么选择 OpenSpec？">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🤝 先对齐再编码
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        📁 井然有序
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🌊 流动灵活
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🔧 工具生态广泛
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_8" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        与同类产品对比
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="与同类产品对比">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#vs-spec-kit-github" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        vs. Spec Kit (GitHub)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#vs-kiro-aws" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        vs. Kiro (AWS)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#vs" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        vs. 不用规范
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_9" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        安装
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="安装">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_10" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        安装指南
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="安装指南">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#npm" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        npm
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pnpm" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        pnpm
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#yarn" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        yarn
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#bun" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        bun
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#nix" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Nix — 直接运行（无需安装）
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#nix-profile" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Nix — 安装到 profile
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_11" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        快速开始
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="快速开始">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_12" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        开始你的第一个变更
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="开始你的第一个变更">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. 初始化项目
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. 创建你的第一个变更
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. 实现任务
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. 归档变更
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_13" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        初始化后的目录结构
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_14" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        核心概念
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="核心概念">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#openspec_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        理解 OpenSpec 的核心机制
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_15" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        设计哲学
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="设计哲学">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_16" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🌊 流动而非僵化
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_17" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🔄 迭代而非瀑布
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_18" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ✨ 简单而非复杂
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_19" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🏗️ 存量项目优先
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_20" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        整体架构
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#specs" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        规范 (Specs)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#changes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        变更 (Changes)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#artifacts" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        产物 (Artifacts)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="产物 (Artifacts)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#proposal" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        📄 Proposal — 提案文档
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#design" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        📐 Design — 设计文档
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tasks" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ✅ Tasks — 任务清单
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#delta" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Delta 规范
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#schema" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Schema 机制
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_21" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        完整工作流程
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_22" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        术语表
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_23" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        命令参考
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="命令参考">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#opsx-slash" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        OPSX Slash 命令
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="OPSX Slash 命令">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#core-profile" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        默认快速路径（core profile）
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_24" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        扩展工作流命令（自定义选择）
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#opsxpropose" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        /opsx:propose
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#opsxexplore" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        /opsx:explore
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#opsxnew" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        /opsx:new
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#opsxcontinue" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        /opsx:continue
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#opsxff" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        /opsx:ff
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#opsxapply" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        /opsx:apply
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#opsxverify" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        /opsx:verify
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#opsxsync" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        /opsx:sync
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#opsxarchive" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        /opsx:archive
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#opsxbulk-archive" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        /opsx:bulk-archive
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#opsxonboard" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        /opsx:onboard
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ai_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        不同 AI 工具的命令语法
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#cli" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        CLI 参考
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="CLI 参考">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_25" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        终端命令完整参考
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_26" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        初始化与更新
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="初始化与更新">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#openspec-init" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        openspec init
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#openspec-update" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        openspec update
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_27" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        浏览命令
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="浏览命令">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#openspec-list" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        openspec list
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#openspec-show" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        openspec show
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_28" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        验证命令
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="验证命令">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#openspec-validate" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        openspec validate
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_29" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        生命周期命令
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="生命周期命令">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#openspec-archive" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        openspec archive
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_30" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        工作流命令
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="工作流命令">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#openspec-status" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        openspec status
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#schema_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Schema 命令
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Schema 命令">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#openspec-schema-init" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        openspec schema init
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#openspec-schema-fork" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        openspec schema fork
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_31" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        配置命令
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="配置命令">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#openspec-config" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        openspec config
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_32" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        环境变量
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_33" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        工作流
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="工作流">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_34" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        常见工作流模式
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="常见工作流模式">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#core-profile_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        默认快速路径（core profile）
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_35" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        扩展工作流（自定义选择）
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_36" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        场景化工作流
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="场景化工作流">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_37" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ⚡ 快速功能（清晰需求）
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_38" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🔍 探索式（需求不明确）
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_39" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🔀 并行变更（多任务）
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#opsxff-opsxcontinue" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        何时使用 /opsx:ff 还是 /opsx:continue
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_40" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        最佳实践
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="最佳实践">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#01" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        01 保持变更聚焦
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#02-explore" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        02 需求不明确时使用 explore
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#03-verify" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        03 归档前先 verify
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#04" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        04 清晰命名变更
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_41" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        定制化
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="定制化">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#openspec_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        让 OpenSpec 按你的方式工作
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#openspecconfigyaml" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        项目配置（openspec/config.yaml）
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#schema_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        自定义 Schema
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="自定义 Schema">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#fork-schema" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Fork 现有 Schema（推荐）
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_42" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        示例：快速迭代工作流
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_43" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        示例：添加审查步骤
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_44" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        集成
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="集成">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#ai_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        支持的 AI 工具
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_45" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        非交互式安装
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_46" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        工作流相关的安装
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_47" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        多语言
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="多语言">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_48" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        多语言支持
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="多语言支持">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_49" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        快速配置
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_50" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        其他语言示例
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_51" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        贡献
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="贡献">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_52" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        参与贡献
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="参与贡献">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_53" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🐛 小型修复
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_54" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🏗️ 较大变更
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ai_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🤖 AI 生成代码
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_55" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        开发指南
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_56" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        遥测数据
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_57" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        实战指南
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="实战指南">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#openspec_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        OpenSpec 上手实践指南
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#part-1-openspec" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Part 1: 深入理解 OpenSpec
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Part 1: 深入理解 OpenSpec">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#11-openspec" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.1 OpenSpec 是什么？
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1.1 OpenSpec 是什么？">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_58" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        核心定位
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#12-openspec" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.2 为什么需要 OpenSpec？
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1.2 为什么需要 OpenSpec？">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#ai_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        😵 痛点一：AI 幻觉与偏离
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_59" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🔄 痛点二：迭代成本高
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_60" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        👥 痛点三：团队协作难
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#openspec_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        OpenSpec 的解决方案
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#13" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.3 核心架构解析
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1.3 核心架构解析">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#openspec_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        OpenSpec 目录结构
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#14-artifact" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.4 产物（Artifact）体系详解
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1.4 产物（Artifact）体系详解">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#proposal_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        📋 Proposal（提案）
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#specs_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        📐 Specs（规范）
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#design_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🏗️ Design（设计）
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tasks_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ✅ Tasks（任务）
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_61" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        产物依赖关系图
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#part-2-openspec" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Part 2: OpenSpec 最佳实践
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Part 2: OpenSpec 最佳实践">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#21" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.1 工作流选择策略
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2.1 工作流选择策略">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#core" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ✅ Core 快速路径（推荐）
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#expanded" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🔧 Expanded 扩展路径（精细控制）
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_62" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        工作流选择决策树
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#22" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.2 变更命名规范
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#23" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.3 高质量规范编写
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2.3 高质量规范编写">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_63" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ✅ 好的规范示例
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_64" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ❌ 避免的写法
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#24-delta" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.4 Delta 规范高级用法
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2.4 Delta 规范高级用法">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#added" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ADDED：新增需求
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#modified" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        MODIFIED：修改现有需求
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#removed" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        REMOVED：删除需求
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#25" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.5 项目配置最佳实践
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2.5 项目配置最佳实践">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_65" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        推荐配置模板
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#part-3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Part 3: 从零开始实践
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Part 3: 从零开始实践">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#31" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.1 环境准备
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3.1 环境准备">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-openspec" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. 安装 OpenSpec
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. 初始化项目
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. 配置项目上下文（可选但推荐）
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#32" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.2 完整案例：为应用添加暗色模式
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3.2 完整案例：为应用添加暗色模式">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#phase-1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Phase 1: 启动变更
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#phase-2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Phase 2: 审查产物（重要！）
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#phase-3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Phase 3: 实现代码
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#phase-4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Phase 4: 验证实现（推荐）
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#phase-5" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Phase 5: 归档变更
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#33-cli" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.3 CLI 常用命令速查
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#part-4-faq" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Part 4: 常见问题解答（FAQ）
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Part 4: 常见问题解答（FAQ）">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#q-ai" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Q: AI 生成的产物质量不高怎么办？
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#q-ai-opsx" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Q: AI 工具无法识别 /opsx 命令怎么办？
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#q" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Q: 如何处理多个变更之间的冲突？
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#q-openspec" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Q: 如何在团队中推广 OpenSpec？
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_66" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        其他常见问题
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="其他常见问题">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#q-openspec-ai" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Q: OpenSpec 支持哪些 AI 工具？
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#q_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Q: 如何回滚或撤销一个已归档的变更？
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#q-schema" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Q: 如何创建自定义 Schema？
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#q-openspec_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Q: OpenSpec 产物会占用太多磁盘空间吗？
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_67" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        总结
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="总结">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_68" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        开始你的规范驱动开发之旅
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="开始你的规范驱动开发之旅">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_69" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        关键要点回顾
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_70" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        下一步行动
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_71" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        更多资源
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="Trellis%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Trellis学习笔记
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="Agent/Agent%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0-Skills.html" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Agent
+  
+
+    
+  </span>
+  
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="Coze/%E5%AE%89%E8%A3%85CozeStudio.html" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Coze
+  
+
+    
+  </span>
+  
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="GoogleADK/GoogleADK-%E5%A4%9A%E5%B7%A5%E5%85%B7%E6%99%BA%E8%83%BD%E4%BD%93.html" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    GoogleADK
+  
+
+    
+  </span>
+  
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="MCP/MCP%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0-%E4%BB%8E0%E5%88%B01.html" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    MCP
+  
+
+    
+  </span>
+  
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="%E6%8F%90%E7%A4%BA%E8%AF%8D/Banana%E6%8F%90%E7%A4%BA%E8%AF%8D-%E6%96%87%E7%AB%A0%E5%8F%98%E6%88%90%E5%8D%A1%E9%80%9A%E4%BF%A1%E6%81%AF%E5%9B%BE.html" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    提示词
+  
+
+    
+  </span>
+  
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    
+  
+  
+  
+    <a href="../Linux/%E5%9F%BA%E7%A1%80/linux%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0-awk.html" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Linux
+  
+
+    
+  </span>
+  
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../%E5%BC%80%E5%8F%91/Jetbrains%E5%85%A8%E5%AE%B6%E6%A1%B6%E6%BF%80%E6%B4%BB.html" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    开发
+  
+
+    
+  </span>
+  
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    
+  
+  
+  
+    <a href="../%E6%95%B0%E6%8D%AE%E5%BA%93/MySQL/Mysql57%E7%BB%BF%E8%89%B2%E7%89%88%E5%AE%89%E8%A3%85.html" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    数据库
+  
+
+    
+  </span>
+  
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../%E6%97%A5%E5%B8%B8%E5%B7%A5%E5%85%B7/Frp%E5%86%85%E7%BD%91%E7%A9%BF%E9%80%8F%E6%90%AD%E5%BB%BA.html" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    日常工具
+  
+
+    
+  </span>
+  
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../%E8%BF%90%E7%BB%B4/IP%E5%88%92%E5%88%86.html" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    运维
+  
+
+    
+  </span>
+  
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#ai" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        让 AI 编码助手 真正理解你的意图
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        演示
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="演示">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        三步完成一个完整变更
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="三步完成一个完整变更">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#ai_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        AI 对话 — 添加暗色模式
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        价值
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="价值">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#openspec" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        为什么选择 OpenSpec？
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="为什么选择 OpenSpec？">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🤝 先对齐再编码
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        📁 井然有序
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🌊 流动灵活
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🔧 工具生态广泛
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_8" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        与同类产品对比
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="与同类产品对比">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#vs-spec-kit-github" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        vs. Spec Kit (GitHub)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#vs-kiro-aws" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        vs. Kiro (AWS)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#vs" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        vs. 不用规范
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_9" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        安装
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="安装">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_10" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        安装指南
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="安装指南">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#npm" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        npm
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pnpm" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        pnpm
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#yarn" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        yarn
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#bun" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        bun
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#nix" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Nix — 直接运行（无需安装）
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#nix-profile" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Nix — 安装到 profile
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_11" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        快速开始
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="快速开始">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_12" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        开始你的第一个变更
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="开始你的第一个变更">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. 初始化项目
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. 创建你的第一个变更
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. 实现任务
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. 归档变更
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_13" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        初始化后的目录结构
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_14" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        核心概念
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="核心概念">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#openspec_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        理解 OpenSpec 的核心机制
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_15" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        设计哲学
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="设计哲学">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_16" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🌊 流动而非僵化
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_17" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🔄 迭代而非瀑布
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_18" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ✨ 简单而非复杂
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_19" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🏗️ 存量项目优先
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_20" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        整体架构
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#specs" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        规范 (Specs)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#changes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        变更 (Changes)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#artifacts" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        产物 (Artifacts)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="产物 (Artifacts)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#proposal" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        📄 Proposal — 提案文档
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#design" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        📐 Design — 设计文档
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tasks" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ✅ Tasks — 任务清单
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#delta" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Delta 规范
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#schema" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Schema 机制
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_21" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        完整工作流程
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_22" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        术语表
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_23" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        命令参考
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="命令参考">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#opsx-slash" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        OPSX Slash 命令
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="OPSX Slash 命令">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#core-profile" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        默认快速路径（core profile）
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_24" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        扩展工作流命令（自定义选择）
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#opsxpropose" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        /opsx:propose
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#opsxexplore" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        /opsx:explore
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#opsxnew" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        /opsx:new
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#opsxcontinue" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        /opsx:continue
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#opsxff" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        /opsx:ff
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#opsxapply" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        /opsx:apply
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#opsxverify" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        /opsx:verify
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#opsxsync" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        /opsx:sync
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#opsxarchive" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        /opsx:archive
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#opsxbulk-archive" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        /opsx:bulk-archive
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#opsxonboard" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        /opsx:onboard
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ai_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        不同 AI 工具的命令语法
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#cli" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        CLI 参考
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="CLI 参考">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_25" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        终端命令完整参考
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_26" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        初始化与更新
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="初始化与更新">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#openspec-init" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        openspec init
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#openspec-update" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        openspec update
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_27" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        浏览命令
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="浏览命令">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#openspec-list" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        openspec list
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#openspec-show" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        openspec show
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_28" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        验证命令
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="验证命令">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#openspec-validate" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        openspec validate
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_29" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        生命周期命令
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="生命周期命令">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#openspec-archive" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        openspec archive
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_30" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        工作流命令
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="工作流命令">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#openspec-status" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        openspec status
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#schema_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Schema 命令
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Schema 命令">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#openspec-schema-init" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        openspec schema init
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#openspec-schema-fork" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        openspec schema fork
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_31" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        配置命令
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="配置命令">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#openspec-config" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        openspec config
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_32" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        环境变量
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_33" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        工作流
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="工作流">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_34" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        常见工作流模式
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="常见工作流模式">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#core-profile_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        默认快速路径（core profile）
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_35" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        扩展工作流（自定义选择）
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_36" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        场景化工作流
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="场景化工作流">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_37" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ⚡ 快速功能（清晰需求）
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_38" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🔍 探索式（需求不明确）
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_39" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🔀 并行变更（多任务）
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#opsxff-opsxcontinue" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        何时使用 /opsx:ff 还是 /opsx:continue
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_40" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        最佳实践
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="最佳实践">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#01" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        01 保持变更聚焦
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#02-explore" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        02 需求不明确时使用 explore
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#03-verify" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        03 归档前先 verify
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#04" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        04 清晰命名变更
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_41" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        定制化
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="定制化">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#openspec_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        让 OpenSpec 按你的方式工作
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#openspecconfigyaml" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        项目配置（openspec/config.yaml）
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#schema_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        自定义 Schema
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="自定义 Schema">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#fork-schema" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Fork 现有 Schema（推荐）
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_42" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        示例：快速迭代工作流
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_43" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        示例：添加审查步骤
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_44" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        集成
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="集成">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#ai_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        支持的 AI 工具
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_45" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        非交互式安装
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_46" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        工作流相关的安装
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_47" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        多语言
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="多语言">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_48" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        多语言支持
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="多语言支持">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_49" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        快速配置
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_50" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        其他语言示例
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_51" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        贡献
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="贡献">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_52" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        参与贡献
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="参与贡献">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_53" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🐛 小型修复
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_54" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🏗️ 较大变更
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ai_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🤖 AI 生成代码
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_55" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        开发指南
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_56" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        遥测数据
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_57" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        实战指南
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="实战指南">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#openspec_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        OpenSpec 上手实践指南
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#part-1-openspec" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Part 1: 深入理解 OpenSpec
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Part 1: 深入理解 OpenSpec">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#11-openspec" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.1 OpenSpec 是什么？
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1.1 OpenSpec 是什么？">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_58" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        核心定位
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#12-openspec" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.2 为什么需要 OpenSpec？
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1.2 为什么需要 OpenSpec？">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#ai_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        😵 痛点一：AI 幻觉与偏离
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_59" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🔄 痛点二：迭代成本高
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_60" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        👥 痛点三：团队协作难
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#openspec_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        OpenSpec 的解决方案
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#13" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.3 核心架构解析
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1.3 核心架构解析">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#openspec_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        OpenSpec 目录结构
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#14-artifact" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.4 产物（Artifact）体系详解
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1.4 产物（Artifact）体系详解">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#proposal_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        📋 Proposal（提案）
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#specs_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        📐 Specs（规范）
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#design_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🏗️ Design（设计）
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tasks_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ✅ Tasks（任务）
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_61" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        产物依赖关系图
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#part-2-openspec" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Part 2: OpenSpec 最佳实践
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Part 2: OpenSpec 最佳实践">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#21" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.1 工作流选择策略
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2.1 工作流选择策略">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#core" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ✅ Core 快速路径（推荐）
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#expanded" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🔧 Expanded 扩展路径（精细控制）
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_62" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        工作流选择决策树
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#22" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.2 变更命名规范
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#23" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.3 高质量规范编写
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2.3 高质量规范编写">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_63" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ✅ 好的规范示例
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_64" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ❌ 避免的写法
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#24-delta" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.4 Delta 规范高级用法
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2.4 Delta 规范高级用法">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#added" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ADDED：新增需求
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#modified" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        MODIFIED：修改现有需求
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#removed" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        REMOVED：删除需求
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#25" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.5 项目配置最佳实践
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2.5 项目配置最佳实践">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_65" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        推荐配置模板
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#part-3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Part 3: 从零开始实践
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Part 3: 从零开始实践">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#31" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.1 环境准备
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3.1 环境准备">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-openspec" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. 安装 OpenSpec
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. 初始化项目
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. 配置项目上下文（可选但推荐）
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#32" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.2 完整案例：为应用添加暗色模式
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3.2 完整案例：为应用添加暗色模式">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#phase-1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Phase 1: 启动变更
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#phase-2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Phase 2: 审查产物（重要！）
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#phase-3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Phase 3: 实现代码
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#phase-4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Phase 4: 验证实现（推荐）
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#phase-5" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Phase 5: 归档变更
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#33-cli" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.3 CLI 常用命令速查
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#part-4-faq" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Part 4: 常见问题解答（FAQ）
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Part 4: 常见问题解答（FAQ）">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#q-ai" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Q: AI 生成的产物质量不高怎么办？
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#q-ai-opsx" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Q: AI 工具无法识别 /opsx 命令怎么办？
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#q" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Q: 如何处理多个变更之间的冲突？
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#q-openspec" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Q: 如何在团队中推广 OpenSpec？
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_66" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        其他常见问题
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="其他常见问题">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#q-openspec-ai" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Q: OpenSpec 支持哪些 AI 工具？
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#q_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Q: 如何回滚或撤销一个已归档的变更？
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#q-schema" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Q: 如何创建自定义 Schema？
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#q-openspec_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Q: OpenSpec 产物会占用太多磁盘空间吗？
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_67" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        总结
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="总结">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_68" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        开始你的规范驱动开发之旅
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="开始你的规范驱动开发之旅">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_69" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        关键要点回顾
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_70" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        下一步行动
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_71" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        更多资源
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+                
+
+
+
+
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  
+    <a href="https://github.com/jruing/obsidian/edit/master/docs/AI/OpenSpec中文文档.md" title="Edit this page" class="md-content__button md-icon" rel="edit">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10 20H6V4h7v5h5v3.1l2-2V8l-6-6H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h4zm10.2-7c.1 0 .3.1.4.2l1.3 1.3c.2.2.2.6 0 .8l-1 1-2.1-2.1 1-1c.1-.1.2-.2.4-.2m0 3.9L14.1 23H12v-2.1l6.1-6.1z"/></svg>
+    </a>
+  
+  
+
+
+  <h1>OpenSpec中文文档</h1>
+
+<blockquote>
+<p>AI 原生 · 规范驱动开发</p>
+</blockquote>
+<h2 id="ai">让 AI 编码助手 真正理解你的意图</h2>
+<p>OpenSpec 是 AI-Native 的规范驱动开发系统，为 AI 编码助手提供轻量级规范层。在第一行代码编写之前，先与 AI 对齐需求，让开发过程更可预测、更高效。</p>
+<p>→ 流动而非僵化<br />
+→ 迭代而非瀑布<br />
+→ 简单而非复杂<br />
+→ 存量项目优先<br />
+→ 从个人项目扩展到企业级</p>
+<p><a href="#快速开始">快速开始</a> | <a href="#核心概念">了解概念</a></p>
+<ul>
+<li>✅ 20+ 支持 AI 工具</li>
+<li>✅ MIT 开源协议</li>
+<li>✅ Node 20+ 运行环境</li>
+</ul>
+<hr />
+<h2 id="_1">演示</h2>
+<h3 id="_2">三步完成一个完整变更</h3>
+<p>OpenSpec 简化了从想法到实现再到归档的完整开发流程</p>
+<h4 id="ai_1">AI 对话 — 添加暗色模式</h4>
+<pre><code>You: /opsx:propose add-dark-mode
+
+AI: 已创建 openspec/changes/add-dark-mode/
+    ✓ proposal.md — 为什么做、做什么
+    ✓ specs/ — 需求与验收场景
+    ✓ design.md — 技术实现方案
+    ✓ tasks.md — 实现任务清单
+    准备开始实现！
+
+You: /opsx:apply
+
+AI: 正在实现各项任务...
+    ✓ 1.1 创建主题上下文 Provider
+    ✓ 1.2 创建主题切换组件
+    ✓ 2.1 添加 CSS 变量
+    ✓ 2.2 接入 localStorage
+    所有任务完成！
+
+You: /opsx:archive
+
+AI: 已归档至 openspec/changes/archive/2026-03-10-add-dark-mode/
+    ✓ 规范已更新。准备好下一个功能！
+</code></pre>
+<p><a href="#">OpenSpec 控制台</a></p>
+<hr />
+<h2 id="_3">价值</h2>
+<h3 id="openspec">为什么选择 OpenSpec？</h3>
+<p>AI 编码助手功能强大，但当需求只存在于聊天记录中时，结果往往难以预测</p>
+<h4 id="_4">🤝 先对齐再编码</h4>
+<p>人与 AI 在写代码前先就规范达成共识，避免方向性偏差带来的大量返工</p>
+<h4 id="_5">📁 井然有序</h4>
+<p>每个变更都有独立文件夹，包含提案、规范、设计和任务四个产物，清晰可查</p>
+<h4 id="_6">🌊 流动灵活</h4>
+<p>随时更新任意产物，无需遵守僵化的阶段门控，按自己的节奏推进</p>
+<h4 id="_7">🔧 工具生态广泛</h4>
+<p>通过 Slash 命令支持 20+ AI 助手，包括 Claude Code、Cursor、Windsurf 等主流工具</p>
+<h3 id="_8">与同类产品对比</h3>
+<h4 id="vs-spec-kit-github">vs. Spec Kit (GitHub)</h4>
+<p>Spec Kit 全面但重量级，有严格阶段门控、大量 Markdown 文件、Python 环境依赖。<strong>OpenSpec 更轻量，让你自由迭代。</strong></p>
+<h4 id="vs-kiro-aws">vs. Kiro (AWS)</h4>
+<p>Kiro 功能强大但锁定在其 IDE 内，且仅限 Claude 模型。<strong>OpenSpec 支持你现有的全部工具。</strong></p>
+<h4 id="vs">vs. 不用规范</h4>
+<p>没有规范的 AI 编码意味着模糊提示和不可预测的结果。<strong>OpenSpec 在不增加繁文缛节的前提下带来可预测性。</strong></p>
+<hr />
+<h2 id="_9">安装</h2>
+<h3 id="_10">安装指南</h3>
+<blockquote>
+<p>需要 Node.js 20.19.0 或更高版本</p>
+</blockquote>
+<h4 id="npm">npm</h4>
+<pre><code class="language-bash">npm install -g @fission-ai/openspec@latest
+</code></pre>
+<h4 id="pnpm">pnpm</h4>
+<pre><code class="language-bash">pnpm add -g @fission-ai/openspec@latest
+</code></pre>
+<h4 id="yarn">yarn</h4>
+<pre><code class="language-bash">yarn global add @fission-ai/openspec@latest
+</code></pre>
+<h4 id="bun">bun</h4>
+<pre><code class="language-bash">bun add -g @fission-ai/openspec@latest
+</code></pre>
+<h4 id="nix">Nix — 直接运行（无需安装）</h4>
+<pre><code class="language-bash">nix run github:Fission-AI/OpenSpec -- init
+</code></pre>
+<h4 id="nix-profile">Nix — 安装到 profile</h4>
+<pre><code class="language-bash">nix profile install github:Fission-AI/OpenSpec
+</code></pre>
+<blockquote>
+<p>💡 <strong>验证安装</strong>
+<code>bash
+openspec --version</code></p>
+</blockquote>
+<hr />
+<h2 id="_11">快速开始</h2>
+<h3 id="_12">开始你的第一个变更</h3>
+<p>初始化项目，与 AI 协作完成一个完整的功能开发流程</p>
+<h4 id="1">1. 初始化项目</h4>
+<p>进入你的项目目录，运行初始化命令。这将创建 OpenSpec 目录结构并为你的 AI 工具生成配置文件。</p>
+<pre><code class="language-bash">cd your-project
+openspec init
+</code></pre>
+<h4 id="2">2. 创建你的第一个变更</h4>
+<p>在 AI 对话窗口中，使用 <code>/opsx:propose</code> 命令描述你想要构建的功能。AI 会自动创建所有必要的规划产物。</p>
+<pre><code>/opsx:propose add-dark-mode
+</code></pre>
+<h4 id="3">3. 实现任务</h4>
+<p>规划产物生成完毕后，运行 <code>/opsx:apply</code> 让 AI 按照任务清单逐步实现代码。</p>
+<pre><code>/opsx:apply
+</code></pre>
+<h4 id="4">4. 归档变更</h4>
+<p>完成实现后，运行 <code>/opsx:archive</code> 将 Delta 规范合并到主规范，并将变更文件夹移至归档目录。</p>
+<pre><code>/opsx:archive
+</code></pre>
+<blockquote>
+<p>🔥 <strong>新功能：扩展工作流</strong>
+如需更细粒度的控制（<code>/opsx:new</code>、<code>/opsx:ff</code>、<code>/opsx:verify</code> 等），运行 <code>openspec config profile</code> 选择工作流，然后执行 <code>openspec update</code> 更新配置。</p>
+</blockquote>
+<h3 id="_13">初始化后的目录结构</h3>
+<pre><code>openspec/
+├── specs/              # 主规范（当前系统行为的权威基准）
+│   └── &lt;domain&gt;/
+│       └── spec.md
+├── changes/            # 提议中的变更（每个变更独立文件夹）
+│   └── &lt;change-name&gt;/
+│       ├── proposal.md    # 为什么做、做什么
+│       ├── design.md      # 如何实现
+│       ├── tasks.md       # 实现任务清单
+│       └── specs/         # Delta 规范（正在变化的部分）
+│           └── &lt;domain&gt;/
+│               └── spec.md
+└── config.yaml         # 项目配置（可选）
+</code></pre>
+<hr />
+<h2 id="_14">核心概念</h2>
+<h3 id="openspec_1">理解 OpenSpec 的核心机制</h3>
+<p>深入了解规范、变更、产物和 Delta 机制如何协同工作</p>
+<h3 id="_15">设计哲学</h3>
+<p>OpenSpec 围绕四个核心原则构建：</p>
+<h4 id="_16">🌊 流动而非僵化</h4>
+<p>传统规范系统将你锁定在阶段中：先规划，再实现，然后完成。OpenSpec 更灵活——你可以以任何有意义的顺序创建产物。</p>
+<h4 id="_17">🔄 迭代而非瀑布</h4>
+<p>需求会变化，理解会加深。最初看起来不错的方案在看到代码库后可能无法成立。OpenSpec 拥抱这种现实。</p>
+<h4 id="_18">✨ 简单而非复杂</h4>
+<p>一些规范框架需要大量设置、严格格式或繁重流程。OpenSpec 不挡你的路。几秒钟初始化，立即开始工作。</p>
+<h4 id="_19">🏗️ 存量项目优先</h4>
+<p>大多数软件工作不是从零开始，而是在已有系统上迭代改造。OpenSpec 基于 Delta 的方法，让描述"改了什么"变得自然而直观。</p>
+<h3 id="_20">整体架构</h3>
+<p>OpenSpec 将你的工作组织为两个主要区域：</p>
+<table>
+<thead>
+<tr>
+<th>区域</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>specs/</strong></td>
+<td>权威基准，描述系统当前行为，归档时合并</td>
+</tr>
+<tr>
+<td><strong>changes/</strong></td>
+<td>提议中的修改，每个变更 = 一个文件夹</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p>💡 这种分离是关键。你可以并行处理多个变更而不发生冲突，在变更影响主规范之前先进行审查，归档时 Delta 会干净地合并回主规范。</p>
+</blockquote>
+<h3 id="specs">规范 (Specs)</h3>
+<p>规范使用结构化需求和场景来描述系统行为。一个典型的规范文件如下：</p>
+<p><code>openspec/specs/auth/spec.md</code></p>
+<pre><code class="language-markdown"># Auth 规范
+
+## 目的
+应用程序的身份验证和会话管理。
+
+## 需求
+
+### 需求：用户身份验证
+系统 SHALL 在登录成功时颁发 JWT 令牌。
+
+#### 场景：有效凭据
+- GIVEN 用户具有有效凭据
+- WHEN 用户提交登录表单
+- THEN 返回 JWT 令牌
+- AND 用户被重定向到仪表板
+
+#### 场景：无效凭据
+- GIVEN 无效凭据
+- WHEN 用户提交登录表单
+- THEN 显示错误消息
+- AND 不颁发令牌
+</code></pre>
+<table>
+<thead>
+<tr>
+<th>元素</th>
+<th>用途</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>## 目的</code></td>
+<td>该规范领域的高层描述</td>
+</tr>
+<tr>
+<td><code>### 需求：</code></td>
+<td>系统必须具备的具体行为</td>
+</tr>
+<tr>
+<td><code>#### 场景：</code></td>
+<td>需求的具体示例（可验证的）</td>
+</tr>
+<tr>
+<td>SHALL / MUST / SHOULD</td>
+<td>RFC 2119 关键词，表示需求强度</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p><strong>规范的本质</strong>：规范是 <strong>行为契约</strong>，而非实现计划。好的规范内容包括可观察行为、输入/输出/错误条件、外部约束。避免在规范中写内部类名、库或框架选择、逐步实现细节。</p>
+</blockquote>
+<h3 id="changes">变更 (Changes)</h3>
+<p>变更是对系统的提议修改，打包为一个包含理解和实现所需一切的文件夹：</p>
+<pre><code>openspec/changes/add-dark-mode/
+├── proposal.md           # 为什么做、做什么
+├── design.md             # 如何实现（技术方案）
+├── tasks.md              # 实现任务清单（带复选框）
+├── .openspec.yaml        # 变更元数据（可选）
+└── specs/                # Delta 规范
+    └── ui/
+        └── spec.md       # ui/spec.md 中正在变化的内容
+</code></pre>
+<ul>
+<li>📦 <strong>一切在一起</strong>：提案、设计、任务和规范都在一处。无需在不同位置寻找信息。</li>
+<li>⚡ <strong>并行工作</strong>：多个变更可以同时存在而不冲突。在修复 bug 的同时开发新功能。</li>
+<li>📚 <strong>清晰历史</strong>：归档时，变更移至 archive/ 并保留完整上下文，方便日后追溯原因。</li>
+<li>🔍 <strong>便于审查</strong>：变更文件夹易于审查——打开它，阅读提案，检查设计，查看规范 Delta。</li>
+</ul>
+<h3 id="artifacts">产物 (Artifacts)</h3>
+<p>产物是变更中指导工作的文档，它们相互构建，每个产物为下一个提供上下文：</p>
+<pre><code>proposal.md → specs/ → design.md → tasks.md
+为什么做 + 范围 → 变化的内容 → 技术方案 → 实现步骤
+</code></pre>
+<h4 id="proposal">📄 Proposal — 提案文档</h4>
+<p>提案捕捉意图、范围和高层方案：</p>
+<pre><code class="language-markdown"># 提案：添加暗色模式
+
+## 意图
+用户希望有一个暗色模式选项，以减少夜间使用时的眼睛疲劳。
+
+## 范围
+包含：主题切换按钮、系统偏好检测、本地存储持久化
+不包含：自定义颜色主题（未来工作）
+
+## 方案
+使用 CSS 自定义属性进行主题设置，React Context 进行状态管理。
+</code></pre>
+<h4 id="design">📐 Design — 设计文档</h4>
+<p>设计文档捕捉技术方案和架构决策：</p>
+<pre><code class="language-markdown"># 设计：添加暗色模式
+
+## 技术方案
+主题状态通过 React Context 管理以避免 prop drilling。
+CSS 自定义属性支持运行时切换而无需切换 class。
+
+## 架构决策
+
+### 决策：Context 而非 Redux
+使用 React Context 的原因：
+- 简单的二值状态（亮/暗）
+- 无复杂状态转换
+- 避免引入 Redux 依赖
+</code></pre>
+<h4 id="tasks">✅ Tasks — 任务清单</h4>
+<p>任务是带复选框的具体实现步骤：</p>
+<pre><code class="language-markdown"># 任务
+
+## 1. 主题基础设施
+- [ ] 1.1 创建带有亮/暗状态的 ThemeContext
+- [ ] 1.2 为颜色添加 CSS 自定义属性
+- [ ] 1.3 实现 localStorage 持久化
+- [ ] 1.4 添加系统偏好检测
+
+## 2. UI 组件
+- [ ] 2.1 创建 ThemeToggle 组件
+- [ ] 2.2 在设置页面添加切换
+- [ ] 2.3 更新 Header 包含快速切换
+
+## 3. 样式
+- [ ] 3.1 定义暗色主题调色板
+- [ ] 3.2 更新组件使用 CSS 变量
+</code></pre>
+<h3 id="delta">Delta 规范</h3>
+<p>Delta 规范是让 OpenSpec 适用于 <strong>已有项目改造</strong> 的关键概念。它们描述 <strong>正在变化的内容</strong>，而不是重新陈述整个规范。</p>
+<pre><code class="language-markdown"># Auth 的 Delta 规范
+
+## ADDED Requirements（新增需求）
+
+### 需求：双因素认证
+系统 MUST 支持基于 TOTP 的双因素认证。
+
+#### 场景：2FA 登录
+- GIVEN 启用了 2FA 的用户
+- WHEN 用户提交有效凭据
+- THEN 呈现 OTP 挑战
+- AND 仅在有效 OTP 后完成登录
+
+## MODIFIED Requirements（修改需求）
+
+### 需求：会话过期
+系统 MUST 在 15 分钟不活动后使会话过期。
+（之前：30 分钟）
+
+## REMOVED Requirements（删除需求）
+
+### 需求：记住我
+（因支持 2FA 而废弃。用户应在每次会话重新认证。）
+</code></pre>
+<table>
+<thead>
+<tr>
+<th>Delta 节</th>
+<th>含义</th>
+<th>归档时操作</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>## ADDED Requirements</code></td>
+<td>新行为</td>
+<td>追加到主规范</td>
+</tr>
+<tr>
+<td><code>## MODIFIED Requirements</code></td>
+<td>变更的行为</td>
+<td>替换现有需求</td>
+</tr>
+<tr>
+<td><code>## REMOVED Requirements</code></td>
+<td>废弃的行为</td>
+<td>从主规范中删除</td>
+</tr>
+</tbody>
+</table>
+<h3 id="schema">Schema 机制</h3>
+<p>Schema 定义工作流的产物类型及其依赖关系。默认 Schema 为 <code>spec-driven</code>：</p>
+<pre><code class="language-yaml">name: spec-driven
+artifacts:
+  - id: proposal
+    generates: proposal.md
+    requires: []              # 无依赖，可以先创建
+
+  - id: specs
+    generates: specs/**/*.md
+    requires: [proposal]      # 需要提案后才能创建
+
+  - id: design
+    generates: design.md
+    requires: [proposal]      # 可与 specs 并行创建
+
+  - id: tasks
+    generates: tasks.md
+    requires: [specs, design] # 需要 specs 和 design 都完成
+</code></pre>
+<pre><code>proposal
+   ↓
+   ├──→ specs ──┐
+   ├──→ design ─┤
+   ↓            ↓
+         tasks
+</code></pre>
+<h3 id="_21">完整工作流程</h3>
+<ol>
+<li><strong>启动变更</strong>：<code>/opsx:propose</code> 或 <code>/opsx:new</code></li>
+<li><strong>创建产物</strong>：proposal → specs → design → tasks</li>
+<li><strong>实现任务</strong>：<code>/opsx:apply</code></li>
+<li><strong>验证工作（可选）</strong>：<code>/opsx:verify</code></li>
+<li><strong>归档变更</strong>：Delta 合并入主规范，变更文件夹移至 archive/</li>
+</ol>
+<h3 id="_22">术语表</h3>
+<table>
+<thead>
+<tr>
+<th>术语</th>
+<th>定义</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>产物 (Artifact)</strong></td>
+<td>变更中的文档（proposal、design、tasks 或 Delta 规范）</td>
+</tr>
+<tr>
+<td><strong>归档 (Archive)</strong></td>
+<td>完成变更并将其 Delta 合并到主规范的过程</td>
+</tr>
+<tr>
+<td><strong>变更 (Change)</strong></td>
+<td>打包为带有产物的文件夹的系统提议修改</td>
+</tr>
+<tr>
+<td><strong>Delta 规范</strong></td>
+<td>描述变化（ADDED/MODIFIED/REMOVED）的规范</td>
+</tr>
+<tr>
+<td><strong>领域 (Domain)</strong></td>
+<td>规范的逻辑分组（如 auth/、payments/）</td>
+</tr>
+<tr>
+<td><strong>需求 (Requirement)</strong></td>
+<td>系统必须具备的具体行为</td>
+</tr>
+<tr>
+<td><strong>场景 (Scenario)</strong></td>
+<td>需求的具体示例，通常采用 Given/When/Then 格式</td>
+</tr>
+<tr>
+<td><strong>Schema</strong></td>
+<td>产物类型及其依赖关系的定义</td>
+</tr>
+<tr>
+<td><strong>规范 (Spec)</strong></td>
+<td>描述系统行为的规格说明</td>
+</tr>
+<tr>
+<td><strong>权威基准</strong></td>
+<td>openspec/specs/ 目录，包含当前一致同意的行为，是所有规范的最终依据</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="_23">命令参考</h2>
+<h3 id="opsx-slash">OPSX Slash 命令</h3>
+<p>在 AI 编码助手的对话界面中调用（如 Claude Code、Cursor、Windsurf）</p>
+<h4 id="core-profile">默认快速路径（core profile）</h4>
+<table>
+<thead>
+<tr>
+<th>命令</th>
+<th>用途</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>/opsx:propose</code></td>
+<td>创建变更并一键生成规划产物</td>
+</tr>
+<tr>
+<td><code>/opsx:explore</code></td>
+<td>在提交变更前思考和探索想法</td>
+</tr>
+<tr>
+<td><code>/opsx:apply</code></td>
+<td>实现变更中的任务</td>
+</tr>
+<tr>
+<td><code>/opsx:archive</code></td>
+<td>归档已完成的变更</td>
+</tr>
+</tbody>
+</table>
+<h4 id="_24">扩展工作流命令（自定义选择）</h4>
+<table>
+<thead>
+<tr>
+<th>命令</th>
+<th>用途</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>/opsx:new</code></td>
+<td>创建新变更脚手架</td>
+</tr>
+<tr>
+<td><code>/opsx:continue</code></td>
+<td>按依赖顺序创建下一个产物</td>
+</tr>
+<tr>
+<td><code>/opsx:ff</code></td>
+<td>快进：一次创建所有规划产物</td>
+</tr>
+<tr>
+<td><code>/opsx:verify</code></td>
+<td>验证实现是否与产物匹配</td>
+</tr>
+<tr>
+<td><code>/opsx:sync</code></td>
+<td>将 Delta 规范合并到主规范</td>
+</tr>
+<tr>
+<td><code>/opsx:bulk-archive</code></td>
+<td>批量归档多个变更</td>
+</tr>
+<tr>
+<td><code>/opsx:onboard</code></td>
+<td>引导式完整工作流教程</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h3 id="opsxpropose"><code>/opsx:propose</code></h3>
+<blockquote>
+<p>core profile</p>
+</blockquote>
+<p>创建新变更并一步生成所有规划产物。这是 core profile 中的默认启动命令。</p>
+<p><strong>语法</strong>：<code>/opsx:propose [变更名或描述]</code></p>
+<table>
+<thead>
+<tr>
+<th>参数</th>
+<th>必填</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>change-name-or-description</code></td>
+<td>否</td>
+<td>kebab-case 名称或自然语言描述</td>
+</tr>
+</tbody>
+</table>
+<p><strong>示例</strong>：</p>
+<pre><code>You: /opsx:propose add-dark-mode
+
+AI:  已创建 openspec/changes/add-dark-mode/
+     ✓ proposal.md
+     ✓ specs/ui/spec.md
+     ✓ design.md
+     ✓ tasks.md
+     准备好实现。运行 /opsx:apply。
+</code></pre>
+<blockquote>
+<p>如果你想分步骤控制产物创建，请启用扩展工作流并使用 <code>/opsx:new</code> + <code>/opsx:continue</code>。</p>
+</blockquote>
+<hr />
+<h3 id="opsxexplore"><code>/opsx:explore</code></h3>
+<blockquote>
+<p>core profile</p>
+</blockquote>
+<p>在提交变更之前，思考想法、调查问题、澄清需求。</p>
+<p><strong>语法</strong>：<code>/opsx:explore [话题]</code></p>
+<p><strong>示例</strong>：</p>
+<pre><code>You: /opsx:explore
+
+AI:  你想探索什么？
+
+You: 如何为移动端应用处理身份验证？
+
+AI:  让我来研究你当前的认证设置...
+     [分析代码库]
+
+     我看到你在 Web 端使用了基于 session 的认证。
+     对于移动端，我们有三种主要选择：
+
+     1. JWT 令牌（无状态，支持离线）
+     2. OAuth2（如需第三方登录）
+     3. 扩展当前 session（更简单，但需要连接）
+
+     你的 API 已经配置了 CORS。你对哪个方向感兴趣？
+
+You: 让我们用 JWT。能开始一个变更吗？
+
+AI:  准备好了。运行 /opsx:propose add-jwt-auth 开始。
+</code></pre>
+<blockquote>
+<p>探索期间不会创建产物。适合在决定之前比较多种方案。</p>
+</blockquote>
+<hr />
+<h3 id="opsxnew"><code>/opsx:new</code></h3>
+<blockquote>
+<p>扩展工作流</p>
+</blockquote>
+<p>创建新变更脚手架。创建变更文件夹，等待你用 <code>/opsx:continue</code> 或 <code>/opsx:ff</code> 生成产物。</p>
+<p><strong>语法</strong>：<code>/opsx:new [变更名] [--schema &lt;schema-name&gt;]</code></p>
+<p><strong>示例</strong>：</p>
+<pre><code>You: /opsx:new add-dark-mode
+
+AI:  已创建 openspec/changes/add-dark-mode/
+     Schema: spec-driven
+
+     准备创建: proposal
+     使用 /opsx:continue 创建，或 /opsx:ff 创建所有产物。
+</code></pre>
+<blockquote>
+<p>使用描述性名称：<code>add-feature</code>、<code>fix-bug</code>、<code>refactor-module</code>。避免使用 <code>update</code>、<code>changes</code>、<code>wip</code> 等泛称。</p>
+</blockquote>
+<hr />
+<h3 id="opsxcontinue"><code>/opsx:continue</code></h3>
+<blockquote>
+<p>扩展工作流</p>
+</blockquote>
+<p>在依赖链中创建下一个产物。每次创建一个产物以实现增量进度。</p>
+<p><strong>语法</strong>：<code>/opsx:continue [变更名]</code></p>
+<p><strong>示例</strong>：</p>
+<pre><code>You: /opsx:continue
+
+AI:  变更: add-dark-mode
+
+     产物状态:
+     ✓ proposal    (完成)
+     ◆ specs       (就绪)
+     ◆ design      (就绪)
+     ○ tasks       (阻塞 - 需要: specs)
+
+     正在创建 specs...
+     ✓ 已创建 openspec/changes/add-dark-mode/specs/ui/spec.md
+
+     现在可用: tasks
+     运行 /opsx:continue 创建下一个产物。
+</code></pre>
+<blockquote>
+<p>当你想在继续之前审查每个产物时使用。可以在继续之前编辑已创建的产物。</p>
+</blockquote>
+<hr />
+<h3 id="opsxff"><code>/opsx:ff</code></h3>
+<blockquote>
+<p>扩展工作流</p>
+</blockquote>
+<p>快进产物创建。一次创建所有规划产物。</p>
+<p><strong>语法</strong>：<code>/opsx:ff [变更名]</code></p>
+<p><strong>示例</strong>：</p>
+<pre><code>You: /opsx:ff add-dark-mode
+
+AI:  快进 add-dark-mode...
+
+     ✓ 创建 proposal.md
+     ✓ 创建 specs/ui/spec.md
+     ✓ 创建 design.md
+     ✓ 创建 tasks.md
+
+     所有规划产物完成！
+     准备好实现。运行 /opsx:apply 开始。
+</code></pre>
+<blockquote>
+<p>当你对要构建的内容有清晰认识时使用。适合中小型功能。</p>
+</blockquote>
+<hr />
+<h3 id="opsxapply"><code>/opsx:apply</code></h3>
+<blockquote>
+<p>core profile</p>
+</blockquote>
+<p>实现变更中的任务。逐步处理任务列表，编写代码并勾选完成项。</p>
+<p><strong>语法</strong>：<code>/opsx:apply [变更名]</code></p>
+<p><strong>示例</strong>：</p>
+<pre><code>You: /opsx:apply
+
+AI:  实现 add-dark-mode...
+
+     读取 tasks.md:
+     - [ ] 1.1 创建 ThemeContext
+     - [ ] 1.2 添加 CSS 自定义属性
+     - [ ] 1.3 实现 localStorage 持久化
+
+     处理 1.1: 创建 ThemeContext...
+     [创建 src/context/ThemeContext.tsx]
+     ✓ 1.1 完成
+
+     处理 1.2: 添加 CSS 自定义属性...
+     [更新 src/styles/globals.css]
+     ✓ 1.2 完成
+     ...
+</code></pre>
+<blockquote>
+<p>如果被打断可以恢复。可以通过指定变更名来并行处理多个变更。完成状态在 tasks.md 复选框中跟踪。</p>
+</blockquote>
+<hr />
+<h3 id="opsxverify"><code>/opsx:verify</code></h3>
+<blockquote>
+<p>扩展工作流</p>
+</blockquote>
+<p>验证实现是否与变更产物匹配。从完整性、正确性和一致性三个维度检查。</p>
+<p><strong>语法</strong>：<code>/opsx:verify [变更名]</code></p>
+<table>
+<thead>
+<tr>
+<th>维度</th>
+<th>验证内容</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>完整性</strong></td>
+<td>所有任务完成、所有需求已实现、场景已覆盖</td>
+</tr>
+<tr>
+<td><strong>正确性</strong></td>
+<td>实现与规范意图匹配、边缘情况已处理</td>
+</tr>
+<tr>
+<td><strong>一致性</strong></td>
+<td>设计决策在代码中有体现、模式一致</td>
+</tr>
+</tbody>
+</table>
+<p><strong>示例</strong>：</p>
+<pre><code>You: /opsx:verify
+
+AI:  验证 add-dark-mode...
+
+     完整性
+     ✓ tasks.md 中的所有 8 个任务都已完成
+     ✓ 规范中的所有需求都有对应代码
+     ⚠ 场景&quot;系统偏好检测&quot;没有测试覆盖
+
+     正确性
+     ✓ 实现与规范意图匹配
+     ✓ 场景中的边缘情况已处理
+
+     一致性
+     ✓ 设计决策在代码结构中有体现
+     ⚠ 设计提到&quot;CSS 变量&quot;但实现使用了 Tailwind 类
+
+     总结
+     关键问题: 0 | 警告: 2 | 可以归档: 是（有警告）
+</code></pre>
+<hr />
+<h3 id="opsxsync"><code>/opsx:sync</code></h3>
+<blockquote>
+<p>扩展工作流（可选）</p>
+</blockquote>
+<p>将 Delta 规范从变更合并到主规范。归档时会提示同步，通常无需手动运行。</p>
+<p><strong>语法</strong>：<code>/opsx:sync [变更名]</code></p>
+<table>
+<thead>
+<tr>
+<th>场景</th>
+<th>是否使用 sync？</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>长期变更，归档前想先将规范同步到主分支</td>
+<td>是</td>
+</tr>
+<tr>
+<td>多个并行变更需要最新的基础规范</td>
+<td>是</td>
+</tr>
+<tr>
+<td>快速变更，直接归档</td>
+<td>否（归档会处理）</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h3 id="opsxarchive"><code>/opsx:archive</code></h3>
+<blockquote>
+<p>core profile</p>
+</blockquote>
+<p>归档已完成的变更。完成变更并将其移至归档文件夹。</p>
+<p><strong>语法</strong>：<code>/opsx:archive [变更名]</code></p>
+<p><strong>示例</strong>：</p>
+<pre><code>You: /opsx:archive
+
+AI:  归档 add-dark-mode...
+
+     产物状态:
+     ✓ proposal.md 存在
+     ✓ specs/ 存在
+     ✓ design.md 存在
+     ✓ tasks.md 存在 (8/8 任务完成)
+
+     Delta 规范: 尚未同步
+     → 现在同步？(推荐)
+
+You: 是
+
+AI:  ✓ 已将规范同步到 openspec/specs/ui/spec.md
+     ✓ 已移至 openspec/changes/archive/2026-03-10-add-dark-mode/
+
+     变更归档成功。
+</code></pre>
+<hr />
+<h3 id="opsxbulk-archive"><code>/opsx:bulk-archive</code></h3>
+<blockquote>
+<p>扩展工作流</p>
+</blockquote>
+<p>批量归档多个已完成的变更。自动处理变更之间的规范冲突。</p>
+<p><strong>语法</strong>：<code>/opsx:bulk-archive [变更名...]</code></p>
+<p><strong>示例</strong>：</p>
+<pre><code>You: /opsx:bulk-archive
+
+AI:  找到 3 个已完成的变更:
+     - add-dark-mode (8/8 任务完成)
+     - fix-login-bug (3/3 任务完成)
+     - update-footer (2/2 任务完成)
+
+     检查规范冲突...
+     ⚠ add-dark-mode 和 update-footer 都触及 specs/ui/
+
+     检查代码库以解决...
+     两个变更都已实现。将按时间顺序合并:
+     1. add-dark-mode (1 月 20 日创建)
+     2. update-footer (1 月 22 日创建)
+
+     归档所有 3 个变更？
+
+You: 是
+
+AI:  ✓ 已归档 add-dark-mode
+     ✓ 已归档 fix-login-bug
+     ✓ 已归档 update-footer
+</code></pre>
+<hr />
+<h3 id="opsxonboard"><code>/opsx:onboard</code></h3>
+<blockquote>
+<p>扩展工作流</p>
+</blockquote>
+<p>完整工作流的引导式入门教程，使用你的真实代码库进行交互式演示。</p>
+<p><strong>语法</strong>：<code>/opsx:onboard</code></p>
+<blockquote>
+<p>📋 <strong>包含 11 个阶段</strong>
+欢迎与代码库分析 → 发现改进机会 → 创建变更 → 编写提案 → 创建规范 → 编写设计 → 创建任务 → 实现任务 → 验证实现 → 归档变更 → 总结与后续步骤</p>
+<p>适合首次使用 OpenSpec 的用户。使用真实代码，不是玩具示例。完整完成约需 15-30 分钟。</p>
+</blockquote>
+<hr />
+<h3 id="ai_2">不同 AI 工具的命令语法</h3>
+<table>
+<thead>
+<tr>
+<th>工具</th>
+<th>语法示例</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Claude Code</td>
+<td><code>/opsx:propose</code>、<code>/opsx:apply</code></td>
+</tr>
+<tr>
+<td>Cursor</td>
+<td><code>/opsx-propose</code>、<code>/opsx-apply</code></td>
+</tr>
+<tr>
+<td>Windsurf</td>
+<td><code>/opsx-propose</code>、<code>/opsx-apply</code></td>
+</tr>
+<tr>
+<td>Copilot (IDE)</td>
+<td><code>/opsx-propose</code>、<code>/opsx-apply</code></td>
+</tr>
+<tr>
+<td>Trae</td>
+<td><code>/openspec-propose</code>、<code>/openspec-apply-change</code></td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="cli">CLI 参考</h2>
+<h3 id="_25">终端命令完整参考</h3>
+<p>openspec CLI 提供项目设置、验证、状态检查和管理的终端命令</p>
+<table>
+<thead>
+<tr>
+<th>分类</th>
+<th>命令</th>
+<th>用途</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>设置</strong></td>
+<td><code>init</code>、<code>update</code></td>
+<td>初始化和更新项目中的 OpenSpec</td>
+</tr>
+<tr>
+<td><strong>浏览</strong></td>
+<td><code>list</code>、<code>view</code>、<code>show</code></td>
+<td>探索变更和规范</td>
+</tr>
+<tr>
+<td><strong>验证</strong></td>
+<td><code>validate</code></td>
+<td>检查变更和规范的问题</td>
+</tr>
+<tr>
+<td><strong>生命周期</strong></td>
+<td><code>archive</code></td>
+<td>完成已完成的变更</td>
+</tr>
+<tr>
+<td><strong>工作流</strong></td>
+<td><code>status</code>、<code>instructions</code>、<code>templates</code>、<code>schemas</code></td>
+<td>产物驱动的工作流支持</td>
+</tr>
+<tr>
+<td><strong>Schema</strong></td>
+<td><code>schema init</code>、<code>schema fork</code>、<code>schema validate</code>、<code>schema which</code></td>
+<td>创建和管理自定义工作流</td>
+</tr>
+<tr>
+<td><strong>配置</strong></td>
+<td><code>config</code></td>
+<td>查看和修改设置</td>
+</tr>
+<tr>
+<td><strong>工具</strong></td>
+<td><code>feedback</code>、<code>completion</code></td>
+<td>反馈和 Shell 集成</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h3 id="_26">初始化与更新</h3>
+<h4 id="openspec-init"><code>openspec init</code></h4>
+<p>在项目中初始化 OpenSpec</p>
+<p><strong>语法</strong>：</p>
+<pre><code class="language-bash">openspec init [path] [options]
+</code></pre>
+<table>
+<thead>
+<tr>
+<th>选项</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>--tools &lt;list&gt;</code></td>
+<td>非交互式配置 AI 工具。使用 all、none 或逗号分隔的列表</td>
+</tr>
+<tr>
+<td><code>--force</code></td>
+<td>自动清理旧文件，无需提示</td>
+</tr>
+<tr>
+<td><code>--profile &lt;profile&gt;</code></td>
+<td>覆盖此次初始化的全局 profile（core 或 custom）</td>
+</tr>
+</tbody>
+</table>
+<p><strong>示例</strong>：</p>
+<pre><code class="language-bash"># 交互式初始化
+openspec init
+
+# 非交互式：配置 Claude 和 Cursor
+openspec init --tools claude,cursor
+
+# 配置所有支持的工具
+openspec init --tools all
+
+# 覆盖 profile
+openspec init --profile core
+</code></pre>
+<h4 id="openspec-update"><code>openspec update</code></h4>
+<p>升级 CLI 后更新 OpenSpec 指令文件</p>
+<pre><code class="language-bash"># npm 升级后更新指令文件
+npm update @fission-ai/openspec
+openspec update
+</code></pre>
+<hr />
+<h3 id="_27">浏览命令</h3>
+<h4 id="openspec-list"><code>openspec list</code></h4>
+<p>列出项目中的变更或规范</p>
+<pre><code class="language-bash"># 列出所有活跃变更
+openspec list
+
+# 列出所有规范
+openspec list --specs
+
+# JSON 输出（用于脚本）
+openspec list --json
+</code></pre>
+<h4 id="openspec-show"><code>openspec show</code></h4>
+<p>显示变更或规范的详情</p>
+<pre><code class="language-bash"># 显示特定变更
+openspec show add-dark-mode
+
+# JSON 输出用于解析
+openspec show add-dark-mode --json
+</code></pre>
+<hr />
+<h3 id="_28">验证命令</h3>
+<h4 id="openspec-validate"><code>openspec validate</code></h4>
+<p>验证变更和规范的结构问题</p>
+<pre><code class="language-bash"># 验证特定变更
+openspec validate add-dark-mode
+
+# 验证所有变更
+openspec validate --changes
+
+# 验证所有内容并输出 JSON（用于 CI）
+openspec validate --all --json
+
+# 严格模式
+openspec validate --all --strict --concurrency 12
+</code></pre>
+<hr />
+<h3 id="_29">生命周期命令</h3>
+<h4 id="openspec-archive"><code>openspec archive</code></h4>
+<p>归档已完成的变更并将 Delta 规范合并到主规范</p>
+<pre><code class="language-bash"># 归档特定变更
+openspec archive add-dark-mode
+
+# 无提示归档（CI/脚本）
+openspec archive add-dark-mode --yes
+
+# 归档不影响规范的工具变更
+openspec archive update-ci-config --skip-specs
+</code></pre>
+<hr />
+<h3 id="_30">工作流命令</h3>
+<h4 id="openspec-status"><code>openspec status</code></h4>
+<p>显示变更的产物完成状态</p>
+<pre><code class="language-bash">openspec status --change add-dark-mode
+
+# 输出:
+# Change: add-dark-mode
+# Schema: spec-driven
+# Progress: 2/4 artifacts complete
+#
+# [x] proposal
+# [ ] design
+# [x] specs
+# [-] tasks (blocked by: design)
+</code></pre>
+<hr />
+<h3 id="schema_1">Schema 命令</h3>
+<h4 id="openspec-schema-init"><code>openspec schema init</code></h4>
+<p>创建新的项目本地 Schema</p>
+<pre><code class="language-bash"># 交互式创建 Schema
+openspec schema init research-first
+
+# 非交互式
+openspec schema init rapid \
+  --description &quot;快速迭代工作流&quot; \
+  --artifacts &quot;proposal,tasks&quot; \
+  --default
+</code></pre>
+<h4 id="openspec-schema-fork"><code>openspec schema fork</code></h4>
+<p>复制现有 Schema 到项目以进行自定义</p>
+<pre><code class="language-bash"># Fork 内置的 spec-driven schema
+openspec schema fork spec-driven my-workflow
+</code></pre>
+<blockquote>
+<p>🔢 <strong>Schema 优先级</strong>
+1. 项目级：<code>openspec/schemas/&lt;name&gt;/</code>
+2. 用户级：<code>~/.local/share/openspec/schemas/&lt;name&gt;/</code>
+3. 包级：内置 Schema</p>
+</blockquote>
+<hr />
+<h3 id="_31">配置命令</h3>
+<h4 id="openspec-config"><code>openspec config</code></h4>
+<p>查看和修改全局 OpenSpec 配置</p>
+<pre><code class="language-bash"># 列出所有设置
+openspec config list
+
+# 获取特定值
+openspec config get telemetry.enabled
+
+# 设置值
+openspec config set telemetry.enabled false
+
+# 配置工作流 profile
+openspec config profile
+
+# 快速切换到 core profile
+openspec config profile core
+
+# 在编辑器中编辑
+openspec config edit
+</code></pre>
+<hr />
+<h3 id="_32">环境变量</h3>
+<table>
+<thead>
+<tr>
+<th>变量</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>OPENSPEC_CONCURRENCY</code></td>
+<td>批量验证的默认并发数（默认: 6）</td>
+</tr>
+<tr>
+<td><code>EDITOR</code> 或 <code>VISUAL</code></td>
+<td>openspec config edit 使用的编辑器</td>
+</tr>
+<tr>
+<td><code>NO_COLOR</code></td>
+<td>设置时禁用彩色输出</td>
+</tr>
+<tr>
+<td><code>OPENSPEC_TELEMETRY=0</code></td>
+<td>禁用遥测数据收集</td>
+</tr>
+<tr>
+<td><code>DO_NOT_TRACK=1</code></td>
+<td>全局禁用追踪</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="_33">工作流</h2>
+<h3 id="_34">常见工作流模式</h3>
+<p>选择最适合你当前场景的工作流模式</p>
+<h4 id="core-profile_1">默认快速路径（core profile）</h4>
+<pre><code>/opsx:propose → /opsx:apply → /opsx:archive
+</code></pre>
+<blockquote>
+<p>新安装默认使用 core，包含：propose、explore、apply、archive</p>
+</blockquote>
+<h4 id="_35">扩展工作流（自定义选择）</h4>
+<pre><code>/opsx:new → /opsx:ff → /opsx:apply → /opsx:verify → /opsx:archive
+</code></pre>
+<blockquote>
+<p>启用扩展工作流：
+<code>bash
+openspec config profile
+openspec update</code></p>
+</blockquote>
+<hr />
+<h3 id="_36">场景化工作流</h3>
+<h4 id="_37">⚡ 快速功能（清晰需求）</h4>
+<pre><code>/opsx:new → /opsx:ff → /opsx:apply → /opsx:verify → /opsx:archive
+</code></pre>
+<p><strong>适用于</strong>：中小型功能、Bug 修复、直接明了的变更</p>
+<h4 id="_38">🔍 探索式（需求不明确）</h4>
+<pre><code>/opsx:explore → /opsx:new → /opsx:continue → ... → /opsx:apply
+</code></pre>
+<p><strong>适用于</strong>：性能优化、调试、架构决策、需求不清晰</p>
+<h4 id="_39">🔀 并行变更（多任务）</h4>
+<pre><code>变更 A 进行中时 → 切换上下文 → 同时处理变更 B → /opsx:bulk-archive
+</code></pre>
+<p><strong>适用于</strong>：并行工作流、紧急中断、团队协作</p>
+<hr />
+<h3 id="opsxff-opsxcontinue">何时使用 <code>/opsx:ff</code> 还是 <code>/opsx:continue</code></h3>
+<table>
+<thead>
+<tr>
+<th>场景</th>
+<th>推荐使用</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>需求清晰，准备构建</td>
+<td><code>/opsx:ff</code></td>
+</tr>
+<tr>
+<td>探索中，想逐步审查</td>
+<td><code>/opsx:continue</code></td>
+</tr>
+<tr>
+<td>想在创建规范前迭代提案</td>
+<td><code>/opsx:continue</code></td>
+</tr>
+<tr>
+<td>时间紧迫，需要快速推进</td>
+<td><code>/opsx:ff</code></td>
+</tr>
+<tr>
+<td>复杂变更，需要精细控制</td>
+<td><code>/opsx:continue</code></td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p><strong>经验法则</strong>：如果你能预先描述完整范围，使用 <code>/opsx:ff</code>。如果你在过程中摸索，使用 <code>/opsx:continue</code>。</p>
+</blockquote>
+<hr />
+<h3 id="_40">最佳实践</h3>
+<h4 id="01">01 保持变更聚焦</h4>
+<p>每个变更对应一个逻辑工作单元。"添加功能 X 同时重构 Y"应考虑拆成两个独立变更。</p>
+<h4 id="02-explore">02 需求不明确时使用 explore</h4>
+<p>在提交变更前先探索问题空间，探索可以澄清思路，避免错误方向带来的返工。</p>
+<h4 id="03-verify">03 归档前先 verify</h4>
+<p>使用 <code>/opsx:verify</code> 检查实现是否与产物匹配，在关闭变更前捕获不匹配问题。</p>
+<h4 id="04">04 清晰命名变更</h4>
+<p>好名称让 <code>openspec list</code> 更有用：<code>add-dark-mode</code>、<code>fix-login-redirect</code>、<code>implement-2fa</code>。避免 <code>feature-1</code>、<code>update</code>、<code>wip</code>。</p>
+<hr />
+<h2 id="_41">定制化</h2>
+<h3 id="openspec_2">让 OpenSpec 按你的方式工作</h3>
+<p>三个级别的自定义，满足从个人到企业的不同需求</p>
+<table>
+<thead>
+<tr>
+<th>级别</th>
+<th>用途</th>
+<th>最适合</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>项目配置</strong></td>
+<td>设置默认值、注入上下文/规则</td>
+<td>大多数团队</td>
+</tr>
+<tr>
+<td><strong>自定义 Schema</strong></td>
+<td>定义你自己的工作流产物</td>
+<td>有独特流程的团队</td>
+</tr>
+<tr>
+<td><strong>全局覆盖</strong></td>
+<td>跨所有项目共享 Schema</td>
+<td>高级用户</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h3 id="openspecconfigyaml">项目配置（openspec/config.yaml）</h3>
+<p>最简单的自定义方式，让你可以：</p>
+<ul>
+<li>设置默认 Schema — 跳过每个命令的 <code>--schema</code></li>
+<li>注入项目上下文 — AI 了解你的技术栈、约定等</li>
+<li>添加每产物规则 — 特定产物的自定义指导</li>
+</ul>
+<pre><code class="language-yaml">schema: spec-driven
+
+context: |
+  技术栈: TypeScript, React, Node.js, PostgreSQL
+  API 风格: RESTful，文档在 docs/api.md
+  测试: Jest + React Testing Library
+  我们重视所有公共 API 的向后兼容性
+
+rules:
+  proposal:
+    - 包含回滚计划
+    - 确认受影响的团队
+  specs:
+    - 使用 Given/When/Then 格式
+    - 在发明新模式之前引用现有模式
+</code></pre>
+<hr />
+<h3 id="schema_2">自定义 Schema</h3>
+<p>当项目配置不够用时，创建完全自定义的工作流 Schema。</p>
+<h4 id="fork-schema">Fork 现有 Schema（推荐）</h4>
+<pre><code class="language-bash">openspec schema fork spec-driven my-workflow
+</code></pre>
+<h4 id="_42">示例：快速迭代工作流</h4>
+<p><code>openspec/schemas/rapid/schema.yaml</code></p>
+<pre><code class="language-yaml">name: rapid
+version: 1
+description: 最小开销的快速迭代
+
+artifacts:
+  - id: proposal
+    generates: proposal.md
+    description: 快速提案
+    template: proposal.md
+    instruction: |
+      为此变更创建简短提案。
+      重点说明做什么和为什么，跳过详细规范。
+    requires: []
+
+  - id: tasks
+    generates: tasks.md
+    description: 实现清单
+    template: tasks.md
+    requires: [proposal]
+
+apply:
+  requires: [tasks]
+  tracks: tasks.md
+</code></pre>
+<h4 id="_43">示例：添加审查步骤</h4>
+<pre><code class="language-bash"># Fork 默认 Schema 并添加审查步骤
+openspec schema fork spec-driven with-review
+
+# 然后编辑 schema.yaml 添加:
+  - id: review
+    generates: review.md
+    description: 实现前的审查清单
+    template: review.md
+    instruction: |
+      基于设计创建审查清单。
+      包含安全、性能和测试注意事项。
+    requires:
+      - design
+</code></pre>
+<hr />
+<h2 id="_44">集成</h2>
+<h3 id="ai_3">支持的 AI 工具</h3>
+<p>OpenSpec 与 28+ AI 编码助手集成，运行 <code>openspec init</code> 时自动配置</p>
+<table>
+<thead>
+<tr>
+<th>工具</th>
+<th>工具</th>
+<th>工具</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Claude Code</td>
+<td>Cursor</td>
+<td>Windsurf</td>
+</tr>
+<tr>
+<td>GitHub Copilot</td>
+<td>Kiro</td>
+<td>Cline</td>
+</tr>
+<tr>
+<td>RooCode</td>
+<td>Continue</td>
+<td>Qoder</td>
+</tr>
+<tr>
+<td>Gemini CLI</td>
+<td>OpenCode</td>
+<td>Amazon Q</td>
+</tr>
+<tr>
+<td>Trae</td>
+<td>Codex</td>
+<td>Pi</td>
+</tr>
+<tr>
+<td>Factory Droid</td>
+<td>Auggie</td>
+<td>CoStrict</td>
+</tr>
+<tr>
+<td>Crush</td>
+<td>iFlow</td>
+<td>Kilo Code</td>
+</tr>
+<tr>
+<td>Qwen Code</td>
+<td>Antigravity</td>
+<td>CodeBuddy</td>
+</tr>
+<tr>
+<td>IBM Bob Shell</td>
+<td>ForgeCode</td>
+<td>Junie</td>
+</tr>
+<tr>
+<td>Lingma IDE</td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h3 id="_45">非交互式安装</h3>
+<p>用于 CI/CD 或脚本化安装，可使用 <code>--tools</code> 和 <code>--profile</code> 参数：</p>
+<pre><code class="language-bash"># 配置特定工具
+openspec init --tools claude,cursor
+
+# 配置所有支持的工具
+openspec init --tools all
+
+# 跳过工具配置
+openspec init --tools none
+
+# 指定 profile 覆盖
+openspec init --profile core
+</code></pre>
+<hr />
+<h3 id="_46">工作流相关的安装</h3>
+<table>
+<thead>
+<tr>
+<th>Profile</th>
+<th>包含的工作流</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Core（默认）</strong></td>
+<td>propose、explore、apply、archive</td>
+</tr>
+<tr>
+<td><strong>Custom（自定义）</strong></td>
+<td>可选择：propose、explore、new、continue、apply、ff、sync、archive、bulk-archive、verify、onboard 的任意子集</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="_47">多语言</h2>
+<h3 id="_48">多语言支持</h3>
+<p>配置 OpenSpec 以非英语生成产物</p>
+<h4 id="_49">快速配置</h4>
+<p>在 <code>openspec/config.yaml</code> 中添加语言指令即可：</p>
+<p><strong>中文（简体）配置示例</strong></p>
+<pre><code class="language-yaml">schema: spec-driven
+
+context: |
+  语言：中文（简体）
+  所有产出物必须用简体中文撰写。
+
+  # 你的其他项目上下文在下面...
+  技术栈: TypeScript, React, Node.js
+</code></pre>
+<h4 id="_50">其他语言示例</h4>
+<p><strong>葡萄牙语</strong></p>
+<pre><code class="language-yaml">context: |
+  Language: Portuguese (pt-BR)
+  All artifacts must be written in Brazilian Portuguese.
+</code></pre>
+<p><strong>西班牙语</strong></p>
+<pre><code class="language-yaml">context: |
+  Idioma: Español
+  Todos los artefactos deben escribirse en español.
+</code></pre>
+<p><strong>日语</strong></p>
+<pre><code class="language-yaml">context: |
+  言語：日本語
+  すべての成果物は日本語で作成してください。
+</code></pre>
+<p><strong>法语</strong></p>
+<pre><code class="language-yaml">context: |
+  Langue : Français
+  Tous les artefacts doivent être rédigés en français.
+</code></pre>
+<hr />
+<h2 id="_51">贡献</h2>
+<h3 id="_52">参与贡献</h3>
+<h4 id="_53">🐛 小型修复</h4>
+<p>Bug 修复、错别字更正和小改进可以直接作为 PR 提交。</p>
+<h4 id="_54">🏗️ 较大变更</h4>
+<p>对于新功能、重大重构或架构变更，请先提交 OpenSpec 变更提案，以便在实现开始前对齐意图和目标。</p>
+<h4 id="ai_4">🤖 AI 生成代码</h4>
+<p>欢迎 AI 生成的代码，只要经过测试和验证。PR 应注明使用的 AI 工具和模型（例如"使用 Claude Code claude-opus-4-5 生成"）。</p>
+<hr />
+<h3 id="_55">开发指南</h3>
+<pre><code class="language-bash"># 安装依赖
+pnpm install
+
+# 构建
+pnpm run build
+
+# 测试
+pnpm test
+
+# 本地开发 CLI
+pnpm run dev
+# 或
+pnpm run dev:cli
+
+# Commit 规范（单行）
+type(scope): subject
+</code></pre>
+<blockquote>
+<p>📋 <strong>写提案时</strong>，请牢记 OpenSpec 的哲学：我们服务于不同编码助手、模型和用例的广泛用户。变更应该对所有人都适用。</p>
+</blockquote>
+<hr />
+<h3 id="_56">遥测数据</h3>
+<p>OpenSpec 收集匿名使用统计数据。我们只收集命令名称和版本以了解使用模式。不收集参数、路径、内容或个人信息。在 CI 中自动禁用。</p>
+<pre><code class="language-bash"># 禁用遥测
+export OPENSPEC_TELEMETRY=0
+# 或
+export DO_NOT_TRACK=1
+</code></pre>
+<hr />
+<h2 id="_57">实战指南</h2>
+<h3 id="openspec_3">OpenSpec 上手实践指南</h3>
+<blockquote>
+<p>从零开始掌握规范驱动开发，构建高质量 AI 协作工作流</p>
+<p>📚 <strong>本指南适合谁？</strong>
+希望系统学习 OpenSpec 的开发者，包括：想要提升 AI 编码效率的个人开发者、希望规范化 AI 协作流程的团队 Leader、以及对规范驱动开发（Spec-Driven Development）感兴趣的技术人员。</p>
+</blockquote>
+<hr />
+<h2 id="part-1-openspec">Part 1: 深入理解 OpenSpec</h2>
+<blockquote>
+<p>不只是工具，更是一种全新的 AI 协作范式</p>
+</blockquote>
+<h3 id="11-openspec">1.1 OpenSpec 是什么？</h3>
+<p>OpenSpec 是一个 <strong>轻量级规范驱动开发框架</strong>，专为 AI 编码助手时代设计。它通过建立「人机对齐」的规范层，让开发者和 AI 在编写代码之前先达成共识。</p>
+<h4 id="_58">核心定位</h4>
+<p>OpenSpec 不是取代 AI 编码助手，而是 <strong>增强它们的可控性和可预测性</strong>。它让 AI 从「被动响应聊天历史」转变为「主动遵循结构化规范」。</p>
+<table>
+<thead>
+<tr>
+<th>维度</th>
+<th>传统 AI 编码</th>
+<th>OpenSpec 增强</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>需求来源</strong></td>
+<td>聊天历史（易丢失、难追溯）</td>
+<td>结构化规范文件（可版本控制）</td>
+</tr>
+<tr>
+<td><strong>实现过程</strong></td>
+<td>一次性生成，难以迭代</td>
+<td>任务驱动，可暂停、可恢复</td>
+</tr>
+<tr>
+<td><strong>变更管理</strong></td>
+<td>无记录，难以审计</td>
+<td>Delta 机制，完整审计轨迹</td>
+</tr>
+<tr>
+<td><strong>团队协作</strong></td>
+<td>依赖个人 prompt 技巧</td>
+<td>标准化工作流，经验可复用</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h3 id="12-openspec">1.2 为什么需要 OpenSpec？</h3>
+<p>AI 编码助手（如 Claude Code、Cursor、Copilot）的普及带来了三个核心痛点：</p>
+<h4 id="ai_5">😵 痛点一：AI 幻觉与偏离</h4>
+<p>需求只存在于聊天中，AI 容易「忘记」上下文或产生幻觉。长对话后，AI 可能偏离最初意图，实现出完全不符合预期的功能。</p>
+<h4 id="_59">🔄 痛点二：迭代成本高</h4>
+<p>没有结构化记录，每次修改都需要重新描述上下文。复杂功能的迭代开发变成「从头再来」，效率极低。</p>
+<h4 id="_60">👥 痛点三：团队协作难</h4>
+<p>个人 prompt 技巧无法复用，团队成员的 AI 协作质量参差不齐。缺乏统一的工作流程和质量标准。</p>
+<h4 id="openspec_4">OpenSpec 的解决方案</h4>
+<ol>
+<li><strong>规范先行</strong>：在编码前通过 Proposal 明确意图、通过 Specs 定义行为契约、通过 Design 确定技术方案</li>
+<li><strong>任务驱动</strong>：Tasks 文件作为实现清单，AI 按任务逐项执行，可随时暂停和恢复，进度可追踪</li>
+<li><strong>Delta 机制</strong>：变更以增量方式记录（ADDED/MODIFIED/REMOVED），完美适配存量项目改造场景</li>
+</ol>
+<hr />
+<h3 id="13">1.3 核心架构解析</h3>
+<p>理解 OpenSpec 的架构设计，是高效使用它的基础。</p>
+<h4 id="openspec_5">OpenSpec 目录结构</h4>
+<pre><code>openspec/
+├── specs/                    # 【权威基准】系统当前行为的完整描述
+│   ├── auth/
+│   │   └── spec.md           # 认证模块规范
+│   ├── payments/
+│   │   └── spec.md           # 支付模块规范
+│   └── ui/
+│       └── spec.md           # UI 行为规范
+│
+├── changes/                  # 【变更工作区】正在进行的修改
+│   ├── add-dark-mode/        # 变更文件夹（每个变更独立）
+│   │   ├── proposal.md       # 提案：为什么做、做什么
+│   │   ├── specs/            # Delta 规范：正在变化的部分
+│   │   │   └── ui/
+│   │   │       └── spec.md   # ADDED/MODIFIED/REMOVED 格式
+│   │   ├── design.md         # 设计：如何实现
+│   │   ├── tasks.md          # 任务：具体实现步骤
+│   │   └── .openspec.yaml    # 变更元数据
+│   │
+│   └── archive/              # 【历史归档】已完成的变更
+│       └── 2025-01-24-add-auth/
+│
+├── schemas/                  # 【可选】自定义工作流 Schema
+│   └── my-workflow/
+│       ├── schema.yaml
+│       └── templates/
+│
+└── config.yaml               # 项目配置（上下文、规则等）
+</code></pre>
+<blockquote>
+<p>💡 <strong>架构设计哲学</strong>
+<code>specs/</code> 与 <code>changes/</code> 的分离是 OpenSpec 的核心设计。这确保了：① 主规范始终保持稳定 ② 多个变更可并行进行而不冲突 ③ 归档时 Delta 能干净合并回主规范</p>
+</blockquote>
+<hr />
+<h3 id="14-artifact">1.4 产物（Artifact）体系详解</h3>
+<p>OpenSpec 的产物体系遵循「渐进式明确」原则，每个产物为下一个提供上下文。</p>
+<h4 id="proposal_1">📋 Proposal（提案）</h4>
+<p><strong>职责</strong>：回答「为什么做」和「做什么」
+- Intent（意图）：解决什么问题
+- Scope（范围）：包含/不包含什么
+- Approach（方案）：高层次的实现思路</p>
+<blockquote>
+<p>💡 Proposal 是与 AI 对齐的第一步，确保你们对「做什么」有共识</p>
+</blockquote>
+<h4 id="specs_1">📐 Specs（规范）</h4>
+<p><strong>职责</strong>：定义系统的行为契约
+- Requirements：系统必须具备的行为
+- Scenarios：可验证的具体场景（Given/When/Then）
+- Delta 格式：ADDED / MODIFIED / REMOVED</p>
+<blockquote>
+<p>💡 Specs 是行为契约，不是实现细节。关注「系统做什么」而非「代码怎么写」</p>
+</blockquote>
+<h4 id="design_1">🏗️ Design（设计）</h4>
+<p><strong>职责</strong>：回答「如何实现」
+- Technical Approach：技术方案概述
+- Architecture Decisions：关键决策及理由
+- Data Flow：数据流和组件交互</p>
+<blockquote>
+<p>💡 Design 记录架构决策的「为什么」，方便后续维护和回溯</p>
+</blockquote>
+<h4 id="tasks_1">✅ Tasks（任务）</h4>
+<p><strong>职责</strong>：具体的实现步骤清单
+- 分组编号：按模块分组，层级编号（1.1, 1.2...）
+- 复选框：<code>- [ ]</code> 未完成 / <code>- [x]</code> 已完成
+- 可追踪：AI 按任务执行，进度实时可见</p>
+<blockquote>
+<p>💡 Tasks 是 AI 实现代码的「导航图」，粒度要适中（一个任务 ≈ 一次提交）</p>
+</blockquote>
+<h4 id="_61">产物依赖关系图</h4>
+<pre><code>proposal
+   ↓
+   ├──→ specs ──┐
+   ├──→ design ─┤
+   ↓            ↓
+         tasks
+           ↓
+    implement（/opsx:apply）
+</code></pre>
+<hr />
+<h2 id="part-2-openspec">Part 2: OpenSpec 最佳实践</h2>
+<blockquote>
+<p>从实战经验中提炼的高效使用模式</p>
+</blockquote>
+<h3 id="21">2.1 工作流选择策略</h3>
+<p>OpenSpec 提供两种主要工作流，选择合适的工作流能显著提升效率。</p>
+<h4 id="core">✅ Core 快速路径（推荐）</h4>
+<pre><code>/opsx:propose → /opsx:apply → /opsx:archive
+</code></pre>
+<p><strong>适用场景</strong>：
+- 需求明确的中小型功能
+- Bug 修复和小型优化
+- 时间紧迫需要快速交付
+- 个人项目或快速原型</p>
+<p><strong>优势</strong>：一条命令生成所有产物，最小化仪式感</p>
+<h4 id="expanded">🔧 Expanded 扩展路径（精细控制）</h4>
+<pre><code>/opsx:new → /opsx:continue → /opsx:apply → /opsx:verify → /opsx:archive
+</code></pre>
+<p><strong>适用场景</strong>：
+- 复杂功能开发（跨模块、跨团队）
+- 需求不明确，需要探索
+- 需要逐步审查每个产物
+- 团队协作项目</p>
+<p><strong>优势</strong>：每个产物可单独创建和审查，控制粒度更细</p>
+<h4 id="_62">工作流选择决策树</h4>
+<pre><code>你能在 30 秒内描述清楚「做什么」吗？
+├── 是 → 需求明确
+│   ├── 功能复杂度高（&gt;10 个任务）？
+│   │   ├── 是 → 使用 Expanded（/opsx:new + /opsx:ff）
+│   │   └── 否 → 使用 Core（/opsx:propose）
+│   └── 需要团队审查？
+│       ├── 是 → 使用 Expanded（/opsx:continue 逐步审查）
+│       └── 否 → 使用 Core（/opsx:propose）
+│
+└── 否 → 需求不明确
+    └── 先使用 /opsx:explore 探索，然后选择合适路径
+</code></pre>
+<hr />
+<h3 id="22">2.2 变更命名规范</h3>
+<p>好的命名让 <code>openspec list</code> 一目了然，也方便日后追溯。</p>
+<table>
+<thead>
+<tr>
+<th>模式</th>
+<th>示例</th>
+<th>适用场景</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>add-&lt;feature&gt;</code></td>
+<td><code>add-dark-mode</code>、<code>add-export-csv</code></td>
+<td>新增功能</td>
+</tr>
+<tr>
+<td><code>fix-&lt;issue&gt;</code></td>
+<td><code>fix-login-redirect</code>、<code>fix-memory-leak</code></td>
+<td>Bug 修复</td>
+</tr>
+<tr>
+<td><code>refactor-&lt;module&gt;</code></td>
+<td><code>refactor-auth-service</code></td>
+<td>代码重构</td>
+</tr>
+<tr>
+<td><code>optimize-&lt;target&gt;</code></td>
+<td><code>optimize-query-performance</code></td>
+<td>性能优化</td>
+</tr>
+<tr>
+<td><code>update-&lt;component&gt;</code></td>
+<td><code>update-react-18</code></td>
+<td>依赖更新</td>
+</tr>
+<tr>
+<td><code>implement-&lt;spec&gt;</code></td>
+<td><code>implement-2fa</code></td>
+<td>实现某个规范</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p><strong>命名原则</strong>：动词 - 名词格式，kebab-case 连字符分隔，具体描述意图。避免使用 <code>feature-1</code>、<code>update</code>、<code>wip</code> 等模糊命名。</p>
+</blockquote>
+<hr />
+<h3 id="23">2.3 高质量规范编写</h3>
+<p>规范是 OpenSpec 的核心，写好规范是提高 AI 实现质量的关键。</p>
+<h4 id="_63">✅ 好的规范示例</h4>
+<p><code>specs/auth/spec.md</code></p>
+<pre><code class="language-markdown"># Auth 规范
+
+## 目的
+用户身份验证和会话管理。
+
+## 需求
+
+### 需求：JWT 令牌认证
+系统 SHALL 在登录成功时颁发 JWT 令牌。
+
+#### 场景：有效凭据登录
+- GIVEN 用户具有有效的邮箱和密码
+- WHEN 用户提交登录表单
+- THEN 系统返回包含 accessToken 和 refreshToken 的响应
+- AND accessToken 有效期为 15 分钟
+- AND refreshToken 有效期为 7 天
+- AND 用户被重定向到 dashboard 页面
+
+#### 场景：无效凭据登录
+- GIVEN 用户提交无效的邮箱或密码
+- WHEN 用户提交登录表单
+- THEN 系统返回 401 状态码
+- AND 响应包含 &quot;Invalid credentials&quot; 错误信息
+- AND 不颁发任何令牌
+</code></pre>
+<h4 id="_64">❌ 避免的写法</h4>
+<pre><code class="language-markdown"># 不好的规范 - 包含实现细节
+
+### 需求：登录功能
+使用 bcrypt 比较密码，用 jsonwebtoken 库生成 JWT。
+在 UserController.login() 方法中实现，
+调用 AuthService.validatePassword() 验证...
+</code></pre>
+<blockquote>
+<p>⚠️ <strong>规范 ≠ 实现计划</strong>
+规范描述「系统应该做什么」（行为契约），不是「代码怎么写」（实现细节）。内部类名、库选择、代码结构应该放在 design.md 中。</p>
+</blockquote>
+<hr />
+<h3 id="24-delta">2.4 Delta 规范高级用法</h3>
+<p>Delta 机制是 OpenSpec 适配「存量项目改造」的核心能力。</p>
+<h4 id="added">ADDED：新增需求</h4>
+<pre><code class="language-markdown">## ADDED Requirements
+
+### 需求：双因素认证
+系统 MUST 支持基于 TOTP 的双因素认证。
+
+#### 场景：启用 2FA
+- GIVEN 用户未启用 2FA
+- WHEN 用户在设置页面启用 2FA
+- THEN 显示二维码供 Authenticator App 扫描
+- AND 用户需输入验证码确认激活
+</code></pre>
+<blockquote>
+<p>归档效果：追加到主规范末尾</p>
+</blockquote>
+<h4 id="modified">MODIFIED：修改现有需求</h4>
+<pre><code class="language-markdown">## MODIFIED Requirements
+
+### 需求：会话过期时间
+系统 MUST 在 15 分钟不活动后使会话过期。
+（之前：30 分钟）
+
+#### 场景：空闲超时
+- GIVEN 已认证的会话
+- WHEN 15 分钟内无任何操作
+- THEN 会话被作废
+- AND 用户需重新登录
+</code></pre>
+<blockquote>
+<p>归档效果：替换主规范中同名需求</p>
+</blockquote>
+<h4 id="removed">REMOVED：删除需求</h4>
+<pre><code class="language-markdown">## REMOVED Requirements
+
+### 需求：记住我功能
+（因支持 2FA 而废弃。用户应在每次会话重新认证。）
+</code></pre>
+<blockquote>
+<p>归档效果：从主规范中删除该需求</p>
+</blockquote>
+<hr />
+<h3 id="25">2.5 项目配置最佳实践</h3>
+<p>合理的 <code>config.yaml</code> 配置能显著提升 AI 产物质量。</p>
+<h4 id="_65">推荐配置模板</h4>
+<p><code>openspec/config.yaml</code></p>
+<pre><code class="language-yaml">schema: spec-driven
+
+# 项目上下文 - AI 生成产物时会参考这些信息
+context: |
+  # 项目概述
+  项目名称：MyApp
+  项目类型：Web 应用
+
+  # 技术栈
+  前端：React 18 + TypeScript + Tailwind CSS
+  后端：Node.js + Express + PostgreSQL
+  测试：Jest + React Testing Library
+
+  # 代码规范
+  - 使用 ESLint + Prettier 进行代码格式化
+  - 组件使用函数式组件 + Hooks
+  - API 遵循 RESTful 设计
+  - 所有公共 API 需保持向后兼容
+
+  # 分支策略
+  - main: 生产分支
+  - develop: 开发分支
+  - feature/*: 功能分支
+
+# 每产物规则 - 针对特定产物的额外指导
+rules:
+  proposal:
+    - 必须包含回滚计划
+    - 说明对现有功能的影响
+    - 列出需要协调的团队
+  specs:
+    - 使用 Given/When/Then 格式编写场景
+    - 优先引用现有模式，避免重复发明
+    - 包含边界条件和异常场景
+  design:
+    - 说明关键技术决策的理由
+    - 列出受影响的文件和模块
+    - 考虑性能和安全影响
+  tasks:
+    - 任务粒度适中（每个任务约 1-2 小时工作量）
+    - 按模块分组，使用层级编号
+    - 包含必要的测试任务
+</code></pre>
+<hr />
+<h2 id="part-3">Part 3: 从零开始实践</h2>
+<blockquote>
+<p>通过完整案例掌握 OpenSpec 工作流</p>
+</blockquote>
+<h3 id="31">3.1 环境准备</h3>
+<h4 id="1-openspec">1. 安装 OpenSpec</h4>
+<pre><code class="language-bash"># 使用 npm 全局安装（推荐）
+npm install -g @fission-ai/openspec@latest
+
+# 验证安装
+openspec --version
+</code></pre>
+<h4 id="2_1">2. 初始化项目</h4>
+<pre><code class="language-bash"># 进入项目目录
+cd your-project
+
+# 交互式初始化（推荐）
+openspec init
+
+# 或非交互式，指定 AI 工具
+openspec init --tools claude,cursor
+</code></pre>
+<h4 id="3_1">3. 配置项目上下文（可选但推荐）</h4>
+<pre><code class="language-bash"># 编辑配置文件，添加项目上下文
+# 参考上一节的配置模板
+vim openspec/config.yaml
+</code></pre>
+<hr />
+<h3 id="32">3.2 完整案例：为应用添加暗色模式</h3>
+<p>让我们通过一个完整案例，体验 OpenSpec 的工作流。</p>
+<h4 id="phase-1">Phase 1: 启动变更</h4>
+<p>在 AI 编码助手的对话窗口中输入：</p>
+<pre><code>/opsx:propose add-dark-mode
+
+我想为应用添加暗色模式功能，包括：
+1. 在设置页面添加主题切换开关
+2. 支持检测系统偏好（跟随系统）
+3. 用户选择持久化到 localStorage
+4. 所有页面即时切换，无需刷新
+</code></pre>
+<p><strong>AI 将创建</strong>：
+- <code>openspec/changes/add-dark-mode/proposal.md</code> — 提案文档
+- <code>openspec/changes/add-dark-mode/specs/ui/spec.md</code> — Delta 规范
+- <code>openspec/changes/add-dark-mode/design.md</code> — 设计文档
+- <code>openspec/changes/add-dark-mode/tasks.md</code> — 任务清单</p>
+<h4 id="phase-2">Phase 2: 审查产物（重要！）</h4>
+<p>在执行实现前，花几分钟审查 AI 生成的产物：</p>
+<pre><code class="language-bash"># 列出当前变更
+openspec list
+
+# 查看变更详情
+openspec show add-dark-mode
+
+# 或使用交互式仪表板
+openspec view
+</code></pre>
+<p><strong>审查清单</strong>：
+- ☐ Proposal：意图和范围是否准确？
+- ☐ Specs：场景是否覆盖了主要用例和边界情况？
+- ☐ Design：技术方案是否合理？
+- ☐ Tasks：任务拆分是否合理？粒度是否适中？</p>
+<blockquote>
+<p><strong>Pro Tip</strong>：如果发现产物有问题，直接告诉 AI 修改即可，如：「请把 tasks.md 中的第 2 组任务拆分得更细一些」</p>
+</blockquote>
+<h4 id="phase-3">Phase 3: 实现代码</h4>
+<pre><code>/opsx:apply
+</code></pre>
+<p>AI 将按照 tasks.md 中的清单逐项实现：</p>
+<pre><code>✓ 1.1 创建 ThemeContext
+✓ 1.2 添加 CSS 自定义属性
+✓ 1.3 实现 localStorage 持久化
+→ 2.1 创建 ThemeToggle 组件（进行中）
+○ 2.2 添加到设置页面
+○ 3.1 定义暗色调色板
+</code></pre>
+<blockquote>
+<p>💡 <strong>可以随时暂停</strong>
+实现过程中如果需要暂停（下班、开会等），直接停止即可。下次继续时，AI 会从未完成的任务继续执行。</p>
+</blockquote>
+<h4 id="phase-4">Phase 4: 验证实现（推荐）</h4>
+<pre><code>/opsx:verify
+</code></pre>
+<p>AI 将检查实现是否与产物一致：
+- <strong>Completeness</strong>：所有任务是否完成？所有需求是否实现？
+- <strong>Correctness</strong>：实现是否符合规范意图？
+- <strong>Coherence</strong>：代码是否反映了设计决策？</p>
+<h4 id="phase-5">Phase 5: 归档变更</h4>
+<pre><code>/opsx:archive
+</code></pre>
+<p>归档过程会：
+1. 将 Delta 规范合并到 <code>openspec/specs/ui/spec.md</code>
+2. 将变更文件夹移动到 <code>openspec/changes/archive/2025-xx-xx-add-dark-mode/</code>
+3. 保留完整的产物作为审计轨迹</p>
+<hr />
+<h3 id="33-cli">3.3 CLI 常用命令速查</h3>
+<table>
+<thead>
+<tr>
+<th>命令</th>
+<th>用途</th>
+<th>示例</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>openspec list</code></td>
+<td>列出所有活动变更</td>
+<td><code>openspec list --json</code></td>
+</tr>
+<tr>
+<td><code>openspec show</code></td>
+<td>查看变更/规范详情</td>
+<td><code>openspec show add-dark-mode</code></td>
+</tr>
+<tr>
+<td><code>openspec view</code></td>
+<td>交互式仪表板</td>
+<td><code>openspec view</code></td>
+</tr>
+<tr>
+<td><code>openspec validate</code></td>
+<td>验证产物格式</td>
+<td><code>openspec validate --all</code></td>
+</tr>
+<tr>
+<td><code>openspec status</code></td>
+<td>查看产物完成状态</td>
+<td><code>openspec status --change add-dark-mode</code></td>
+</tr>
+<tr>
+<td><code>openspec archive</code></td>
+<td>归档变更（CLI 方式）</td>
+<td><code>openspec archive add-dark-mode -y</code></td>
+</tr>
+<tr>
+<td><code>openspec update</code></td>
+<td>更新 AI 工具配置</td>
+<td><code>openspec update</code></td>
+</tr>
+<tr>
+<td><code>openspec config profile</code></td>
+<td>配置工作流 profile</td>
+<td><code>openspec config profile core</code></td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="part-4-faq">Part 4: 常见问题解答（FAQ）</h2>
+<blockquote>
+<p>实战中常见问题的解决方案</p>
+</blockquote>
+<h3 id="q-ai">Q: AI 生成的产物质量不高怎么办？</h3>
+<p><strong>解决方案</strong>：</p>
+<ol>
+<li><strong>完善项目配置</strong>：在 <code>openspec/config.yaml</code> 中添加详细的项目上下文（技术栈、代码规范、架构约定等），AI 会参考这些信息</li>
+<li><strong>添加产物规则</strong>：为特定产物添加 rules，如要求 specs 必须使用 Given/When/Then 格式</li>
+<li><strong>使用高质量模型</strong>：OpenSpec 官方推荐使用 Claude Opus 4.5 或 GPT 5.2 等高推理能力模型</li>
+<li><strong>提供更多上下文</strong>：在 <code>/opsx:propose</code> 时提供更详细的描述</li>
+</ol>
+<p><strong>示例：增强的提案描述</strong></p>
+<pre><code>/opsx:propose add-dark-mode
+
+## 背景
+- 用户调研显示 60% 用户希望有暗色模式
+- 竞品 A 和 B 都已支持暗色模式
+
+## 详细需求
+1. 主题切换：设置页面添加 Toggle，支持「浅色/深色/跟随系统」三种选项
+2. 即时切换：切换后所有页面立即生效，无需刷新
+3. 持久化：使用 localStorage 存储，刷新后保持选择
+4. 系统适配：首次访问时检测系统偏好
+
+## 技术约束
+- 使用 CSS Custom Properties 实现
+- 使用 React Context 管理状态
+- 不引入额外的 CSS-in-JS 库
+</code></pre>
+<hr />
+<h3 id="q-ai-opsx">Q: AI 工具无法识别 <code>/opsx</code> 命令怎么办？</h3>
+<p><strong>可能原因及解决方案</strong>：</p>
+<ol>
+<li><strong>未初始化</strong>：运行 <code>openspec init</code> 初始化项目</li>
+<li><strong>配置过期</strong>：升级 OpenSpec 后运行 <code>openspec update</code> 重新生成 AI 工具配置</li>
+<li><strong>工具未选择</strong>：检查初始化时是否选择了你使用的 AI 工具</li>
+<li><strong>需要重启</strong>：某些 AI 工具需要重启才能加载新的 skills/commands</li>
+</ol>
+<p><strong>修复步骤</strong>：</p>
+<pre><code class="language-bash"># 重新初始化，指定你的 AI 工具
+openspec init --tools claude,cursor --force
+
+# 或只更新配置
+openspec update --force
+</code></pre>
+<hr />
+<h3 id="q">Q: 如何处理多个变更之间的冲突？</h3>
+<p>OpenSpec 支持并行变更，但当多个变更修改同一个规范时需要注意：</p>
+<ol>
+<li><strong>使用 <code>/opsx:bulk-archive</code></strong>：它会自动检测规范冲突并按时间顺序合并</li>
+<li><strong>先归档依赖变更</strong>：如果变更 B 依赖变更 A 的结果，先归档 A</li>
+<li><strong>手动解决</strong>：如果冲突复杂，可以手动编辑 specs 文件后再归档</li>
+</ol>
+<pre><code>/opsx:bulk-archive
+
+# AI 会检测冲突并提示：
+# ⚠ add-dark-mode 和 update-theme-system 都修改 specs/ui/
+# 将按创建时间顺序合并：add-dark-mode → update-theme-system
+# 是否继续？
+</code></pre>
+<hr />
+<h3 id="q-openspec">Q: 如何在团队中推广 OpenSpec？</h3>
+<p><strong>推广策略</strong>：</p>
+<ol>
+<li><strong>从小处开始</strong>：选择一个小功能作为试点，展示 OpenSpec 的价值</li>
+<li><strong>统一配置</strong>：将 <code>openspec/config.yaml</code> 提交到代码库，确保团队使用一致的配置</li>
+<li><strong>建立规范模板</strong>：创建团队专属的 Schema 和 templates，体现团队最佳实践</li>
+<li><strong>结合 Code Review</strong>：将产物审查纳入 CR 流程，提高规范质量</li>
+</ol>
+<p><strong>团队配置建议</strong>：
+- 将 <code>openspec/</code> 目录纳入版本控制
+- 在 <code>config.yaml</code> 中添加团队约定和代码规范
+- 定期归档变更，保持 changes/ 目录整洁</p>
+<hr />
+<h3 id="_66">其他常见问题</h3>
+<h4 id="q-openspec-ai">Q: OpenSpec 支持哪些 AI 工具？</h4>
+<p>OpenSpec 支持 20+ AI 编码助手，包括但不限于：Claude Code、Cursor、Windsurf、GitHub Copilot、Kiro、Cline、RooCode、Continue、Qoder、Gemini CLI、Amazon Q、Trae 等。完整列表请参考官方文档。</p>
+<h4 id="q_1">Q: 如何回滚或撤销一个已归档的变更？</h4>
+<p>OpenSpec 本身不提供回滚功能，但你可以：
+1. <strong>Git 回滚</strong>：使用 <code>git revert</code> 回滚相关提交
+2. <strong>查看归档</strong>：在 <code>openspec/changes/archive/</code> 中找到原变更的完整产物
+3. <strong>创建反向变更</strong>：创建一个新变更，使用 REMOVED 来删除之前 ADDED 的内容</p>
+<pre><code>/opsx:propose revert-dark-mode
+
+需要回滚暗色模式功能，原因是与第三方组件库存在兼容性问题。
+参考归档：openspec/changes/archive/2025-01-24-add-dark-mode/
+</code></pre>
+<h4 id="q-schema">Q: 如何创建自定义 Schema？</h4>
+<p><strong>两种方式</strong>：</p>
+<ol>
+<li><strong>Fork 现有 Schema（推荐）</strong></li>
+</ol>
+<pre><code class="language-bash"># Fork 默认 Schema 进行自定义
+openspec schema fork spec-driven my-workflow
+
+# 编辑 schema.yaml 和 templates/
+vim openspec/schemas/my-workflow/schema.yaml
+</code></pre>
+<ol>
+<li><strong>从零创建</strong></li>
+</ol>
+<pre><code class="language-bash"># 创建极简 Schema（只有 proposal + tasks）
+openspec schema init rapid \
+  --description &quot;快速迭代工作流&quot; \
+  --artifacts &quot;proposal,tasks&quot; \
+  --default
+</code></pre>
+<h4 id="q-openspec_1">Q: OpenSpec 产物会占用太多磁盘空间吗？</h4>
+<p>不会。OpenSpec 产物都是轻量级 Markdown 文件：
+- 一个完整变更通常只有 10-50KB
+- 归档会保留完整产物，但仍然很小
+- 可以定期清理不需要的历史归档</p>
+<p><strong>磁盘管理建议</strong>：
+- 将 <code>openspec/</code> 纳入 Git，享受版本控制和压缩
+- 可以将很久以前的归档移到外部存储
+- 归档本质是审计轨迹，建议保留</p>
+<hr />
+<h2 id="_67">总结</h2>
+<h3 id="_68">开始你的规范驱动开发之旅</h3>
+<p>OpenSpec 不仅仅是一个工具，它代表了一种全新的 AI 协作范式：<strong>先对齐，再编码</strong>。</p>
+<h4 id="_69">关键要点回顾</h4>
+<ul>
+<li><strong>规范是契约</strong>：定义系统「做什么」，而非「怎么做」</li>
+<li><strong>产物递进</strong>：Proposal → Specs → Design → Tasks，逐步明确</li>
+<li><strong>Delta 机制</strong>：增量描述变化，完美适配存量项目</li>
+<li><strong>可追溯</strong>：完整的变更历史和审计轨迹</li>
+<li><strong>灵活工作流</strong>：Core 快速路径 vs Expanded 精细控制</li>
+</ul>
+<h4 id="_70">下一步行动</h4>
+<ol>
+<li>在一个小项目上尝试 OpenSpec</li>
+<li>完善你的 config.yaml 配置</li>
+<li>在团队中推广规范驱动开发</li>
+</ol>
+<h4 id="_71">更多资源</h4>
+<ul>
+<li><a href="https://github.com/Fission-AI/OpenSpec">GitHub 仓库</a></li>
+<li><a href="#">Discord 社区</a></li>
+<li><a href="#">中文文档站</a></li>
+</ul>
+<hr />
+<blockquote>
+<p>📝 本文档基于 OpenSpec 官方英文文档翻译整理，内容会随官方版本迭代定期更新。如发现翻译错误或希望补充内容，欢迎通过 GitHub 提交 Issue 参与贡献。</p>
+</blockquote>
+
+
+
+
+
+
+
+  
+  
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="Footer" >
+        
+          
+          <a href="OpenCode.html" class="md-footer__link md-footer__link--prev" aria-label="Previous: OpenCode">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              <div class="md-ellipsis">
+                OpenCode
+              </div>
+            </div>
+          </a>
+        
+        
+          
+          <a href="Trellis%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0.html" class="md-footer__link md-footer__link--next" aria-label="Next: Trellis学习笔记">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              <div class="md-ellipsis">
+                Trellis学习笔记
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+      <div class="md-progress" data-md-component="progress" role="progressbar"></div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "..", "features": ["navigation.instant", "navigation.instant.prefetch", "navigation.instant.progress", "navigation.instant.preview", "navigation.tracking", "navigation.tabs", "navigation.tabs.sticky", "navigation.tabs.sections", "navigation.expand", "navigation.path", "navigation.indexes", "toc.follow", "navigation.top", "navigation.footer", "search.suggest", "search.highlight", "search.share", "content.code.copy", "content.action.edit", "navigation.prune"], "search": "../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+    
+  </body>
+</html>
