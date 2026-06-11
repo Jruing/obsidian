@@ -17,11 +17,12 @@ docs/
 │   │   ├── LlamaIndex-Agent关联数据库.md
 │   │   └── Llamaindex-Agent自然语言查询数据库.md
 │   ├── Coze/
-│   │   └── 安装 Coze Studio.md
-│   ├── Eino/
-│   ├── Google ADK/
-│   │   ├── Google ADK安装.md
-│   │   └── Google ADK实现简历打分助手.md
+│   │   └── 安装CozeStudio.md
+│   ├── GoogleADK/
+│   │   ├── GoogleADK-多工具智能体.md
+│   │   ├── GoogleADK-顺序智能体.md
+│   │   ├── GoogleADK安装.md
+│   │   └── GoogleADK实现简历打分助手.md
 │   ├── MCP/
 │   │   ├── MCP学习笔记-从0到1.md
 │   │   ├── MCP学习笔记-天气预报.md
@@ -44,15 +45,22 @@ docs/
 │   │   ├── 归纳总结.md
 │   │   ├── 源文档到SVG幻灯片生成器.md
 │   │   ├── 猫娘.md
+│   │   ├── 论文修改助手.md
+│   │   ├── 论文降AI率大师.md
 │   │   ├── 豆包-KFC图片.md
 │   │   ├── 豆包-丝控.md
 │   │   ├── 豆包-生成架构图.md
 │   │   └── 黑白系图片生成.md
-│   ├── Claude Code+Claude Code Router.md
+│   ├── ClaudeCode+ClaudeCodeRouter.md
+│   ├── CliProxyAPI.md
 │   ├── Docker安装OneAPI.md
 │   ├── Gemini-cli.md
-│   ├── llms.txt 标准完整教程.md
-│   └── OpenCode.md
+│   ├── LLM中FunctionCall与MCP的区别.md
+│   ├── llms.txt标准完整教程.md
+│   ├── OpenClaw.md
+│   ├── OpenCode.md
+│   ├── OpenSpec中文文档.md
+│   └── Trellis学习笔记.md
 ├── Linux/
 │   └── 基础/
 │       ├── linux学习笔记-awk.md
@@ -91,16 +99,16 @@ docs/
 │   │   │   ├── Golang学习笔记-循环.md
 │   │   │   └── Golang学习笔记-数据类型.md
 │   │   └── 进阶/
-│   │       ├── Golang 学习笔记-sqlc 代码生成.md
-│   │       ├── Golang 学习笔记-Viper.md
-│   │       ├── Golang 学习笔记-结构体与匿名结构体.md
 │   │       ├── Golang学习笔记-Casbin学习笔记.md
 │   │       ├── Golang学习笔记-CorbaCLI学习笔记.md
 │   │       ├── Golang学习笔记-go-resty请求.md
 │   │       ├── Golang学习笔记-jwt.md
+│   │       ├── Golang学习笔记-sqlc代码生成.md
+│   │       ├── Golang学习笔记-Viper.md
 │   │       ├── Golang学习笔记-令牌桶限流.md
 │   │       ├── Golang学习笔记-处理HTTP请求参数.md
 │   │       ├── Golang学习笔记-定时任务.md
+│   │       ├── Golang学习笔记-结构体与匿名结构体.md
 │   │       ├── Golang学习笔记-自定义日志轮转及输出.md
 │   │       └── Golang学习笔记-跨平台编译.md
 │   ├── Java/
@@ -114,9 +122,10 @@ docs/
 │   ├── Python/
 │   │   ├── Web/
 │   │   │   ├── Django/
-│   │   │   ├── FastAPI/
-│   │   │   │   └── 安装.md
-│   │   │   └── Flask/
+│   │   │   │   ├── Django学习笔记-安装.md
+│   │   │   │   └── Django学习笔记-第一个应用.md
+│   │   │   └── FastAPI/
+│   │   │       └── 安装.md
 │   │   ├── 基础/
 │   │   │   ├── pathlib用法.md
 │   │   │   ├── pydantic用法.md
@@ -126,7 +135,6 @@ docs/
 │   │   │   ├── zipapp用法.md
 │   │   │   ├── 函数.md
 │   │   │   ├── 判断.md
-│   │   │   ├── 安装环境.md
 │   │   │   ├── 异常处理.md
 │   │   │   ├── 循环.md
 │   │   │   ├── 数据类型.md
@@ -137,8 +145,8 @@ docs/
 │   │   │   └── Pandas用法.md
 │   │   ├── 爬虫/
 │   │   │   ├── JsRpc练习.md
-│   │   │   ├── Python selenium过图片滑块验证.md
-│   │   │   ├── Python爬虫-无限VM debugger解决方案.md
+│   │   │   ├── Pythonselenium过图片滑块验证.md
+│   │   │   ├── Python爬虫-无限VMdebugger解决方案.md
 │   │   │   ├── 有道翻译爬虫.md
 │   │   │   └── 某验五子棋验证码.md
 │   │   ├── 自动化/
@@ -155,7 +163,10 @@ docs/
 │   │   │   └── 工厂模式.md
 │   │   └── 进阶/
 │   │       ├── Python学习笔记-__missing__用法.md
-│   │       ├── Python学习笔记-Alembic Python数据库迁移教程.md
+│   │       ├── Python学习笔记-AlembicPython数据库迁移教程.md
+│   │       ├── Python学习笔记-APScheduler定时任务.md
+│   │       ├── Python学习笔记-Dataclass.md
+│   │       ├── Python学习笔记-FastScheduler任务调度.md
 │   │       ├── Python学习笔记-gc垃圾回收.md
 │   │       ├── Python学习笔记-grpc.md
 │   │       ├── Python学习笔记-property和setter.md
@@ -182,16 +193,21 @@ docs/
 │   │   │   ├── React-更新页面数据.md
 │   │   │   └── React-条件判断.md
 │   │   ├── Vue/
-│   │   │   ├── Vue3 Router路由.md
-│   │   │   └── Vue3+Vite项目基础环境搭建.md
+│   │   │   ├── Vue3+Vite项目基础环境搭建.md
+│   │   │   └── Vue3Router路由.md
 │   │   └── 基础三剑客/
 │   │       └── javascript/
-│   │           ├── fetch 学习笔记.md
+│   │           ├── fetch学习笔记.md
 │   │           ├── forEach数组循环.md
 │   │           ├── Javascript学习笔记-js实现拷贝复制功能.md
 │   │           ├── js控制台Hook.md
 │   │           └── 元素选择器.md
-│   └── Jetbrains全家桶激活.md
+│   ├── 数据结构/
+│   │   ├── BBR拥塞算法.md
+│   │   ├── 哈夫曼.excalidraw.md
+│   │   └── 哈夫曼编码.md
+│   ├── Jetbrains全家桶激活.md
+│   └── TLS1.3握手过程详解.md
 ├── 数据库/
 │   ├── MySQL/
 │   │   └── Mysql57绿色版安装.md
@@ -202,12 +218,12 @@ docs/
 │       ├── Redis7.XCentos集群搭建.md
 │       └── 安装及基础.md
 ├── 日常工具/
-│   ├── Frp 内网穿透搭建.md
+│   ├── Frp内网穿透搭建.md
 │   ├── jookdb重置试用期.md
-│   ├── RustDesk 私有化部署.md
+│   ├── RustDesk私有化部署.md
 │   ├── task任务构建工具.md
 │   ├── UPX使用方法.md
-│   ├── Wiki.js 安装.md
+│   ├── Wiki.js安装.md
 │   ├── win10右键添加复制文件绝对路径.md
 │   └── 基于订阅号开发属于自己的微信消息通知.md
 └── 运维/
@@ -221,7 +237,7 @@ docs/
     │   ├── caddy简介.md
     │   └── caddy静态文件.md
     ├── Jenkins/
-    │   ├── Freestyle Job.md
+    │   ├── FreestyleJob.md
     │   ├── Jenkinsfile.md
     │   ├── Pipline.md
     │   ├── Trigger.md
@@ -232,7 +248,7 @@ docs/
     │   └── 环境搭建与安装.md
     ├── Nginx/
     │   ├── Nginx学习笔记-auth_basic认证.md
-    │   ├── Nginx学习笔记-Centos 7 安装Nginx.md
+    │   ├── Nginx学习笔记-Centos7安装Nginx.md
     │   ├── Nginx学习笔记-Nginx简介.md
     │   ├── Nginx学习笔记-图片防盗链.md
     │   ├── Nginx学习笔记-解决前端后端跨域.md
@@ -245,13 +261,13 @@ docs/
     │   └── ServerLess学习笔记-FnProject完整指南.md
     ├── Traefik/
     │   ├── Traefik学习笔记-安装.md
-    │   ├── Traefik学习笔记-概念详解（基于 Docker Labels 配置）.md
+    │   ├── Traefik学习笔记-概念详解（基于DockerLabels配置）.md
     │   ├── Traefik学习笔记-自定义中间件.md
     │   └── Traefik学习笔记-重定向配置.md
     ├── 容器化/
     │   ├── Docker/
-    │   │   ├── Docker Swarm 学习笔记.md
     │   │   ├── Docker-Compose安装.md
+    │   │   ├── DockerSwarm学习笔记.md
     │   │   ├── Docker学习笔记-redis部署.md
     │   │   ├── Docker学习笔记-在线安装教程.md
     │   │   ├── Docker学习笔记-多阶段构建学习笔记.md
@@ -272,6 +288,7 @@ docs/
     │       ├── kubernetes学习笔记-安装.md
     │       └── 目录.md
     ├── 监控/
+    │   ├── Uptime-kuma监控.md
     │   ├── Prometheus/
     │   │   ├── Prometheus学习笔记-file_sd_config.md
     │   │   ├── Prometheus学习笔记-Grafana可视化.md
@@ -283,18 +300,18 @@ docs/
     │   │   ├── Prometheus学习笔记-监控docker容器.md
     │   │   ├── Prometheus学习笔记-设置Basic_auth登录校验.md
     │   │   └── Prometheus学习笔记-配置文件字段解析.md
-    │   ├── 日志监控/
-    │   │   └── 基于Grafana+Loki+Promatil搭建日志分析平台.md
-    │   └── Uptime-kuma 监控.md
+    │   └── 日志监控/
+    │       └── 基于Grafana+Loki+Promatil搭建日志分析平台.md
     ├── 进程管理/
-    │   └── Supervisor 学习笔记.md
+    │   └── Supervisor学习笔记.md
     ├── IP划分.md
-    └── Neo4j 实现一个简单的CMDB管理平台.md
+    └── Neo4j实现一个简单的CMDB管理平台.md
 ```
 
 ## 📊 项目统计
 
-- **总文件数量**: 229 个 Markdown 文件
+- **总文件数量**: 246 个 Markdown 文件
+- **总目录数量**: 62 个
 - **主要分类**: 6 个核心技术领域
 
 ## 🚀 快速导航
@@ -320,7 +337,7 @@ docs/
 - **MySQL、PostgreSQL、Redis**
 
 ### Linux
-- **基础命令**: 20+ 个常用Linux命令和配置
+- **基础命令**: 23 个常用Linux命令和配置
 
 ## 📝 使用说明
 
@@ -341,4 +358,4 @@ docs/
 
 ---
 
-*最后更新: 2026-03-06*
+*最后更新: 2026-06-11*
